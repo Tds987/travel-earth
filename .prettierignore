@@ -1,0 +1,8 @@
+dist
+node_modules
+legacy
+package-lock.json
+
+# Hand-written briefs; keep their formatting as authored
+CLAUDE.md
+DECISIONS.md

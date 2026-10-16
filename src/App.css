@@ -1,0 +1,30 @@
+.hello {
+  min-height: 100dvh;
+  display: grid;
+  place-content: center;
+  gap: 12px;
+  padding: var(--space-gutter);
+  text-align: center;
+}
+
+.hello__seal {
+  justify-self: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color-accent);
+}
+
+.hello__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 8vw, 3.5rem);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.hello__line {
+  margin: 0;
+  color: var(--color-ink-muted);
+  font-size: 1.0625rem;
+}

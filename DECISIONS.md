@@ -27,3 +27,8 @@ Trip planning and personal context live in the "Travel Japan" Claude Project, no
 
 ## Log
 <!-- Claude Code: append new entries below -->
+- 2026-10-16 — Moved `places.js` into `legacy/` — CLAUDE.md expects reference data at `legacy/places.js`; it stays untouched until migrated into the new schema.
+- 2026-10-16 — Phase 0 scaffold: Vite + React + TypeScript — fast, standard, Vercel's built-in preset; types catch content mistakes early.
+- 2026-10-16 — Linter is oxlint (current Vite template default) instead of ESLint — same job, much faster, zero extra config; Prettier handles formatting.
+- 2026-10-16 — No Tailwind for now; plain CSS variables as design tokens — region packs swap a small set of variables, keeping the look per region simple.
+- 2026-10-16 — No installs on Tyler's own or borrowed devices — builds run in the cloud session and on Vercel; Tyler only uses the browser.
