@@ -5,6 +5,9 @@ import { InfoSheet } from './components/InfoSheet'
 import { JournalScreen } from './components/JournalScreen'
 import { MapControls } from './components/MapControls'
 import { PeekCard } from './components/PeekCard'
+import { RailCard } from './components/RailCard'
+import { SearchSheet } from './components/SearchSheet'
+import { FILTERS, matchesFilters, type Filter } from './lib/filters'
 import { TabBar, type Tab } from './components/TabBar'
 import { places, region } from './content'
 import { addEntry, useJournal, type NewEntry } from './journal/store'
@@ -12,6 +15,7 @@ import { familyJournal } from './journal/supabase'
 import type { Entry } from './journal/types'
 import { nearestCity } from './lib/geo'
 import type { MapApi } from './map/MapView'
+import { lineBounds, RAIL_KINDS, RAIL_STYLE, type RailPick } from './map/rail'
 import type { MapQuality, MapSource } from './map/viewer'
 
 // Cesium is large; load it after the shell so the app appears instantly on weak signal.
@@ -57,6 +61,10 @@ function App() {
   const [notice, setNotice] = useState<string | null>(null)
   const [composer, setComposer] = useState<Composer | null>(null)
   const [pickingStay, setPickingStay] = useState(false)
+  const [searchOpen, setSearchOpen] = useState(false)
+  const [filters, setFilters] = useState<Set<Filter>>(new Set())
+  const [trainsOn, setTrainsOn] = useState(false)
+  const [railPick, setRailPick] = useState<RailPick | null>(null)
   const api = useRef<MapApi | null>(null)
 
   useEffect(() => {
@@ -84,9 +92,21 @@ function App() {
   const visited = useMemo(() => new Set(visitedAt.keys()), [visitedAt])
 
   const selected = places.find((p) => p.id === selectedId) ?? null
+  const visibleIds = useMemo(
+    () => new Set(places.filter((p) => matchesFilters(p, filters)).map((p) => p.id)),
+    [filters],
+  )
+  const toggleFilter = (f: Filter) =>
+    setFilters((cur) => {
+      const next = new Set(cur)
+      if (next.has(f)) next.delete(f)
+      else next.add(f)
+      return next
+    })
 
   const select = useCallback((id: string | null) => {
     setSelectedId(id)
+    if (id) setRailPick(null)
     setInfoOpen(false)
     const place = id ? places.find((p) => p.id === id) : null
     if (place) api.current?.flyToPlace(place)
@@ -171,24 +191,73 @@ function App() {
             selectedId={selectedId}
             journal={entries}
             visited={visited}
+            visibleIds={visibleIds}
+            trainsOn={trainsOn}
             quality={quality}
             onSelect={select}
+            onSelectRail={setRailPick}
+            onTrainsError={() => flash('Couldn’t load train lines. Try again with signal.')}
             onReady={(a) => (api.current = a)}
             onSource={setSource}
           />
         </Suspense>
 
         <header className="topbar">
-          <p className="topbar__brand">
-            {owner ? 'Travel Earth' : `${family?.name ?? 'Traveler'}’s travels`}{' '}
-            <span className="topbar__region">{region.name}</span>
-          </p>
+          {owner ? (
+            <button type="button" className="topbar__search" onClick={() => setSearchOpen(true)}>
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                <circle
+                  cx="11"
+                  cy="11"
+                  r="6.5"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                />
+                <path
+                  d="m16 16 4.5 4.5"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  strokeLinecap="round"
+                />
+              </svg>
+              Search {region.name}
+            </button>
+          ) : (
+            <p className="topbar__brand">
+              {`${family?.name ?? 'Traveler'}’s travels`}{' '}
+              <span className="topbar__region">{region.name}</span>
+            </p>
+          )}
+          {[...filters].map((f) => (
+            <button
+              key={f}
+              type="button"
+              className={`topbar__chip topbar__chip--on${f === 'bourdain' ? ' chip--bourdain' : ''}`}
+              onClick={() => toggleFilter(f)}
+              aria-label={`Remove filter ${FILTERS.find((x) => x.id === f)?.label}`}
+            >
+              {FILTERS.find((x) => x.id === f)?.label} ×
+            </button>
+          ))}
           {source && source !== 'google-3d' && (
             <button type="button" className="topbar__chip" onClick={() => setInfoOpen(true)}>
               {source === 'offline' ? 'Offline map' : 'Basic map'}
             </button>
           )}
         </header>
+
+        {trainsOn && (
+          <p className="legend" aria-label="Train map key">
+            {RAIL_KINDS.map((k) => (
+              <span key={k} className="legend__item">
+                <span className="legend__swatch" style={{ background: RAIL_STYLE[k].color }} />
+                {RAIL_STYLE[k].label}
+              </span>
+            ))}
+            <span className="legend__credit">Rail data: MLIT 国土数値情報</span>
+          </p>
+        )}
 
         {pickingStay ? (
           <>
@@ -210,7 +279,12 @@ function App() {
             onTilt={() => api.current?.toggleTilt()}
             onLocate={locate}
             onInfo={() => setInfoOpen((o) => !o)}
+            onTrains={() => {
+              setTrainsOn((t) => !t)
+              setRailPick(null)
+            }}
             locating={locating}
+            trainsOn={trainsOn}
           />
         )}
 
@@ -221,6 +295,9 @@ function App() {
             onQuality={changeQuality}
             onClose={() => setInfoOpen(false)}
           />
+        )}
+        {railPick && !selected && !infoOpen && !pickingStay && (
+          <RailCard pick={railPick} onClose={() => setRailPick(null)} />
         )}
         {selected && !infoOpen && !pickingStay && (
           <PeekCard
@@ -265,6 +342,36 @@ function App() {
         <p className="notice" role="status">
           {notice}
         </p>
+      )}
+
+      {searchOpen && (
+        <SearchSheet
+          places={places}
+          filters={filters}
+          onToggleFilter={toggleFilter}
+          onClearFilters={() => setFilters(new Set())}
+          onClose={() => setSearchOpen(false)}
+          onPickPlace={(p) => {
+            setSearchOpen(false)
+            setTab('map')
+            setTimeout(() => select(p.id), 50)
+          }}
+          onPickStation={(st) => {
+            setSearchOpen(false)
+            setTab('map')
+            setTrainsOn(true)
+            select(null)
+            setTimeout(() => api.current?.flyToPoint(st.lon, st.lat), 50)
+          }}
+          onPickLine={(line, kind) => {
+            setSearchOpen(false)
+            setTab('map')
+            setTrainsOn(true)
+            select(null)
+            setRailPick({ rail: line, kind })
+            setTimeout(() => api.current?.flyToBounds(lineBounds(line)), 50)
+          }}
+        />
       )}
 
       {composer && (

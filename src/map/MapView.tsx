@@ -16,14 +16,24 @@ import {
   Matrix4,
   Math as CesiumMath,
   NearFarScalar,
+  Rectangle,
   ScreenSpaceEventHandler,
   ScreenSpaceEventType,
   VerticalOrigin,
+  type GroundPolylinePrimitive,
   type Viewer,
 } from 'cesium'
 import type { Entry } from '../journal/types'
 import type { Place, Region } from '../types'
 import { pinImage, stayImage } from './pins'
+import {
+  isRailPick,
+  loadRail,
+  RAIL_KINDS,
+  railPrimitive,
+  type RailKind,
+  type RailPick,
+} from './rail'
 import {
   applyQuality,
   createViewer,
@@ -44,6 +54,7 @@ export type MapApi = {
   flyToPoint: (lon: number, lat: number) => void
   /** Ground point under the screen center, for "pick on map". */
   centerLonLat: () => { lon: number; lat: number } | null
+  flyToBounds: (b: { w: number; s: number; e: number; n: number }) => void
 }
 
 type Props = {
@@ -53,8 +64,13 @@ type Props = {
   /** Journal entries drawn on the map: stays, check-ins and the travel path. */
   journal: Entry[]
   visited: Set<string>
+  /** Pins shown under the current search filter (selected pin always shows). */
+  visibleIds: Set<string>
+  trainsOn: boolean
   quality: MapQuality
   onSelect: (id: string | null) => void
+  onSelectRail: (pick: RailPick | null) => void
+  onTrainsError: () => void
   onReady: (api: MapApi) => void
   onSource: (source: MapSource) => void
 }
@@ -67,8 +83,12 @@ export default function MapView({
   selectedId,
   journal,
   visited,
+  visibleIds,
+  trainsOn,
   quality,
   onSelect,
+  onSelectRail,
+  onTrainsError,
   onReady,
   onSource,
 }: Props) {
@@ -78,10 +98,14 @@ export default function MapView({
   const sourceRef = useRef<MapSource>('offline')
   const entitiesRef = useRef(new Map<string, Entity>())
   const journalRef = useRef<CustomDataSource | null>(null)
+  const railRef = useRef<{
+    prims: Map<RailKind, GroundPolylinePrimitive>
+    stations: CustomDataSource
+  } | null>(null)
   // Latest props for the viewer's event handlers, without re-creating the viewer.
-  const latest = useRef({ region, onSelect, onReady, onSource })
+  const latest = useRef({ region, onSelect, onSelectRail, onReady, onSource, onTrainsError })
   useEffect(() => {
-    latest.current = { region, onSelect, onReady, onSource }
+    latest.current = { region, onSelect, onSelectRail, onReady, onSource, onTrainsError }
   })
 
   // Create the viewer once.
@@ -94,6 +118,10 @@ export default function MapView({
     const journalLayer = new CustomDataSource('journal')
     void viewer.dataSources.add(journalLayer)
     journalRef.current = journalLayer
+    const railStations = new CustomDataSource('rail-stations')
+    railStations.show = false
+    void viewer.dataSources.add(railStations)
+    railRef.current = { prims: new Map(), stations: railStations }
 
     // Globe intro: start over St. Louis, fly to the region, framed so the whole
     // country fits (a tall phone screen needs to sit further back than a wide one).
@@ -125,7 +153,13 @@ export default function MapView({
     const handler = new ScreenSpaceEventHandler(scene.canvas)
     handler.setInputAction((e: { position: Cartesian2 }) => {
       const picked = scene.pick(e.position)
+      if (defined(picked) && isRailPick(picked.id)) {
+        latest.current.onSelect(null)
+        latest.current.onSelectRail(picked.id)
+        return
+      }
       const id = defined(picked) && picked.id instanceof Entity ? picked.id.id : null
+      latest.current.onSelectRail(null)
       latest.current.onSelect(id && entities.has(id) ? id : null)
     }, ScreenSpaceEventType.LEFT_CLICK)
 
@@ -147,6 +181,13 @@ export default function MapView({
 
     onReady({
       flyToPoint: (lon, lat) => flyClose(lon, lat),
+      flyToBounds({ w, s, e, n }) {
+        const pad = Math.max(e - w, n - s) * 0.15 + 0.05
+        camera.flyTo({
+          destination: Rectangle.fromDegrees(w - pad, s - pad, e + pad, n + pad),
+          duration: duration() * 1.5,
+        })
+      },
       centerLonLat() {
         const target = centerTarget()
         if (!target) return null
@@ -205,6 +246,7 @@ export default function MapView({
       viewer.destroy()
       viewerRef.current = null
       journalRef.current = null
+      railRef.current = null
       entities.clear()
     }
   }, [])
@@ -259,6 +301,7 @@ export default function MapView({
       if (!e?.billboard || !e.label) continue
       const sel = place.id === selectedId
       const size = sel ? PIN_SIZE_SELECTED : PIN_SIZE
+      e.show = sel || visibleIds.has(place.id)
       e.billboard.image = pinImage(place.category, sel, size, visited.has(place.id)) as never
       e.billboard.width = size as never
       e.billboard.height = size as never
@@ -269,7 +312,62 @@ export default function MapView({
       e.label.pixelOffset = new Cartesian2(0, size / 2 + 4) as never
     }
     viewer.scene.requestRender()
-  }, [selectedId, places, visited])
+  }, [selectedId, places, visited, visibleIds])
+
+  // Trains layer: fetched the first time it's switched on, then just shown/hidden.
+  useEffect(() => {
+    const viewer = viewerRef.current
+    const rail = railRef.current
+    if (!viewer || !rail) return
+    rail.stations.show = trainsOn
+    for (const prim of rail.prims.values()) prim.show = trainsOn
+    viewer.scene.requestRender()
+    if (!trainsOn || rail.prims.size) return
+
+    let cancelled = false
+    Promise.allSettled(RAIL_KINDS.map(loadRail)).then((results) => {
+      if (cancelled || viewer.isDestroyed()) return
+      if (results.some((r) => r.status === 'rejected')) latest.current.onTrainsError()
+      // Draw order: other, JR, then Shinkansen on top.
+      for (const kind of ['other', 'jr', 'shinkansen'] as RailKind[]) {
+        const res = results[RAIL_KINDS.indexOf(kind)]
+        if (res.status !== 'fulfilled' || rail.prims.has(kind)) continue
+        const prim = viewer.scene.groundPrimitives.add(railPrimitive(res.value, kind))
+        rail.prims.set(kind, prim)
+        for (const st of res.value.stations ?? []) {
+          rail.stations.entities.add({
+            position: Cartesian3.fromDegrees(st.lon, st.lat),
+            point: {
+              pixelSize: 7,
+              color: Color.fromCssColorString('#F7F3E9'),
+              outlineColor: Color.fromCssColorString('#C8402F'),
+              outlineWidth: 2.5,
+              heightReference: HeightReference.CLAMP_TO_GROUND,
+              disableDepthTestDistance: Number.POSITIVE_INFINITY,
+              distanceDisplayCondition: new DistanceDisplayCondition(0, 2_500_000),
+            },
+            label: {
+              text: st.nameEn ?? st.name,
+              font: '600 12px system-ui, -apple-system, sans-serif',
+              fillColor: Color.fromCssColorString('#2B2B28'),
+              outlineColor: Color.fromCssColorString('#F7F3E9'),
+              outlineWidth: 4,
+              style: LabelStyle.FILL_AND_OUTLINE,
+              verticalOrigin: VerticalOrigin.TOP,
+              pixelOffset: new Cartesian2(0, 8),
+              heightReference: HeightReference.CLAMP_TO_GROUND,
+              disableDepthTestDistance: Number.POSITIVE_INFINITY,
+              distanceDisplayCondition: new DistanceDisplayCondition(0, 300_000),
+            },
+          })
+        }
+      }
+      viewer.scene.requestRender()
+    })
+    return () => {
+      cancelled = true
+    }
+  }, [trainsOn])
 
   // Journal overlay
   useEffect(() => {
