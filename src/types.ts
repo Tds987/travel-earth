@@ -37,5 +37,7 @@ export type Place = {
   status?: string
   flags?: { bourdain?: boolean; series?: boolean; tickets?: boolean }
   sources?: string[]
+  /** Search text for directions when the pin is approximate. */
+  mapsQuery?: string
   updated: string
 }

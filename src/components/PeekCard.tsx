@@ -16,7 +16,31 @@ type Props = {
 /** Place card: peek (name, one line, price) → full (story, tips, directions). */
 export function PeekCard({ place, onClose, visitedAt, onStamp }: Props) {
   const [open, setOpen] = useState(false)
-  const directions = `https://www.google.com/maps/dir/?api=1&destination=${place.lat},${place.lon}`
+  const destination = place.mapsQuery
+    ? encodeURIComponent(place.mapsQuery)
+    : `${place.lat},${place.lon}`
+  const directions = `https://www.google.com/maps/dir/?api=1&destination=${destination}`
+  const q = encodeURIComponent(`${place.name} ${place.city} Japan`)
+  const links = [
+    { label: 'Website', href: `https://www.google.com/search?q=${q}+official+site` },
+    { label: 'Reviews', href: `https://www.google.com/search?q=${q}+reviews` },
+    ...(place.category === 'food'
+      ? [{ label: 'Menu', href: `https://www.google.com/search?q=${q}+menu` }]
+      : [
+          {
+            label: 'Wikipedia',
+            href: `https://en.wikipedia.org/wiki/Special:Search/${encodeURIComponent(place.name)}`,
+          },
+        ]),
+    ...(place.flags?.bourdain
+      ? [
+          {
+            label: 'Bourdain video',
+            href: `https://www.youtube.com/results?search_query=${encodeURIComponent(`Anthony Bourdain ${place.name} ${place.city}`)}`,
+          },
+        ]
+      : []),
+  ]
 
   return (
     <article className={`card${open ? ' card--open' : ''}`} aria-label={place.name}>
@@ -54,6 +78,16 @@ export function PeekCard({ place, onClose, visitedAt, onStamp }: Props) {
       )}
 
       <p className="card__why">{open ? place.why : firstSentence(place.why)}</p>
+
+      {open && (
+        <p className="card__links">
+          {links.map((l) => (
+            <a key={l.label} href={l.href} target="_blank" rel="noopener noreferrer">
+              {l.label}
+            </a>
+          ))}
+        </p>
+      )}
 
       {open && place.tips && (
         <ul className="card__tips">

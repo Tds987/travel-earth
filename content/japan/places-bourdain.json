@@ -1,0 +1,682 @@
+[
+  {
+    "id": "jiro",
+    "region": "japan",
+    "name": "Sukiyabashi Jiro, Ginza",
+    "localName": "すきやばし次郎",
+    "lat": 35.6721,
+    "lon": 139.7637,
+    "city": "Tokyo",
+    "category": "food",
+    "why": "Where Bourdain said he'd want to die mid-meal: twenty-odd pieces of Edomae sushi from the Ono family, in a basement under a Ginza office block. He sat at the counter in a No Reservations deleted scene and talked about it for years after.",
+    "tips": [
+      "Seats go through hotel concierges or premium booking services, often months out",
+      "Far over a backpacker budget; worth knowing about even if you only walk past"
+    ],
+    "price": {
+      "min": 55000,
+      "max": 60000,
+      "estimate": true
+    },
+    "flags": {
+      "bourdain": true
+    },
+    "mapsQuery": "Sukiyabashi Jiro Honten, Ginza, Tokyo",
+    "sources": [
+      "https://www.continentscondiments.com/anthony-bourdain-tokyo-all-of-the-restaurants-picked-on-no-reservations/"
+    ],
+    "updated": "2026-10-17"
+  },
+  {
+    "id": "karaku",
+    "region": "japan",
+    "name": "Sushi Karaku, Ginza",
+    "localName": "鮨 からく",
+    "lat": 35.6711,
+    "lon": 139.764,
+    "city": "Tokyo",
+    "category": "food",
+    "why": "A Cook's Tour, 2002: after the dawn tuna auction, Bourdain and a sushi chef came here for the meal that opened his first Japan episode. Edomae sushi in a quiet Ginza basement.",
+    "tips": [
+      "Book ahead through an online reservation service",
+      "Lunch sets are the gentler way in"
+    ],
+    "price": {
+      "min": 15000,
+      "max": 30000,
+      "estimate": true
+    },
+    "flags": {
+      "bourdain": true
+    },
+    "mapsQuery": "Sushi Karaku, Ginza, Tokyo",
+    "sources": ["https://www.timeout.com/tokyo/restaurants/sushi-karaku"],
+    "updated": "2026-10-17"
+  },
+  {
+    "id": "edosawa",
+    "region": "japan",
+    "name": "Chanko Edosawa, Ryogoku",
+    "localName": "ちゃんこ 江戸沢",
+    "lat": 35.6956,
+    "lon": 139.7934,
+    "city": "Tokyo",
+    "category": "food",
+    "why": "After watching morning practice at a sumo stable, Bourdain sat down to chanko nabe, the big communal hot pot wrestlers bulk up on. Ryogoku is sumo town; this is the classic place to try it.",
+    "tips": [
+      "Pair with the Ryogoku Kokugikan sumo museum next door",
+      "Hot pot is sized for two or more; solo, ask for a single portion at lunch"
+    ],
+    "price": {
+      "min": 4000,
+      "max": 7000,
+      "estimate": true
+    },
+    "flags": {
+      "bourdain": true
+    },
+    "mapsQuery": "Chanko Edosawa, Ryogoku, Tokyo",
+    "sources": ["https://eatlikebourdain.com/anthony-bourdain-in-japan/"],
+    "updated": "2026-10-17"
+  },
+  {
+    "id": "ishinohana",
+    "region": "japan",
+    "name": "Bar Ishinohana, Shibuya",
+    "localName": "石の華",
+    "lat": 35.6567,
+    "lon": 139.7058,
+    "city": "Tokyo",
+    "category": "food",
+    "why": "No Reservations Tokyo: Bourdain sipped a 'Claudia' cocktail from champion bartender Shinobu Ishigaki. Japanese bartending at its most precise: hand-cut ice, exact pours, quiet room.",
+    "tips": ["Cover charge plus ¥1,800–2,500 per cocktail", "Dress a notch up from hostel-casual"],
+    "price": {
+      "min": 3000,
+      "max": 6000,
+      "estimate": true
+    },
+    "flags": {
+      "bourdain": true
+    },
+    "mapsQuery": "Bar Ishinohana, Shibuya, Tokyo, Japan",
+    "sources": ["https://eatlikebourdain.com/anthony-bourdain-in-japan/"],
+    "updated": "2026-10-17"
+  },
+  {
+    "id": "pianobar",
+    "region": "japan",
+    "name": "Piano Bar, Nonbei Yokocho",
+    "localName": "ピアノバー",
+    "lat": 35.6602,
+    "lon": 139.7022,
+    "city": "Tokyo",
+    "category": "food",
+    "why": "A late-night stop on No Reservations Tokyo: a doll's-house bar in Shibuya's 'Drunkard's Alley', a lantern-lit lane of tiny bars right by the station.",
+    "tips": ["Seats about eight; peek in and smile", "Cash; small cover charge"],
+    "price": {
+      "min": 1500,
+      "max": 3000,
+      "estimate": true
+    },
+    "flags": {
+      "bourdain": true
+    },
+    "mapsQuery": "Piano Bar, Nonbei Yokocho, Shibuya, Tokyo",
+    "sources": ["https://eatlikebourdain.com/anthony-bourdain-in-japan/"],
+    "updated": "2026-10-17"
+  },
+  {
+    "id": "nygrill",
+    "region": "japan",
+    "name": "New York Grill, Park Hyatt",
+    "localName": "ニューヨーク グリル",
+    "lat": 35.6855,
+    "lon": 139.6907,
+    "city": "Tokyo",
+    "category": "food",
+    "why": "Parts Unknown Tokyo, 2013. The 52nd-floor bar from Lost in Translation, with the whole city lit up below. Bourdain came for the view and the whisky.",
+    "tips": [
+      "The hotel reopened after a long renovation; check hours before going",
+      "A drink at the bar costs far less than dinner"
+    ],
+    "price": {
+      "min": 3000,
+      "max": 8000,
+      "estimate": true
+    },
+    "flags": {
+      "bourdain": true
+    },
+    "mapsQuery": "New York Grill, Park Hyatt Tokyo, Shinjuku",
+    "sources": ["https://explorepartsunknown.com/destination/tokyo/"],
+    "updated": "2026-10-17"
+  },
+  {
+    "id": "morimotoxex",
+    "region": "japan",
+    "name": "Atelier Morimoto XEX, Roppongi",
+    "lat": 35.6627,
+    "lon": 139.731,
+    "city": "Tokyo",
+    "category": "food",
+    "why": "Iron Chef Morimoto cooked monkfish for Bourdain here on No Reservations. High-end teppan and sushi in Roppongi.",
+    "tips": ["Splurge territory; check it is still open under this name before going"],
+    "price": {
+      "min": 20000,
+      "max": 40000,
+      "estimate": true
+    },
+    "status": "Verify still open",
+    "flags": {
+      "bourdain": true
+    },
+    "mapsQuery": "Atelier Morimoto XEX, Roppongi, Tokyo, Japan",
+    "sources": ["https://eatlikebourdain.com/anthony-bourdain-in-japan/"],
+    "updated": "2026-10-17"
+  },
+  {
+    "id": "sushiko",
+    "region": "japan",
+    "name": "Ginza Sushi-ko Honten",
+    "localName": "銀座 寿司幸本店",
+    "lat": 35.6703,
+    "lon": 139.7608,
+    "city": "Tokyo",
+    "category": "food",
+    "why": "Parts Unknown 'Japan with Masa', 2016: chef Masa Takayama took Bourdain back to the Ginza counter where he trained as a teenager. Old-school Edomae sushi, family-run since 1885.",
+    "tips": ["Reserve ahead; lunch is easier", "Ask for the counter"],
+    "price": {
+      "min": 15000,
+      "max": 35000,
+      "estimate": true
+    },
+    "flags": {
+      "bourdain": true
+    },
+    "mapsQuery": "Ginza Sushiko Honten, Ginza, Tokyo",
+    "sources": ["https://explorepartsunknown.com/destination/masas-japan/"],
+    "updated": "2026-10-17"
+  },
+  {
+    "id": "tsukiji",
+    "region": "japan",
+    "name": "Tsukiji Outer Market",
+    "localName": "築地場外市場",
+    "lat": 35.6654,
+    "lon": 139.7707,
+    "city": "Tokyo",
+    "category": "food",
+    "why": "Bourdain filmed the old Tsukiji tuna auction in 2002 and again with Naomichi Yasuda in 2013. The wholesale market moved to Toyosu in 2018, but the outer market's 400-odd stalls still do breakfast: tamagoyaki, uni, grilled scallops.",
+    "tips": [
+      "Go early, by 8 am; many stalls close by early afternoon",
+      "The tuna auction itself is now at Toyosu (book the viewing deck online)"
+    ],
+    "price": {
+      "min": 1000,
+      "max": 4000,
+      "estimate": true
+    },
+    "flags": {
+      "bourdain": true
+    },
+    "mapsQuery": "Tsukiji Outer Market, Tokyo",
+    "sources": ["https://eatlikebourdain.com/anthony-bourdain-in-japan/"],
+    "updated": "2026-10-17"
+  },
+  {
+    "id": "mahakala",
+    "region": "japan",
+    "name": "Mahakala, Nakameguro",
+    "lat": 35.644,
+    "lon": 139.6985,
+    "city": "Tokyo",
+    "category": "food",
+    "why": "Parts Unknown Tokyo: Bourdain and sushi master Naomichi Yasuda went for kushiage (fried skewers: shrimp and basil, octopus, quail eggs) and okonomiyaki.",
+    "tips": [
+      "Pin is approximate; Directions searches the name.",
+      "Status unclear; check before going"
+    ],
+    "price": {
+      "min": 3000,
+      "max": 6000,
+      "estimate": true
+    },
+    "status": "Verify still open",
+    "flags": {
+      "bourdain": true
+    },
+    "mapsQuery": "Mahakala, Nakameguro, Tokyo, Japan",
+    "sources": ["https://eatlikebourdain.com/anthony-bourdain-in-japan/"],
+    "updated": "2026-10-17"
+  },
+  {
+    "id": "jiyuken",
+    "region": "japan",
+    "name": "Jiyuken, Namba",
+    "localName": "自由軒",
+    "lat": 34.6656,
+    "lon": 135.5016,
+    "city": "Osaka",
+    "category": "food",
+    "why": "No Reservations Osaka: 'meibutsu curry', with the rice and curry already mixed and a raw egg cracked on top. Open since 1910, and a favorite of the novelist Sakunosuke Oda. Cheap, fast, an Osaka original.",
+    "tips": [
+      "Stir the egg in, then add a dash of Worcestershire like the regulars do",
+      "Expect a short queue at lunch"
+    ],
+    "price": {
+      "min": 800,
+      "max": 1200,
+      "estimate": true
+    },
+    "flags": {
+      "bourdain": true
+    },
+    "mapsQuery": "Jiyuken Namba, Osaka",
+    "sources": ["https://eatlikebourdain.com/anthony-bourdain-in-japan/"],
+    "updated": "2026-10-17"
+  },
+  {
+    "id": "kanidoraku",
+    "region": "japan",
+    "name": "Kani Doraku Dotonbori",
+    "localName": "かに道楽 道頓堀本店",
+    "lat": 34.6688,
+    "lon": 135.5017,
+    "city": "Osaka",
+    "category": "food",
+    "why": "Under the giant moving crab: Bourdain grabbed grilled crab legs from the street cart out front on No Reservations. Peak Dotonbori.",
+    "tips": ["The street cart is the cheap version; the restaurant upstairs is a crab splurge"],
+    "price": {
+      "min": 500,
+      "max": 1500,
+      "estimate": true
+    },
+    "flags": {
+      "bourdain": true
+    },
+    "mapsQuery": "Kani Doraku Dotonbori, Osaka, Japan",
+    "sources": ["https://eatlikebourdain.com/anthony-bourdain-in-japan/"],
+    "updated": "2026-10-17"
+  },
+  {
+    "id": "kuidaore",
+    "region": "japan",
+    "name": "Kuidaore Taro, Dotonbori",
+    "localName": "くいだおれ太郎",
+    "lat": 34.6687,
+    "lon": 135.503,
+    "city": "Osaka",
+    "category": "sight",
+    "why": "Not food: the drumming clown mascot of 'eat till you drop' Osaka. Bourdain faced his famous fear of clowns here. Take the photo.",
+    "tips": ["Free; it's a statue by a shop front"],
+    "flags": {
+      "bourdain": true
+    },
+    "mapsQuery": "Kuidaore Taro, Dotonbori, Osaka, Japan",
+    "sources": ["https://eatlikebourdain.com/anthony-bourdain-in-japan/"],
+    "updated": "2026-10-17"
+  },
+  {
+    "id": "fukutaro",
+    "region": "japan",
+    "name": "Fukutaro, Sennichimae",
+    "localName": "福太郎",
+    "lat": 34.6653,
+    "lon": 135.505,
+    "city": "Osaka",
+    "category": "food",
+    "why": "The okonomiyaki finale of Bourdain's Osaka night, by most accounts. Savory pancakes and negiyaki griddled in front of you; one of the city's best.",
+    "tips": [
+      "Queue forms at opening; put your name down and wander",
+      "Get the negiyaki (green onion) as well as the classic"
+    ],
+    "price": {
+      "min": 1200,
+      "max": 2500,
+      "estimate": true
+    },
+    "flags": {
+      "bourdain": true
+    },
+    "mapsQuery": "Fukutaro okonomiyaki, Sennichimae, Osaka",
+    "sources": ["https://eatlikebourdain.com/anthony-bourdain-in-japan/"],
+    "updated": "2026-10-17"
+  },
+  {
+    "id": "takonotetsu",
+    "region": "japan",
+    "name": "Takonotetsu, Umeda",
+    "localName": "たこの鉄",
+    "lat": 34.7015,
+    "lon": 135.498,
+    "city": "Osaka",
+    "category": "food",
+    "why": "Make-your-own takoyaki: you turn the octopus balls in the griddle yourself. Fans tie it to Bourdain's Osaka takoyaki scene. (The other takoyaki spot, Pizza Ball House, has closed.)",
+    "tips": ["Pin is approximate; Directions searches the name.", "Fun solo or with a group"],
+    "price": {
+      "min": 800,
+      "max": 1500,
+      "estimate": true
+    },
+    "flags": {
+      "bourdain": true
+    },
+    "mapsQuery": "Takonotetsu, Osaka",
+    "sources": ["https://eatlikebourdain.com/anthony-bourdain-in-japan/"],
+    "updated": "2026-10-17"
+  },
+  {
+    "id": "gosakudon",
+    "region": "japan",
+    "name": "Gosakudon, Tennoji",
+    "lat": 34.647,
+    "lon": 135.513,
+    "city": "Osaka",
+    "category": "baseball",
+    "why": "No Reservations Osaka opened in a sushi sports bar packed with Hanshin Tigers fans screaming at the TV. Fitting for a Japan Series trip; check it still exists, or find the nearest Tigers bar on game night.",
+    "tips": [
+      "Pin is approximate; Directions searches the name.",
+      "On a Tigers night, any bar with a TV near Tennoji or Namba will do"
+    ],
+    "status": "Verify still open",
+    "flags": {
+      "bourdain": true
+    },
+    "mapsQuery": "Gosakudon, Tennoji, Osaka, Japan",
+    "sources": ["https://eatlikebourdain.com/anthony-bourdain-in-japan/"],
+    "updated": "2026-10-17"
+  },
+  {
+    "id": "rokkakudo",
+    "region": "japan",
+    "name": "Rokkakudo Temple",
+    "localName": "六角堂",
+    "lat": 35.0072,
+    "lon": 135.7597,
+    "city": "Kyoto",
+    "category": "sight",
+    "why": "The birthplace of ikebana. Bourdain took a flower-arranging lesson here on No Reservations. A small, central temple with swans in the pond and a stump said to mark the city's center.",
+    "tips": ["Free to enter the grounds", "Five minutes' walk from Karasuma-Oike station"],
+    "flags": {
+      "bourdain": true
+    },
+    "mapsQuery": "Rokkakudo Temple, Kyoto, Japan",
+    "sources": ["https://eatlikebourdain.com/anthony-bourdain-in-japan/"],
+    "updated": "2026-10-17"
+  },
+  {
+    "id": "yamanoo",
+    "region": "japan",
+    "name": "Yamanoo, Kanazawa",
+    "localName": "山乃尾",
+    "lat": 36.569,
+    "lon": 136.664,
+    "city": "Kanazawa",
+    "category": "food",
+    "why": "Parts Unknown 'Japan with Masa': formal kaiseki in an old ryotei above the Higashi Chaya teahouse district. Sea bream over rice, rockfish smoked in wormwood, Noto wagyu.",
+    "tips": ["Splurge; book ahead", "Lunch kaiseki is cheaper"],
+    "price": {
+      "min": 20000,
+      "max": 40000,
+      "estimate": true
+    },
+    "flags": {
+      "bourdain": true
+    },
+    "mapsQuery": "Yamanoo, Kanazawa",
+    "sources": ["https://explorepartsunknown.com/destination/masas-japan/"],
+    "updated": "2026-10-17"
+  },
+  {
+    "id": "higashichaya",
+    "region": "japan",
+    "name": "Higashi Chaya District",
+    "localName": "ひがし茶屋街",
+    "lat": 36.5726,
+    "lon": 136.6662,
+    "city": "Kanazawa",
+    "category": "sight",
+    "why": "Bourdain had tea with a former geisha at the Fujinoya teahouse in this preserved 1820s quarter of wooden teahouses. Walk it at dusk when the lamps come on.",
+    "tips": [
+      "Some teahouses open to the public (Shima, Kaikaro)",
+      "Gold-leaf soft serve is the local gimmick, and it's fun"
+    ],
+    "flags": {
+      "bourdain": true
+    },
+    "mapsQuery": "Higashi Chaya District, Kanazawa, Japan",
+    "sources": ["https://eatlikebourdain.com/anthony-bourdain-in-japan/"],
+    "updated": "2026-10-17"
+  },
+  {
+    "id": "nanao",
+    "region": "japan",
+    "name": "Nanao Fish Market (Fisherman’s Wharf)",
+    "localName": "能登食祭市場",
+    "lat": 37.045,
+    "lon": 136.962,
+    "city": "Nanao",
+    "category": "food",
+    "why": "No Reservations 'Cook It Raw' (2011): after a morning at sea, Bourdain ate a fisherman's breakfast in the market restaurant. Noto was hit hard by the 2024 earthquake, so check what has reopened.",
+    "tips": [
+      "Verify opening status (Noto quake recovery)",
+      "Pin is approximate; Directions searches the name."
+    ],
+    "price": {
+      "min": 1500,
+      "max": 3500,
+      "estimate": true
+    },
+    "status": "Verify open (Noto recovery)",
+    "flags": {
+      "bourdain": true
+    },
+    "mapsQuery": "Noto Shokusai Market, Nanao, Ishikawa",
+    "sources": ["https://eatlikebourdain.com/anthony-bourdain-in-japan/"],
+    "updated": "2026-10-17"
+  },
+  {
+    "id": "tsukimura",
+    "region": "japan",
+    "name": "Tsukimura, Nasushiobara",
+    "lat": 36.9615,
+    "lon": 139.98,
+    "city": "Nasushiobara",
+    "category": "food",
+    "why": "Chef Masa Takayama's brother Kazuo has run this sushi counter in Masa's hometown for over 30 years. Parts Unknown 'Japan with Masa' came here. Way off the tourist track.",
+    "tips": [
+      "Pin is approximate; Directions searches the name.",
+      "Call ahead; small family restaurant"
+    ],
+    "price": {
+      "min": 5000,
+      "max": 12000,
+      "estimate": true
+    },
+    "status": "Verify name and hours",
+    "flags": {
+      "bourdain": true
+    },
+    "mapsQuery": "Tsukimura sushi, Nasushiobara, Tochigi",
+    "sources": ["https://eatlikebourdain.com/anthony-bourdain-in-japan/"],
+    "updated": "2026-10-17"
+  },
+  {
+    "id": "sapporobeer",
+    "region": "japan",
+    "name": "Sapporo Beer Garden (jingisukan)",
+    "localName": "サッポロビール園",
+    "lat": 43.0717,
+    "lon": 141.3685,
+    "city": "Sapporo",
+    "category": "food",
+    "why": "No Reservations Hokkaido opened here: jingisukan, lamb grilled on a dome-shaped skillet at the table, washed down with beer brewed on site in an 1890 brick hall.",
+    "tips": [
+      "All-you-can-eat-and-drink sets are the move",
+      "Wear clothes you don't mind smelling of lamb"
+    ],
+    "price": {
+      "min": 4000,
+      "max": 6000,
+      "estimate": true
+    },
+    "flags": {
+      "bourdain": true
+    },
+    "mapsQuery": "Sapporo Beer Garden (jingisukan), Sapporo, Japan",
+    "sources": ["https://eatlikebourdain.com/anthony-bourdain-in-japan/"],
+    "updated": "2026-10-17"
+  },
+  {
+    "id": "torimatsu",
+    "region": "japan",
+    "name": "Yakitori Torimatsu, Kutchan",
+    "localName": "鳥松",
+    "lat": 42.9015,
+    "lon": 140.759,
+    "city": "Niseko",
+    "category": "food",
+    "why": "Bourdain ate yakitori with Japanese snowboarders at an izakaya in Kutchan, the town at the foot of Niseko. Locals identify it as Torimatsu.",
+    "tips": [
+      "Pin is approximate; Directions searches the name.",
+      "Kutchan is the train stop for Niseko"
+    ],
+    "price": {
+      "min": 2500,
+      "max": 5000,
+      "estimate": true
+    },
+    "flags": {
+      "bourdain": true
+    },
+    "mapsQuery": "Torimatsu yakitori, Kutchan, Hokkaido",
+    "sources": ["https://eatlikebourdain.com/anthony-bourdain-in-japan/"],
+    "updated": "2026-10-17"
+  },
+  {
+    "id": "makishi",
+    "region": "japan",
+    "name": "Makishi Public Market, Naha",
+    "localName": "第一牧志公設市場",
+    "lat": 26.2147,
+    "lon": 127.688,
+    "city": "Naha",
+    "category": "food",
+    "why": "Parts Unknown Okinawa: buy fish downstairs (parrotfish, sea grapes, gurukun) and the restaurants upstairs cook it for a small fee. Bourdain ate sashimi and fried porcupine fish here.",
+    "tips": [
+      "The market was rebuilt in 2023, same idea",
+      "Upstairs cooking fee is a few hundred yen per dish"
+    ],
+    "price": {
+      "min": 1500,
+      "max": 4000,
+      "estimate": true
+    },
+    "flags": {
+      "bourdain": true
+    },
+    "mapsQuery": "Makishi Public Market, Naha, Naha, Japan",
+    "sources": ["https://explorepartsunknown.com/destination/okinawa/"],
+    "updated": "2026-10-17"
+  },
+  {
+    "id": "urizun",
+    "region": "japan",
+    "name": "Urizun, Naha",
+    "localName": "うりずん",
+    "lat": 26.2153,
+    "lon": 127.6955,
+    "city": "Naha",
+    "category": "food",
+    "why": "Old Okinawan izakaya where Bourdain tried tofuyo (fermented tofu, eaten in tiny nibbles) and awamori. Classic island food.",
+    "tips": ["Order the dururu-ten (taro croquettes)", "Awamori comes neat or with water"],
+    "price": {
+      "min": 2500,
+      "max": 4500,
+      "estimate": true
+    },
+    "flags": {
+      "bourdain": true
+    },
+    "mapsQuery": "Urizun, Naha, Naha, Japan",
+    "sources": ["https://eatlikebourdain.com/anthony-bourdain-in-japan/"],
+    "updated": "2026-10-17"
+  },
+  {
+    "id": "kingtacos",
+    "region": "japan",
+    "name": "King Tacos, Kin",
+    "localName": "キングタコス 金武本店",
+    "lat": 26.4561,
+    "lon": 127.918,
+    "city": "Kin",
+    "category": "food",
+    "why": "Birthplace of taco rice, the Okinawa-meets-US-base mash-up Bourdain ate on Parts Unknown. Taco filling, cheese, lettuce, salsa on rice. Cheap and enormous.",
+    "tips": [
+      "Original shop is by Camp Hansen in Kin",
+      "Cash; the regular size feeds one very hungry person"
+    ],
+    "price": {
+      "min": 700,
+      "max": 1000,
+      "estimate": true
+    },
+    "flags": {
+      "bourdain": true
+    },
+    "mapsQuery": "King Tacos, Kin, Kin, Japan",
+    "sources": ["https://eatlikebourdain.com/anthony-bourdain-in-japan/"],
+    "updated": "2026-10-17"
+  },
+  {
+    "id": "dojobar",
+    "region": "japan",
+    "name": "Dojo Bar, Naha",
+    "lat": 26.214,
+    "lon": 127.683,
+    "city": "Naha",
+    "category": "food",
+    "why": "Karate-themed bar where Bourdain drank habushu, awamori with a pit viper coiled in the bottle. Run by a martial artist who appears in the episode.",
+    "tips": [
+      "Pin is approximate; Directions searches the name.",
+      "Habushu tastes better than it looks"
+    ],
+    "price": {
+      "min": 1000,
+      "max": 2500,
+      "estimate": true
+    },
+    "flags": {
+      "bourdain": true
+    },
+    "mapsQuery": "Dojo Bar, Naha, Okinawa",
+    "sources": ["https://eatlikebourdain.com/anthony-bourdain-in-japan/"],
+    "updated": "2026-10-17"
+  },
+  {
+    "id": "sekiyou",
+    "region": "japan",
+    "name": "Sekiyou Ryokan, Yugawara",
+    "localName": "石葉",
+    "lat": 35.145,
+    "lon": 139.095,
+    "city": "Yugawara",
+    "category": "stay",
+    "why": "A Cook's Tour 'Dining with Geishas': Bourdain's first proper ryokan, kaiseki dinner and hot spring, an hour from Tokyo near Atami. Splurge-level.",
+    "tips": [
+      "Pin is approximate; Directions searches the name.",
+      "Day-trip onsen in Yugawara town are the budget alternative"
+    ],
+    "price": {
+      "min": 40000,
+      "max": 70000,
+      "estimate": true
+    },
+    "flags": {
+      "bourdain": true
+    },
+    "mapsQuery": "Sekiyou ryokan, Yugawara",
+    "sources": ["https://eatlikebourdain.com/anthony-bourdain-in-japan/"],
+    "updated": "2026-10-17"
+  }
+]
