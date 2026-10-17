@@ -4,10 +4,17 @@ import { CATEGORY_LABEL, firstSentence, formatPrice } from '../lib/format'
 import { CATEGORY_COLOR } from '../map/pins'
 import type { Place } from '../types'
 
-type Props = { place: Place; onClose: () => void }
+type Props = {
+  place: Place
+  onClose: () => void
+  /** When this place was stamped in the journal, if it was. */
+  visitedAt?: string
+  /** Owner only: stamp this place and open the journal composer. */
+  onStamp?: () => void
+}
 
 /** Place card: peek (name, one line, price) → full (story, tips, directions). */
-export function PeekCard({ place, onClose }: Props) {
+export function PeekCard({ place, onClose, visitedAt, onStamp }: Props) {
   const [open, setOpen] = useState(false)
   const directions = `https://www.google.com/maps/dir/?api=1&destination=${place.lat},${place.lon}`
 
@@ -56,6 +63,16 @@ export function PeekCard({ place, onClose }: Props) {
         </ul>
       )}
 
+      {visitedAt && (
+        <p className="card__stamped">
+          <span className="seal seal--small" aria-hidden="true">
+            印
+          </span>
+          Stamped{' '}
+          {new Date(visitedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
+        </p>
+      )}
+
       <div className="card__actions">
         <button
           type="button"
@@ -68,6 +85,11 @@ export function PeekCard({ place, onClose }: Props) {
         <a className="btn btn--primary" href={directions} target="_blank" rel="noopener noreferrer">
           Directions
         </a>
+        {onStamp && (
+          <button type="button" className="btn" onClick={onStamp}>
+            {visitedAt ? 'Add to journal' : 'I’ve been here'}
+          </button>
+        )}
       </div>
     </article>
   )

@@ -3,7 +3,9 @@ import {
   BoundingSphere,
   Cartesian2,
   Cartesian3,
+  Cartographic,
   Color,
+  CustomDataSource,
   defined,
   DistanceDisplayCondition,
   Entity,
@@ -19,8 +21,9 @@ import {
   VerticalOrigin,
   type Viewer,
 } from 'cesium'
+import type { Entry } from '../journal/types'
 import type { Place, Region } from '../types'
-import { pinImage } from './pins'
+import { pinImage, stayImage } from './pins'
 import {
   applyQuality,
   createViewer,
@@ -38,12 +41,18 @@ export type MapApi = {
   toggleTilt: () => void
   flyToPlace: (place: Place) => void
   showUser: (lon: number, lat: number) => void
+  flyToPoint: (lon: number, lat: number) => void
+  /** Ground point under the screen center, for "pick on map". */
+  centerLonLat: () => { lon: number; lat: number } | null
 }
 
 type Props = {
   places: Place[]
   region: Region
   selectedId: string | null
+  /** Journal entries drawn on the map: stays, check-ins and the travel path. */
+  journal: Entry[]
+  visited: Set<string>
   quality: MapQuality
   onSelect: (id: string | null) => void
   onReady: (api: MapApi) => void
@@ -56,6 +65,8 @@ export default function MapView({
   places,
   region,
   selectedId,
+  journal,
+  visited,
   quality,
   onSelect,
   onReady,
@@ -66,6 +77,7 @@ export default function MapView({
   const viewerRef = useRef<Viewer | null>(null)
   const sourceRef = useRef<MapSource>('offline')
   const entitiesRef = useRef(new Map<string, Entity>())
+  const journalRef = useRef<CustomDataSource | null>(null)
   // Latest props for the viewer's event handlers, without re-creating the viewer.
   const latest = useRef({ region, onSelect, onReady, onSource })
   useEffect(() => {
@@ -79,6 +91,9 @@ export default function MapView({
     const viewer = createViewer(containerRef.current!, creditsRef.current!)
     viewerRef.current = viewer
     const { camera, scene } = viewer
+    const journalLayer = new CustomDataSource('journal')
+    void viewer.dataSources.add(journalLayer)
+    journalRef.current = journalLayer
 
     // Globe intro: start over St. Louis, fly to the region, framed so the whole
     // country fits (a tall phone screen needs to sit further back than a wide one).
@@ -122,7 +137,22 @@ export default function MapView({
 
     const duration = () => (prefersReducedMotion() ? 0 : 1.2)
 
+    const flyClose = (lon: number, lat: number, pitch = -45) => {
+      const range = sourceRef.current === 'google-3d' ? 2500 : 40_000
+      camera.flyToBoundingSphere(new BoundingSphere(Cartesian3.fromDegrees(lon, lat), 0), {
+        offset: new HeadingPitchRange(camera.heading, CesiumMath.toRadians(pitch), range),
+        duration: prefersReducedMotion() ? 0 : 2,
+      })
+    }
+
     onReady({
+      flyToPoint: (lon, lat) => flyClose(lon, lat),
+      centerLonLat() {
+        const target = centerTarget()
+        if (!target) return null
+        const c = Cartographic.fromCartesian(target)
+        return { lon: CesiumMath.toDegrees(c.longitude), lat: CesiumMath.toDegrees(c.latitude) }
+      },
       toggleTilt() {
         const target = centerTarget()
         if (!target) return
@@ -174,6 +204,7 @@ export default function MapView({
       handler.destroy()
       viewer.destroy()
       viewerRef.current = null
+      journalRef.current = null
       entities.clear()
     }
   }, [])
@@ -228,7 +259,7 @@ export default function MapView({
       if (!e?.billboard || !e.label) continue
       const sel = place.id === selectedId
       const size = sel ? PIN_SIZE_SELECTED : PIN_SIZE
-      e.billboard.image = pinImage(place.category, sel, size) as never
+      e.billboard.image = pinImage(place.category, sel, size, visited.has(place.id)) as never
       e.billboard.width = size as never
       e.billboard.height = size as never
       e.label.distanceDisplayCondition = new DistanceDisplayCondition(
@@ -238,7 +269,98 @@ export default function MapView({
       e.label.pixelOffset = new Cartesian2(0, size / 2 + 4) as never
     }
     viewer.scene.requestRender()
-  }, [selectedId, places])
+  }, [selectedId, places, visited])
+
+  // Journal overlay
+  useEffect(() => {
+    const layer = journalRef.current
+    if (!layer) return
+    layer.entities.removeAll()
+    const placeById = new Map(places.map((p) => [p.id, p]))
+    const path: Cartesian3[] = []
+    const checkins = journal.filter((e) => e.kind === 'checkin' && e.lat != null)
+    const last = checkins[checkins.length - 1]
+    const ground = {
+      heightReference: HeightReference.CLAMP_TO_GROUND,
+      disableDepthTestDistance: Number.POSITIVE_INFINITY,
+    }
+
+    for (const e of journal) {
+      const place = e.placeId ? placeById.get(e.placeId) : undefined
+      const lon = e.lon ?? place?.lon
+      const lat = e.lat ?? place?.lat
+      if (lon == null || lat == null) continue
+      const position = Cartesian3.fromDegrees(lon, lat)
+      if (e.kind !== 'stay') path.push(position)
+
+      if (e.kind === 'stay') {
+        layer.entities.add({
+          id: `j:${e.id}`,
+          position,
+          billboard: { image: stayImage(28), width: 28, height: 28, ...ground },
+          label: {
+            text: e.title ?? 'My stay',
+            font: '600 13px system-ui, -apple-system, sans-serif',
+            fillColor: Color.fromCssColorString('#2B2B28'),
+            outlineColor: Color.fromCssColorString('#F7F3E9'),
+            outlineWidth: 4,
+            style: LabelStyle.FILL_AND_OUTLINE,
+            verticalOrigin: VerticalOrigin.TOP,
+            pixelOffset: new Cartesian2(0, 18),
+            distanceDisplayCondition: new DistanceDisplayCondition(0, 150_000),
+            ...ground,
+          },
+        })
+      } else if (e.kind === 'checkin') {
+        const isLast = e === last
+        const when = new Date(e.at).toLocaleString('en-US', {
+          month: 'short',
+          day: 'numeric',
+          hour: 'numeric',
+          minute: '2-digit',
+        })
+        layer.entities.add({
+          id: `j:${e.id}`,
+          position,
+          point: {
+            pixelSize: isLast ? 16 : 9,
+            color: Color.fromCssColorString('#165E83'),
+            outlineColor: Color.fromCssColorString('#F7F3E9'),
+            outlineWidth: isLast ? 4 : 2,
+            ...ground,
+          },
+          label: isLast
+            ? {
+                text: `Last check-in · ${when}`,
+                font: '600 13px system-ui, -apple-system, sans-serif',
+                fillColor: Color.fromCssColorString('#F7F3E9'),
+                showBackground: true,
+                backgroundColor: Color.fromCssColorString('#165E83'),
+                backgroundPadding: new Cartesian2(8, 5),
+                verticalOrigin: VerticalOrigin.BOTTOM,
+                pixelOffset: new Cartesian2(0, -14),
+                // keep the country view calm; the Journal tab has "See on map"
+                distanceDisplayCondition: new DistanceDisplayCondition(0, 1_500_000),
+                ...ground,
+              }
+            : undefined,
+        })
+      }
+    }
+
+    // The trail of where you've been, in order.
+    if (path.length > 1) {
+      layer.entities.add({
+        polyline: {
+          positions: path,
+          width: 3,
+          material: Color.fromCssColorString('#C8402F').withAlpha(0.8),
+          clampToGround: true,
+        },
+      })
+    }
+    viewerRef.current?.scene.requestRender()
+  }, [journal, places])
 
   useEffect(() => {
     if (viewerRef.current) applyQuality(viewerRef.current, quality)
