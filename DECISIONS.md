@@ -35,3 +35,4 @@ Trip planning and personal context live in the "Travel Japan" Claude Project, no
 - 2026-10-17 — Live on Vercel at https://travel-earth-ivory.vercel.app (Hobby plan, auto-deploys from `main`) — free, already in use, GitHub-linked; `vercel.json` pins the Vite build so dashboard presets can't break it.
 - 2026-10-17 — Cesium ion token "Japan Earth web app" allowlist now includes the Vercel URL and http://localhost:5173 — Phase 0 complete.
 - 2026-10-17 — Bottom tabs for now: **Map · Journal** (Tyler's call) — keep it minimal before the trip; Plan can return later.
+- 2026-10-17 — Map engine: **Cesium from the start**, strictly on the free Cesium ion Community plan (~1,000 Google 3D loads/month, stops instead of billing; no card ever) — photoreal look was the goal; Italia (MapLibre) is a reference for features only, ported piece by piece after Tyler ticks a checklist.
