@@ -1,0 +1,774 @@
+[
+  {
+    "id": "koshien",
+    "region": "japan",
+    "name": "Hanshin Koshien Stadium",
+    "localName": "阪神甲子園球場",
+    "lat": 34.7212,
+    "lon": 135.3616,
+    "city": "Nishinomiya",
+    "category": "baseball",
+    "why": "Hanshin finished first in the Central League and host the Climax final here Oct 14–19. If they win it, the Series opens in the most sacred ballpark in Asia: ivy walls, black-dirt infield, 47,000 people singing the Rokko Oroshi. Bring a yellow towel, or buy one at the gate.",
+    "tips": [
+      "Face-value tickets drop through team sites and Ticket Pia; resale runs higher",
+      "Your ceiling: $200 ≈ ¥31,700 per game",
+      "Tigers fan club presales usually go first — membership is being researched"
+    ],
+    "when": "Oct 24–25 · Oct 31–Nov 1",
+    "status": "Projected: Games 1–2, 6–7",
+    "flags": {
+      "series": true,
+      "tickets": true
+    },
+    "updated": "2026-10-12"
+  },
+  {
+    "id": "paypay",
+    "region": "japan",
+    "name": "Mizuho PayPay Dome Fukuoka",
+    "localName": "みずほPayPayドーム福岡",
+    "lat": 33.5954,
+    "lon": 130.3622,
+    "city": "Fukuoka",
+    "category": "baseball",
+    "why": "SoftBank clinched the Pacific League on Sept 17 and start the Climax final with a built-in edge. If they hold, Games 3–5 are here, which puts you a short walk from Nakasu's yatai stalls after every game. Hard to script a better three days.",
+    "tips": [
+      "Off day Oct 26: shinkansen Shin-Osaka → Hakata is about 2.5 hours",
+      "Dome roof means no rainouts",
+      "Sit near the right-field Hawks cheering section for the full show"
+    ],
+    "when": "Oct 27–29",
+    "status": "Projected: Games 3–5",
+    "flags": {
+      "series": true,
+      "tickets": true
+    },
+    "updated": "2026-10-12"
+  },
+  {
+    "id": "tokyodome",
+    "region": "japan",
+    "name": "Tokyo Dome",
+    "localName": "東京ドーム",
+    "lat": 35.7056,
+    "lon": 139.7519,
+    "city": "Tokyo",
+    "category": "baseball",
+    "why": "If the Giants upset Hanshin, the Series comes here. Either way, the Baseball Hall of Fame sits in the same complex, so it earns a visit.",
+    "tips": ["Giants vs DeNA first stage Oct 10–12, here"],
+    "when": "Only if Giants win CL",
+    "status": "Alternate CL venue",
+    "flags": {
+      "series": true,
+      "tickets": true
+    },
+    "updated": "2026-10-12"
+  },
+  {
+    "id": "yokohama",
+    "region": "japan",
+    "name": "Yokohama Stadium",
+    "localName": "横浜スタジアム",
+    "lat": 35.4434,
+    "lon": 139.64,
+    "city": "Yokohama",
+    "category": "baseball",
+    "why": "DeNA won the whole thing from third place in 2024. If they repeat the trick, you'll be next to Chinatown for Games 1–2.",
+    "tips": ["Five-minute walk to Yokohama Chinatown"],
+    "when": "Only if DeNA win CL",
+    "status": "Alternate CL venue",
+    "flags": {
+      "series": true,
+      "tickets": true
+    },
+    "updated": "2026-10-12"
+  },
+  {
+    "id": "koshienmuseum",
+    "region": "japan",
+    "name": "Koshien History Museum",
+    "localName": "甲子園歴史館",
+    "lat": 34.7203,
+    "lon": 135.3628,
+    "city": "Nishinomiya",
+    "category": "baseball",
+    "why": "A century of the national high-school tournament and the Tigers. The kids' tournament is the heart of Japanese baseball; this explains why grown men cry over it.",
+    "tips": ["Combine with a game day; it closes early"],
+    "price": {
+      "min": 900,
+      "max": 900,
+      "estimate": true
+    },
+    "updated": "2026-10-12"
+  },
+  {
+    "id": "hof",
+    "region": "japan",
+    "name": "Japanese Baseball Hall of Fame",
+    "localName": "野球殿堂博物館",
+    "lat": 35.705,
+    "lon": 139.7522,
+    "city": "Tokyo",
+    "category": "baseball",
+    "why": "Sadaharu Oh, Babe Ruth's 1934 tour, Ichiro, Ohtani. Small, dense and thoughtfully done.",
+    "tips": ["Inside the Tokyo Dome complex, gate 21"],
+    "price": {
+      "min": 600,
+      "max": 800,
+      "estimate": true
+    },
+    "updated": "2026-10-12"
+  },
+  {
+    "id": "ohmuseum",
+    "region": "japan",
+    "name": "Oh Sadaharu Baseball Museum",
+    "localName": "王貞治ベースボールミュージアム",
+    "lat": 33.5948,
+    "lon": 130.3615,
+    "city": "Fukuoka",
+    "category": "baseball",
+    "why": "868 home runs, one man. Next to the dome, so it fits a Fukuoka game day.",
+    "tips": ["Part of BOSS E・ZO FUKUOKA beside the dome"],
+    "price": {
+      "min": 1000,
+      "max": 1500,
+      "estimate": true
+    },
+    "updated": "2026-10-12"
+  },
+  {
+    "id": "daruma",
+    "region": "japan",
+    "name": "Daruma Kushikatsu, Shinsekai",
+    "localName": "だるま 新世界",
+    "lat": 34.6522,
+    "lon": 135.5063,
+    "city": "Osaka",
+    "category": "food",
+    "why": "Deep-fried skewers in Osaka's old neon district. Bourdain ate here. One rule, posted everywhere: no double-dipping in the communal sauce.",
+    "tips": [
+      "Cabbage is free; use it to scoop sauce",
+      "Go after a Koshien game: 30 minutes by train"
+    ],
+    "price": {
+      "min": 1500,
+      "max": 3000,
+      "estimate": true
+    },
+    "flags": {
+      "bourdain": true
+    },
+    "updated": "2026-10-12"
+  },
+  {
+    "id": "dotonbori",
+    "region": "japan",
+    "name": "Dotonbori",
+    "localName": "道頓堀",
+    "lat": 34.6687,
+    "lon": 135.5013,
+    "city": "Osaka",
+    "category": "food",
+    "why": "Takoyaki, okonomiyaki and the giant moving crab sign. Touristy, loud and still the right place to eat badly and happily in Osaka.",
+    "tips": [
+      "Eat standing; most stalls are cash-friendly",
+      "Tigers fans jump into the canal when they win big (don't)"
+    ],
+    "price": {
+      "min": 500,
+      "max": 1500
+    },
+    "updated": "2026-10-12"
+  },
+  {
+    "id": "nakasu",
+    "region": "japan",
+    "name": "Nakasu yatai stalls",
+    "localName": "中洲屋台",
+    "lat": 33.592,
+    "lon": 130.406,
+    "city": "Fukuoka",
+    "category": "food",
+    "why": "Open-air food stalls along the river, eight stools each. Hakata tonkotsu ramen, oden, yakitori, strangers who become drinking partners. This is the post-game plan.",
+    "tips": ["Many stalls are cash only", "Open evenings; closed in heavy rain"],
+    "price": {
+      "min": 800,
+      "max": 3000,
+      "estimate": true
+    },
+    "updated": "2026-10-12"
+  },
+  {
+    "id": "albatross",
+    "region": "japan",
+    "name": "Bar Albatross, Golden Gai",
+    "localName": "アルバトロス",
+    "lat": 35.694,
+    "lon": 139.7046,
+    "city": "Tokyo",
+    "category": "food",
+    "why": "Golden Gai is six alleys of bars that seat five or six people each. Bourdain drank at Albatross. Chandeliers in a closet, and the best people-watching in Shinjuku.",
+    "tips": [
+      "Small cover charge is normal in Golden Gai",
+      "Some bars are regulars-only; look for English signs"
+    ],
+    "price": {
+      "min": 1500,
+      "max": 3000,
+      "estimate": true
+    },
+    "flags": {
+      "bourdain": true
+    },
+    "updated": "2026-10-12"
+  },
+  {
+    "id": "horii",
+    "region": "japan",
+    "name": "Sarashina Horii",
+    "localName": "総本家 更科堀井",
+    "lat": 35.656,
+    "lon": 139.7366,
+    "city": "Tokyo",
+    "category": "food",
+    "why": "Soba made here since 1789, white and delicate. A Bourdain pick, and a calm counterweight to Shinjuku.",
+    "tips": ["Order the sarashina (white) soba first"],
+    "price": {
+      "min": 1200,
+      "max": 2500,
+      "estimate": true
+    },
+    "flags": {
+      "bourdain": true
+    },
+    "updated": "2026-10-12"
+  },
+  {
+    "id": "tsukiji",
+    "region": "japan",
+    "name": "Tsukiji Outer Market",
+    "localName": "築地場外市場",
+    "lat": 35.6655,
+    "lon": 139.77,
+    "city": "Tokyo",
+    "category": "food",
+    "why": "The wholesale market moved, but the outer market stayed: tamagoyaki on a stick, uni bowls, knife shops. Go hungry at 8am.",
+    "tips": ["Many shops close by early afternoon"],
+    "price": {
+      "min": 500,
+      "max": 4000
+    },
+    "updated": "2026-10-12"
+  },
+  {
+    "id": "omicho",
+    "region": "japan",
+    "name": "Omicho Market",
+    "localName": "近江町市場",
+    "lat": 36.5715,
+    "lon": 136.656,
+    "city": "Kanazawa",
+    "category": "food",
+    "why": "Kanazawa's 300-year-old market: snow crab season starts Nov 6, nodoguro, sweet shrimp. Bourdain filmed here. A strong pick for the open stretch after the Series.",
+    "tips": ["Snow crab season opens Nov 6"],
+    "price": {
+      "min": 1500,
+      "max": 5000,
+      "estimate": true
+    },
+    "flags": {
+      "bourdain": true
+    },
+    "updated": "2026-10-12"
+  },
+  {
+    "id": "ramenalley",
+    "region": "japan",
+    "name": "Ramen Alley, Sapporo",
+    "localName": "元祖さっぽろラーメン横丁",
+    "lat": 43.056,
+    "lon": 141.353,
+    "city": "Sapporo",
+    "category": "food",
+    "why": "A narrow lane of miso-ramen counters. Bourdain came through on No Reservations. Far north, but cheap flights make it a real option.",
+    "price": {
+      "min": 900,
+      "max": 1300,
+      "estimate": true
+    },
+    "flags": {
+      "bourdain": true
+    },
+    "updated": "2026-10-12"
+  },
+  {
+    "id": "inari",
+    "region": "japan",
+    "name": "Fushimi Inari Taisha",
+    "localName": "伏見稲荷大社",
+    "lat": 34.9671,
+    "lon": 135.7727,
+    "city": "Kyoto",
+    "category": "sight",
+    "why": "Ten thousand vermilion gates climbing a mountain. Go at dawn and walk past the crowds to the top; above the halfway point you'll be nearly alone with the foxes.",
+    "tips": ["Open 24 hours", "Full loop to the summit: 2–3 hours"],
+    "price": {
+      "min": 0,
+      "max": 0
+    },
+    "updated": "2026-10-12"
+  },
+  {
+    "id": "todaiji",
+    "region": "japan",
+    "name": "Todai-ji",
+    "localName": "東大寺",
+    "lat": 34.689,
+    "lon": 135.8398,
+    "city": "Nara",
+    "category": "sight",
+    "why": "A 15-metre bronze Buddha in one of the largest wooden buildings on earth, rebuilt and still standing since 1709. The deer will bow for crackers.",
+    "tips": ["Easy day trip from Osaka or Kyoto"],
+    "price": {
+      "min": 800,
+      "max": 800,
+      "estimate": true
+    },
+    "updated": "2026-10-12"
+  },
+  {
+    "id": "himeji",
+    "region": "japan",
+    "name": "Himeji Castle",
+    "localName": "姫路城",
+    "lat": 34.8394,
+    "lon": 134.6939,
+    "city": "Himeji",
+    "category": "sight",
+    "why": "The real thing: an original castle that survived war and bombing. Stop on the way from Kansai toward Fukuoka on the Oct 26 travel day.",
+    "tips": [
+      "Price rose for non-residents in 2026; verify at the gate",
+      "On the shinkansen line between Osaka and Hakata"
+    ],
+    "price": {
+      "min": 2500,
+      "max": 2500,
+      "estimate": true
+    },
+    "updated": "2026-10-12"
+  },
+  {
+    "id": "miyajima",
+    "region": "japan",
+    "name": "Itsukushima Shrine, Miyajima",
+    "localName": "厳島神社",
+    "lat": 34.2959,
+    "lon": 132.3196,
+    "city": "Hatsukaichi",
+    "category": "sight",
+    "why": "The floating torii. Stay one night so you see it after the day-trippers leave. Pair with Hiroshima's Peace Memorial.",
+    "tips": ["Island visitor tax ¥100", "Momijidani maple valley peaks mid-November"],
+    "price": {
+      "min": 300,
+      "max": 300,
+      "estimate": true
+    },
+    "updated": "2026-10-12"
+  },
+  {
+    "id": "dazaifu",
+    "region": "japan",
+    "name": "Dazaifu Tenmangu",
+    "localName": "太宰府天満宮",
+    "lat": 33.5215,
+    "lon": 130.535,
+    "city": "Dazaifu",
+    "category": "sight",
+    "why": "A 1,100-year-old shrine 30 minutes from Fukuoka. Eat a hot umegae-mochi on the approach. Easy morning before a night game.",
+    "tips": ["Nishitetsu train from Tenjin"],
+    "price": {
+      "min": 0,
+      "max": 0
+    },
+    "updated": "2026-10-12"
+  },
+  {
+    "id": "kiyomizu",
+    "region": "japan",
+    "name": "Kiyomizu-dera",
+    "localName": "清水寺",
+    "lat": 34.9949,
+    "lon": 135.785,
+    "city": "Kyoto",
+    "category": "sight",
+    "why": "A wooden stage over a hillside of maples, built without nails. Crowded, and worth it anyway.",
+    "tips": ["Autumn night illumination usually starts mid-November"],
+    "price": {
+      "min": 500,
+      "max": 500,
+      "estimate": true
+    },
+    "updated": "2026-10-12"
+  },
+  {
+    "id": "kumano",
+    "region": "japan",
+    "name": "Kumano Kodo (Nakahechi)",
+    "localName": "熊野古道",
+    "lat": 33.84,
+    "lon": 135.775,
+    "city": "Wakayama",
+    "category": "nature",
+    "why": "A thousand-year pilgrim trail through cedar forest to the Kumano shrines. Two to four days, inn to inn. One of only two pilgrim routes on the World Heritage list.",
+    "tips": [
+      "Book minshuku lodging a few days ahead",
+      "Pairs naturally with a Koyasan temple stay"
+    ],
+    "price": {
+      "min": 0,
+      "max": 0
+    },
+    "updated": "2026-10-12"
+  },
+  {
+    "id": "kamikochi",
+    "region": "japan",
+    "name": "Kamikochi",
+    "localName": "上高地",
+    "lat": 36.249,
+    "lon": 137.638,
+    "city": "Nagano",
+    "category": "nature",
+    "why": "An alpine valley under 3,000-metre peaks, with the larches turning gold. The road closes Nov 15, so early November is the last window of the year.",
+    "tips": ["Private cars banned; bus or taxi from Hirayu or Sawando", "Season closes Nov 15"],
+    "updated": "2026-10-12"
+  },
+  {
+    "id": "takao",
+    "region": "japan",
+    "name": "Mount Takao",
+    "localName": "高尾山",
+    "lat": 35.6251,
+    "lon": 139.2437,
+    "city": "Tokyo",
+    "category": "nature",
+    "why": "An hour from Shinjuku, a 599-metre mountain with a temple near the top and Fuji views on a clear day. Good first-day leg-stretcher after the flight.",
+    "tips": ["Trail 6 is the quieter, wetter route up"],
+    "price": {
+      "min": 400,
+      "max": 800,
+      "estimate": true
+    },
+    "updated": "2026-10-12"
+  },
+  {
+    "id": "biwa",
+    "region": "japan",
+    "name": "Lake Biwa bass fishing",
+    "localName": "琵琶湖",
+    "lat": 35.25,
+    "lon": 136.07,
+    "city": "Shiga",
+    "category": "fishing",
+    "why": "Japan's biggest lake and a famous big-bass fishery. Several guides run English-language solo trips. Close to Kyoto.",
+    "tips": [
+      "Look for guides that list English and solo bookings",
+      "Prices are per boat; ask about half days"
+    ],
+    "price": {
+      "min": 40000,
+      "max": 70000,
+      "estimate": true
+    },
+    "updated": "2026-10-12"
+  },
+  {
+    "id": "genkai",
+    "region": "japan",
+    "name": "Genkai Sea shared charters",
+    "localName": "玄界灘",
+    "lat": 33.65,
+    "lon": 130.25,
+    "city": "Fukuoka",
+    "category": "fishing",
+    "why": "Shared boats out of Fukuoka-area ports target sea bream, yellowtail and squid. You can join solo as one seat on a shared boat. Fits the Fukuoka leg.",
+    "tips": [
+      "Shared (乗合) boats take individuals",
+      "Most captains speak little English; a translation app helps"
+    ],
+    "price": {
+      "min": 10000,
+      "max": 15000,
+      "estimate": true
+    },
+    "updated": "2026-10-12"
+  },
+  {
+    "id": "koyasan",
+    "region": "japan",
+    "name": "Koyasan temple stay",
+    "localName": "高野山 宿坊",
+    "lat": 34.213,
+    "lon": 135.586,
+    "city": "Koya",
+    "category": "stay",
+    "why": "Sleep in a working Buddhist temple on a mountain, eat the monks' vegetarian shojin ryori, join the 6am chanting, then walk Okunoin cemetery at night among 200,000 graves and stone lanterns. This is your zen place.",
+    "tips": [
+      "Price usually includes dinner and breakfast",
+      "About 2 hours from Osaka (Nankai line + cable car)"
+    ],
+    "price": {
+      "min": 12000,
+      "max": 25000,
+      "estimate": true
+    },
+    "updated": "2026-10-12"
+  },
+  {
+    "id": "hiiragiya",
+    "region": "japan",
+    "name": "Hiiragiya Ryokan",
+    "localName": "柊家",
+    "lat": 35.0114,
+    "lon": 135.7639,
+    "city": "Kyoto",
+    "category": "stay",
+    "why": "A 200-year-old ryokan where Bourdain stayed. Tatami, a wooden bath, a kaiseki dinner served in the room. The once-in-a-trip splurge.",
+    "tips": ["Per person with dinner; book ahead", "Splurge candidate: yes or no still open"],
+    "price": {
+      "min": 60000,
+      "max": 120000,
+      "estimate": true
+    },
+    "flags": {
+      "bourdain": true
+    },
+    "updated": "2026-10-12"
+  },
+  {
+    "id": "takinoya",
+    "region": "japan",
+    "name": "Takinoya, Noboribetsu",
+    "localName": "滝乃家",
+    "lat": 42.496,
+    "lon": 141.15,
+    "city": "Hokkaido",
+    "category": "stay",
+    "why": "Hokkaido's sulfur-steaming onsen town. Bourdain stayed at Takinoya on No Reservations. A splurge if you head north.",
+    "price": {
+      "min": 40000,
+      "max": 80000,
+      "estimate": true
+    },
+    "flags": {
+      "bourdain": true
+    },
+    "updated": "2026-10-12"
+  },
+  {
+    "id": "jidai",
+    "region": "japan",
+    "name": "Jidai Matsuri",
+    "localName": "時代祭",
+    "lat": 35.016,
+    "lon": 135.7823,
+    "city": "Kyoto",
+    "category": "event",
+    "why": "Two thousand people in costume, from every era of Kyoto's 1,000 years as capital, parade to Heian Shrine.",
+    "tips": ["Arrival day; realistic only if you land early and go straight to Kyoto"],
+    "price": {
+      "min": 0,
+      "max": 0
+    },
+    "dates": {
+      "start": "2026-10-22",
+      "end": "2026-10-22"
+    },
+    "updated": "2026-10-12"
+  },
+  {
+    "id": "kurama",
+    "region": "japan",
+    "name": "Kurama Fire Festival",
+    "localName": "鞍馬の火祭",
+    "lat": 35.117,
+    "lon": 135.7708,
+    "city": "Kyoto",
+    "category": "event",
+    "why": "Torches the size of logs carried through a mountain village at night. One of Japan's wildest festivals.",
+    "tips": [
+      "Has been scaled back in recent years; confirm it's on",
+      "Same night as Jidai Matsuri"
+    ],
+    "price": {
+      "min": 0,
+      "max": 0
+    },
+    "dates": {
+      "start": "2026-10-22",
+      "end": "2026-10-22"
+    },
+    "updated": "2026-10-12"
+  },
+  {
+    "id": "karatsu",
+    "region": "japan",
+    "name": "Karatsu Kunchi",
+    "localName": "唐津くんち",
+    "lat": 33.45,
+    "lon": 129.9686,
+    "city": "Saga",
+    "category": "event",
+    "why": "Giant lacquered floats (a sea bream, a samurai helmet, a dragon) hauled through town by chanting crews. Starts the day after Game 7, an hour from Fukuoka. This could be the bridge from the Series to the open weeks.",
+    "tips": [
+      "Nov 3 is the big day on the beach",
+      "Lodging in Karatsu fills; stay in Fukuoka and train in"
+    ],
+    "price": {
+      "min": 0,
+      "max": 0
+    },
+    "dates": {
+      "start": "2026-11-02",
+      "end": "2026-11-04"
+    },
+    "updated": "2026-10-12"
+  },
+  {
+    "id": "hakone",
+    "region": "japan",
+    "name": "Hakone Daimyo Procession",
+    "localName": "箱根大名行列",
+    "lat": 35.233,
+    "lon": 139.105,
+    "city": "Hakone",
+    "category": "event",
+    "why": "A feudal lord's procession of 170 people in Edo-period dress walks through the hot-spring town.",
+    "price": {
+      "min": 0,
+      "max": 0
+    },
+    "dates": {
+      "start": "2026-11-03",
+      "end": "2026-11-03"
+    },
+    "updated": "2026-10-12"
+  },
+  {
+    "id": "asakusa",
+    "region": "japan",
+    "name": "Tokyo Jidai Matsuri",
+    "localName": "東京時代まつり",
+    "lat": 35.7148,
+    "lon": 139.7967,
+    "city": "Tokyo",
+    "category": "event",
+    "why": "Asakusa's costume parade through Tokyo history, around Senso-ji.",
+    "price": {
+      "min": 0,
+      "max": 0
+    },
+    "dates": {
+      "start": "2026-11-03",
+      "end": "2026-11-03"
+    },
+    "updated": "2026-10-12"
+  },
+  {
+    "id": "k_kamikochi",
+    "region": "japan",
+    "name": "Japan Alps larches",
+    "localName": "北アルプス",
+    "lat": 36.3,
+    "lon": 137.65,
+    "city": "Nagano",
+    "category": "season",
+    "why": "High-country larch turns gold first. Early November catches the end.",
+    "seasonPeak": {
+      "start": "2026-10-15",
+      "end": "2026-11-05"
+    },
+    "updated": "2026-10-12"
+  },
+  {
+    "id": "k_nikko",
+    "region": "japan",
+    "name": "Nikko · Irohazaka",
+    "localName": "日光",
+    "lat": 36.74,
+    "lon": 139.48,
+    "city": "Tochigi",
+    "category": "season",
+    "why": "Lake Chuzenji and the hairpin road peak in late October; the town and Toshogu shrine follow into early November.",
+    "seasonPeak": {
+      "start": "2026-10-20",
+      "end": "2026-11-10"
+    },
+    "updated": "2026-10-12"
+  },
+  {
+    "id": "k_oirase",
+    "region": "japan",
+    "name": "Oirase Gorge",
+    "localName": "奥入瀬渓流",
+    "lat": 40.54,
+    "lon": 140.97,
+    "city": "Aomori",
+    "category": "season",
+    "why": "A 14-kilometre stream walk under maples and beech. Far north, so it peaks early.",
+    "seasonPeak": {
+      "start": "2026-10-18",
+      "end": "2026-11-03"
+    },
+    "updated": "2026-10-12"
+  },
+  {
+    "id": "k_korankei",
+    "region": "japan",
+    "name": "Korankei",
+    "localName": "香嵐渓",
+    "lat": 35.14,
+    "lon": 137.317,
+    "city": "Aichi",
+    "category": "season",
+    "why": "Four thousand maples along a river near Nagoya. Starts turning right as your trip ends.",
+    "seasonPeak": {
+      "start": "2026-11-10",
+      "end": "2026-11-30"
+    },
+    "updated": "2026-10-12"
+  },
+  {
+    "id": "k_kyoto",
+    "region": "japan",
+    "name": "Kyoto temples",
+    "localName": "京都の紅葉",
+    "lat": 35.0148,
+    "lon": 135.7943,
+    "city": "Kyoto",
+    "category": "season",
+    "why": "Eikando, Tofuku-ji, Arashiyama. Kyoto peaks late; your last days might catch the first wave.",
+    "seasonPeak": {
+      "start": "2026-11-12",
+      "end": "2026-12-05"
+    },
+    "updated": "2026-10-12"
+  },
+  {
+    "id": "k_miyajima",
+    "region": "japan",
+    "name": "Momijidani, Miyajima",
+    "localName": "紅葉谷",
+    "lat": 34.293,
+    "lon": 132.324,
+    "city": "Hiroshima",
+    "category": "season",
+    "why": "Maple Valley behind the shrine. The name says it.",
+    "seasonPeak": {
+      "start": "2026-11-08",
+      "end": "2026-11-28"
+    },
+    "updated": "2026-10-12"
+  }
+]

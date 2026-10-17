@@ -36,3 +36,8 @@ Trip planning and personal context live in the "Travel Japan" Claude Project, no
 - 2026-10-17 — Cesium ion token "Japan Earth web app" allowlist now includes the Vercel URL and http://localhost:5173 — Phase 0 complete.
 - 2026-10-17 — Bottom tabs for now: **Map · Journal** (Tyler's call) — keep it minimal before the trip; Plan can return later.
 - 2026-10-17 — Map engine: **Cesium from the start**, strictly on the free Cesium ion Community plan (~1,000 Google 3D loads/month, stops instead of billing; no card ever) — photoreal look was the goal; Italia (MapLibre) is a reference for features only, ported piece by piece after Tyler ticks a checklist.
+- 2026-10-17 — Phase 1 map shell: Cesium (`cesium` package, no `resium`) + `vite-plugin-static-copy` for Cesium's runtime files — a thin wrapper of our own is easier to control than a React binding.
+- 2026-10-17 — Sharpness: `useBrowserRecommendedResolution=false` with `resolutionScale = min(dpr, 2) / dpr` — Cesium multiplies resolutionScale by devicePixelRatio when the flag is off, so setting resolutionScale to dpr (as first sketched in CLAUDE.md) would over-render. Data saver = 1x.
+- 2026-10-17 — Imagery ladder: Google Photorealistic 3D (free ion plan) → Cesium World Terrain + Bing (ion) → offline Natural Earth globe bundled with Cesium — the app never shows a blank map and nothing can bill.
+- 2026-10-17 — Content migrated from `legacy/places.js` to typed `content/japan/places.json` (40 places) via `scripts/migrate-legacy.mjs`; added `when`, `status`, `flags.series`, `flags.tickets` for projected Series games.
+- 2026-10-17 — Map is lazy-loaded so the shell appears instantly; the Cesium chunk (~1.1 MB gzipped) loads after.
