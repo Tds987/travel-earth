@@ -32,3 +32,5 @@ Trip planning and personal context live in the "Travel Japan" Claude Project, no
 - 2026-10-16 — Linter is oxlint (current Vite template default) instead of ESLint — same job, much faster, zero extra config; Prettier handles formatting.
 - 2026-10-16 — No Tailwind for now; plain CSS variables as design tokens — region packs swap a small set of variables, keeping the look per region simple.
 - 2026-10-16 — No installs on Tyler's own or borrowed devices — builds run in the cloud session and on Vercel; Tyler only uses the browser.
+- 2026-10-17 — Live on Vercel at https://travel-earth-ivory.vercel.app (Hobby plan, auto-deploys from `main`) — free, already in use, GitHub-linked; `vercel.json` pins the Vite build so dashboard presets can't break it.
+- 2026-10-17 — Cesium ion token "Japan Earth web app" allowlist now includes the Vercel URL and http://localhost:5173 — Phase 0 complete.
