@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { places } from '../content'
 import { nearestCity, timeAgo } from '../lib/geo'
+import { installSteps, isIOS, isStandalone } from '../lib/install'
 import { removeEntry, refreshStatus, useMediaSrc, type SyncStatus } from '../journal/store'
 import { cloud, cloudConfigured, signedInEmail, signIn, signOut, signUp } from '../journal/supabase'
 import type { Entry, LocalEntry, MediaItem } from '../journal/types'
@@ -81,6 +82,13 @@ export function JournalScreen(props: Props) {
             </button>
           </div>
         </div>
+      )}
+
+      {owner && isIOS() && !isStandalone() && (
+        <p className="journal__install">
+          <strong>Install first.</strong> {installSteps()} On iPhone the home-screen app keeps its
+          own journal, separate from Safari, so start logging there.
+        </p>
       )}
 
       {owner && <SharingCard status={props.status ?? 'local'} />}

@@ -1,3 +1,4 @@
+import { installSteps, isStandalone } from '../lib/install'
 import type { MapQuality, MapSource } from '../map/viewer'
 
 const SOURCE_TEXT: Record<MapSource, string> = {
@@ -41,6 +42,12 @@ export function InfoSheet({ source, quality, onQuality, onClose }: Props) {
           Lower resolution. Uses less data and battery on weak signal.
         </span>
       </label>
+      {!isStandalone() && (
+        <p className="sheet__row">
+          <span className="sheet__label">Use it like an app</span>
+          {installSteps()} It then opens full screen and works on weak signal.
+        </p>
+      )}
       <p className="sheet__note">
         Map data credits are shown at the bottom of the map. Train lines:
         「国土数値情報（鉄道データ）」 国土交通省 (MLIT Japan, 2024).
