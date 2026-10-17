@@ -65,6 +65,9 @@ function App() {
   const [filters, setFilters] = useState<Set<Filter>>(new Set())
   const [trainsOn, setTrainsOn] = useState(false)
   const [railPick, setRailPick] = useState<RailPick | null>(null)
+  const [heading, setHeading] = useState(0)
+  // -180..180, 0 = north up
+  const rotated = Math.abs((((heading % 360) + 540) % 360) - 180) > 4
   const api = useRef<MapApi | null>(null)
 
   useEffect(() => {
@@ -196,6 +199,8 @@ function App() {
             quality={quality}
             onSelect={select}
             onSelectRail={setRailPick}
+            highlight={railPick}
+            onHeading={setHeading}
             onTrainsError={() => flash('Couldn’t load train lines. Try again with signal.')}
             onReady={(a) => (api.current = a)}
             onSource={setSource}
@@ -286,6 +291,26 @@ function App() {
             locating={locating}
             trainsOn={trainsOn}
           />
+        )}
+
+        {!pickingStay && rotated && (
+          <button
+            type="button"
+            className="compass"
+            onClick={() => api.current?.northUp()}
+            aria-label="Turn map north up"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              aria-hidden="true"
+              style={{ transform: `rotate(${-heading}deg)` }}
+            >
+              <path d="M12 3 16 12h-8z" fill="#C8402F" />
+              <path d="M12 21 8 12h8z" fill="currentColor" opacity="0.45" />
+            </svg>
+          </button>
         )}
 
         {infoOpen && source && (

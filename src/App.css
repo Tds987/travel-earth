@@ -35,14 +35,21 @@
 .map-credits {
   position: absolute;
   left: 8px;
+  right: 76px;
   bottom: 6px;
   z-index: 2;
-  max-width: calc(100% - 16px);
-  font-size: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 9px;
   line-height: 1.2;
   color: rgba(255, 255, 255, 0.85);
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
   pointer-events: auto;
+}
+.map-credits * {
+  display: inline !important;
+  white-space: nowrap;
 }
 .map-credits img {
   max-height: 14px;
@@ -332,6 +339,23 @@
 .controls__btn + .controls__btn {
   border-top: 1px solid var(--color-line);
 }
+.compass {
+  position: absolute;
+  right: var(--space-gutter);
+  bottom: calc(40px + 4 * 48px + 3px + 10px);
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+  color: var(--color-ink);
+  cursor: pointer;
+}
+
 .controls__btn[aria-pressed='true'] {
   background: var(--color-ink);
   color: var(--color-surface);

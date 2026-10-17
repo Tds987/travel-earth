@@ -30,6 +30,7 @@ import {
   isRailPick,
   loadRail,
   RAIL_KINDS,
+  railHighlight,
   railPrimitive,
   type RailKind,
   type RailPick,
@@ -55,6 +56,8 @@ export type MapApi = {
   /** Ground point under the screen center, for "pick on map". */
   centerLonLat: () => { lon: number; lat: number } | null
   flyToBounds: (b: { w: number; s: number; e: number; n: number }) => void
+  /** Rotate back to north-up around the screen center. */
+  northUp: () => void
 }
 
 type Props = {
@@ -71,6 +74,10 @@ type Props = {
   onSelect: (id: string | null) => void
   onSelectRail: (pick: RailPick | null) => void
   onTrainsError: () => void
+  /** Line to emphasise (the one whose card is open). */
+  highlight: RailPick | null
+  /** Map heading in degrees (0 = north up), for the compass. */
+  onHeading: (deg: number) => void
   onReady: (api: MapApi) => void
   onSource: (source: MapSource) => void
 }
@@ -89,6 +96,8 @@ export default function MapView({
   onSelect,
   onSelectRail,
   onTrainsError,
+  highlight,
+  onHeading,
   onReady,
   onSource,
 }: Props) {
@@ -103,9 +112,17 @@ export default function MapView({
     stations: CustomDataSource
   } | null>(null)
   // Latest props for the viewer's event handlers, without re-creating the viewer.
-  const latest = useRef({ region, onSelect, onSelectRail, onReady, onSource, onTrainsError })
+  const latest = useRef({
+    region,
+    onSelect,
+    onSelectRail,
+    onReady,
+    onSource,
+    onTrainsError,
+    onHeading,
+  })
   useEffect(() => {
-    latest.current = { region, onSelect, onSelectRail, onReady, onSource, onTrainsError }
+    latest.current = { region, onSelect, onSelectRail, onReady, onSource, onTrainsError, onHeading }
   })
 
   // Create the viewer once.
@@ -149,6 +166,17 @@ export default function MapView({
       scene.requestRender()
     })
 
+    // Report heading so the compass can appear when the map is rotated.
+    camera.percentageChanged = 0.01
+    let lastHeading = 0
+    const removeHeading = camera.changed.addEventListener(() => {
+      const deg = Math.round(CesiumMath.toDegrees(camera.heading)) % 360
+      if (Math.abs(deg - lastHeading) >= 2) {
+        lastHeading = deg
+        latest.current.onHeading(deg)
+      }
+    })
+
     // Tap a pin to select it; tap empty map to clear.
     const handler = new ScreenSpaceEventHandler(scene.canvas)
     handler.setInputAction((e: { position: Cartesian2 }) => {
@@ -181,6 +209,18 @@ export default function MapView({
 
     onReady({
       flyToPoint: (lon, lat) => flyClose(lon, lat),
+      northUp() {
+        const target = centerTarget()
+        if (!target) return
+        camera.flyToBoundingSphere(new BoundingSphere(target, 0), {
+          offset: new HeadingPitchRange(
+            0,
+            camera.pitch,
+            Cartesian3.distance(camera.position, target),
+          ),
+          duration: duration() * 0.6,
+        })
+      },
       flyToBounds({ w, s, e, n }) {
         const pad = Math.max(e - w, n - s) * 0.15 + 0.05
         camera.flyTo({
@@ -243,6 +283,7 @@ export default function MapView({
 
     return () => {
       handler.destroy()
+      removeHeading()
       viewer.destroy()
       viewerRef.current = null
       journalRef.current = null
@@ -344,7 +385,7 @@ export default function MapView({
               outlineWidth: 2.5,
               heightReference: HeightReference.CLAMP_TO_GROUND,
               disableDepthTestDistance: Number.POSITIVE_INFINITY,
-              distanceDisplayCondition: new DistanceDisplayCondition(0, 2_500_000),
+              distanceDisplayCondition: new DistanceDisplayCondition(0, 900_000),
             },
             label: {
               text: st.nameEn ?? st.name,
@@ -368,6 +409,19 @@ export default function MapView({
       cancelled = true
     }
   }, [trainsOn])
+
+  // Emphasise the tapped line: a light halo with the line color on top.
+  useEffect(() => {
+    const viewer = viewerRef.current
+    if (!viewer || !highlight) return
+    const prims = railHighlight(highlight).map((p) => viewer.scene.groundPrimitives.add(p))
+    viewer.scene.requestRender()
+    return () => {
+      if (viewer.isDestroyed()) return
+      prims.forEach((p) => viewer.scene.groundPrimitives.remove(p))
+      viewer.scene.requestRender()
+    }
+  }, [highlight])
 
   // Journal overlay
   useEffect(() => {

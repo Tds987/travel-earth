@@ -82,6 +82,32 @@ export function railPrimitive(data: RailData, kind: RailKind): GroundPolylinePri
   })
 }
 
+/** Halo + bright line for the selected rail line (drawn above everything else). */
+export function railHighlight({ rail, kind }: RailPick): GroundPolylinePrimitive[] {
+  const width = RAIL_STYLE[kind].width
+  const make = (css: string, w: number) =>
+    new GroundPolylinePrimitive({
+      geometryInstances: rail.paths
+        .filter((p) => p.length >= 4)
+        .map(
+          (path) =>
+            new GeometryInstance({
+              geometry: new GroundPolylineGeometry({
+                positions: Cartesian3.fromDegreesArray(path),
+                width: w,
+              }),
+              attributes: {
+                color: ColorGeometryInstanceAttribute.fromColor(Color.fromCssColorString(css)),
+              },
+              id: { rail, kind } satisfies RailPick,
+            }),
+        ),
+      appearance: new PolylineColorAppearance(),
+      classificationType: ClassificationType.BOTH,
+    })
+  return [make('#F7F3E9', width + 7), make(RAIL_STYLE[kind].color, width + 2.5)]
+}
+
 export const isRailPick = (x: unknown): x is RailPick =>
   typeof x === 'object' && x !== null && 'rail' in x && 'kind' in x
 
