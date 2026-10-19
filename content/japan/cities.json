@@ -1,0 +1,146 @@
+[
+  {
+    "id": "tokyo",
+    "name": "Tokyo",
+    "lat": 35.6812,
+    "lon": 139.7671,
+    "radiusKm": 18,
+    "station": "Tokyo"
+  },
+  {
+    "id": "yokohama",
+    "name": "Yokohama",
+    "lat": 35.4437,
+    "lon": 139.638,
+    "radiusKm": 9,
+    "station": "Shin-Yokohama"
+  },
+  {
+    "id": "kamakura",
+    "name": "Kamakura",
+    "lat": 35.3192,
+    "lon": 139.5467,
+    "radiusKm": 5,
+    "station": "Kamakura"
+  },
+  {
+    "id": "hakone",
+    "name": "Hakone",
+    "lat": 35.2324,
+    "lon": 139.1069,
+    "radiusKm": 10,
+    "station": "Odawara"
+  },
+  {
+    "id": "nikko",
+    "name": "Nikko",
+    "lat": 36.7199,
+    "lon": 139.6982,
+    "radiusKm": 12,
+    "station": "Utsunomiya"
+  },
+  {
+    "id": "fukuoka",
+    "name": "Fukuoka",
+    "lat": 33.5902,
+    "lon": 130.4017,
+    "radiusKm": 10,
+    "station": "Hakata"
+  },
+  {
+    "id": "karatsu",
+    "name": "Karatsu",
+    "lat": 33.4502,
+    "lon": 129.9686,
+    "radiusKm": 6,
+    "station": "Karatsu"
+  },
+  {
+    "id": "osaka",
+    "name": "Osaka",
+    "lat": 34.6937,
+    "lon": 135.5023,
+    "radiusKm": 12,
+    "station": "Shin-Osaka"
+  },
+  {
+    "id": "kyoto",
+    "name": "Kyoto",
+    "lat": 35.0116,
+    "lon": 135.7681,
+    "radiusKm": 10,
+    "station": "Kyoto"
+  },
+  {
+    "id": "nara",
+    "name": "Nara",
+    "lat": 34.6851,
+    "lon": 135.8048,
+    "radiusKm": 6,
+    "station": "Nara"
+  },
+  {
+    "id": "koyasan",
+    "name": "Koyasan",
+    "lat": 34.2131,
+    "lon": 135.5852,
+    "radiusKm": 5,
+    "station": "Gokurakubashi"
+  },
+  {
+    "id": "himeji",
+    "name": "Himeji",
+    "lat": 34.8394,
+    "lon": 134.6939,
+    "radiusKm": 5,
+    "station": "Himeji"
+  },
+  {
+    "id": "hiroshima",
+    "name": "Hiroshima",
+    "lat": 34.3853,
+    "lon": 132.4553,
+    "radiusKm": 15,
+    "station": "Hiroshima"
+  },
+  {
+    "id": "kanazawa",
+    "name": "Kanazawa",
+    "lat": 36.5613,
+    "lon": 136.6562,
+    "radiusKm": 8,
+    "station": "Kanazawa"
+  },
+  {
+    "id": "nagasaki",
+    "name": "Nagasaki",
+    "lat": 32.7503,
+    "lon": 129.8777,
+    "radiusKm": 8,
+    "station": "Nagasaki"
+  },
+  {
+    "id": "kumamoto",
+    "name": "Kumamoto",
+    "lat": 32.8032,
+    "lon": 130.7079,
+    "radiusKm": 8,
+    "station": "Kumamoto"
+  },
+  {
+    "id": "sapporo",
+    "name": "Sapporo",
+    "lat": 43.0618,
+    "lon": 141.3545,
+    "radiusKm": 12,
+    "station": "Sapporo"
+  },
+  {
+    "id": "matsumoto",
+    "name": "Matsumoto",
+    "lat": 36.238,
+    "lon": 137.972,
+    "radiusKm": 30,
+    "station": "Matsumoto"
+  }
+]

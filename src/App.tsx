@@ -4,6 +4,8 @@ import { EntryComposer } from './components/EntryComposer'
 import { InfoSheet } from './components/InfoSheet'
 import { JournalScreen } from './components/JournalScreen'
 import { MapControls } from './components/MapControls'
+import { Panel, type PanelSize } from './components/Panel'
+import { PlanSheet } from './components/PlanSheet'
 import { PeekCard } from './components/PeekCard'
 import { RailCard } from './components/RailCard'
 import { SearchSheet } from './components/SearchSheet'
@@ -15,6 +17,9 @@ import { familyJournal } from './journal/supabase'
 import type { Entry } from './journal/types'
 import { nearestCity } from './lib/geo'
 import type { MapApi } from './map/MapView'
+import { japanToday, shortDay } from './plan/dates'
+import { cityById, stopPoint, type LatLon } from './plan/guide'
+import { planActions, usePlan } from './plan/store'
 import { lineBounds, RAIL_KINDS, RAIL_STYLE, type RailPick } from './map/rail'
 import type { MapQuality, MapSource } from './map/viewer'
 
@@ -51,7 +56,15 @@ function App() {
   const [family, setFamily] = useState<{ name: string; entries: Entry[] } | null>(null)
   const [familyError, setFamilyError] = useState(false)
 
-  const [tab, setTab] = useState<Tab>('map')
+  const [tab, setTab] = useState<Tab>(familyToken ? 'journal' : 'plan')
+  const [panel, setPanel] = useState<PanelSize>('half')
+  const plan = usePlan()
+  const [planDate, setPlanDate] = useState(() => {
+    const t = japanToday()
+    return t >= plan.start && t <= plan.end ? t : plan.start
+  })
+  const [userPos, setUserPos] = useState<LatLon | null>(null)
+  const [suggestionIds, setSuggestionIds] = useState<string[] | null>(null)
   const [selectedId, setSelectedId] = useState<string | null>(null)
   const [source, setSource] = useState<MapSource | null>(null)
   const [quality, setQuality] = useState<MapQuality>(readQuality)
@@ -95,10 +108,53 @@ function App() {
   const visited = useMemo(() => new Set(visitedAt.keys()), [visitedAt])
 
   const selected = places.find((p) => p.id === selectedId) ?? null
-  const visibleIds = useMemo(
-    () => new Set(places.filter((p) => matchesFilters(p, filters)).map((p) => p.id)),
-    [filters],
+  const byId = useMemo(() => new Map(places.map((p) => [p.id, p])), [])
+  const planDay = useMemo(() => plan.days[planDate] ?? { stops: [] }, [plan, planDate])
+  const dayStops = useMemo(
+    () =>
+      tab === 'plan'
+        ? planDay.stops
+            .map((s) => stopPoint(s, byId))
+            .filter((x): x is NonNullable<typeof x> => !!x)
+        : [],
+    [tab, planDay, byId],
   )
+  // Map pins: search filters always apply; in Plan, an active mood narrows to its suggestions
+  // (plus whatever is already in the day).
+  const visibleIds = useMemo(() => {
+    const base = places.filter((p) => matchesFilters(p, filters)).map((p) => p.id)
+    if (tab !== 'plan' || !suggestionIds) return new Set(base)
+    const keep = new Set([...suggestionIds, ...planDay.stops.map((s) => s.placeId ?? '')])
+    return new Set(base.filter((id) => keep.has(id)))
+  }, [filters, tab, suggestionIds, planDay])
+  const onSuggestions = useCallback((ids: string[] | null) => setSuggestionIds(ids), [])
+
+  // Picking a day (or changing its base) frames the map on that day: its stops, else its city.
+  const dayKey = `${planDate}|${planDay.base ?? ''}|${dayStops.length}`
+  useEffect(() => {
+    if (tab !== 'plan') return
+    const pts = dayStops.length ? dayStops : []
+    const city = planDay.base ? cityById.get(planDay.base) : undefined
+    if (pts.length) {
+      const lats = pts.map((p) => p.lat)
+      const lons = pts.map((p) => p.lon)
+      api.current?.flyToBounds({
+        w: Math.min(...lons) - 0.01,
+        e: Math.max(...lons) + 0.01,
+        s: Math.min(...lats) - 0.01,
+        n: Math.max(...lats) + 0.01,
+      })
+    } else if (city) {
+      const d = city.radiusKm / 111
+      api.current?.flyToBounds({
+        w: city.lon - d,
+        e: city.lon + d,
+        s: city.lat - d,
+        n: city.lat + d,
+      })
+    }
+    // Only re-frame when the day, its base, or its number of stops changes.
+  }, [dayKey, tab]) // oxlint-disable-line react-hooks/exhaustive-deps
   const toggleFilter = (f: Filter) =>
     setFilters((cur) => {
       const next = new Set(cur)
@@ -112,7 +168,10 @@ function App() {
     if (id) setRailPick(null)
     setInfoOpen(false)
     const place = id ? places.find((p) => p.id === id) : null
-    if (place) api.current?.flyToPlace(place)
+    if (place) {
+      api.current?.flyToPlace(place)
+      setPanel('peek') // make room for the card
+    }
   }, [])
 
   const changeQuality = (q: MapQuality) => {
@@ -133,6 +192,7 @@ function App() {
     setLocating(true)
     try {
       const pos = await getPosition()
+      setUserPos({ lat: pos.coords.latitude, lon: pos.coords.longitude })
       api.current?.showUser(pos.coords.longitude, pos.coords.latitude)
     } catch {
       flash('Couldn’t get your location. Check location permission.')
@@ -154,13 +214,10 @@ function App() {
   }
 
   const showOnMap = (e: Entry) => {
-    setTab('map')
     const place = e.placeId ? places.find((p) => p.id === e.placeId) : undefined
-    // Let the map tab become visible before flying.
-    setTimeout(() => {
-      if (e.lat != null && e.lon != null) api.current?.flyToPoint(e.lon, e.lat)
-      else if (place) select(place.id)
-    }, 50)
+    setPanel('peek')
+    if (e.lat != null && e.lon != null) api.current?.flyToPoint(e.lon, e.lat)
+    else if (place) select(place.id)
   }
 
   const startStay = async () => {
@@ -172,7 +229,7 @@ function App() {
         draft: { kind: 'stay', lat: coords.latitude, lon: coords.longitude },
       })
     } catch {
-      setTab('map')
+      setPanel('peek')
       setPickingStay(true)
     }
   }
@@ -185,8 +242,8 @@ function App() {
   }
 
   return (
-    <div className="app">
-      <div className="app__map" hidden={tab !== 'map'}>
+    <div className={`app app--panel-${panel}`}>
+      <div className="app__map">
         <Suspense fallback={<div className="map map--loading">Loading the globe…</div>}>
           <MapView
             places={places}
@@ -201,6 +258,7 @@ function App() {
             onSelectRail={setRailPick}
             highlight={railPick}
             onHeading={setHeading}
+            dayStops={dayStops}
             onTrainsError={() => flash('Couldn’t load train lines. Try again with signal.')}
             onReady={(a) => (api.current = a)}
             onSource={setSource}
@@ -330,6 +388,11 @@ function App() {
             place={selected}
             onClose={() => select(null)}
             visitedAt={visitedAt.get(selected.id)}
+            planLabel={`${shortDay(planDate)} ${Number(planDate.slice(8))}`}
+            inPlan={planDay.stops.some((s) => s.placeId === selected.id)}
+            onAddToPlan={
+              owner ? () => planActions.addStop(planDate, { placeId: selected.id }) : undefined
+            }
             onStamp={
               owner
                 ? () =>
@@ -343,18 +406,35 @@ function App() {
         )}
       </div>
 
-      {tab === 'journal' && (
-        <JournalScreen
-          mode={owner ? 'owner' : 'family'}
-          entries={entries}
-          familyName={family?.name}
-          status={journal.status}
-          onCheckIn={checkIn}
-          checkingIn={checkingIn}
-          onWrite={() => setComposer({ heading: 'New entry', draft: { kind: 'note' } })}
-          onAddStay={startStay}
-          onShowOnMap={showOnMap}
-        />
+      {tab === 'plan' && owner && !pickingStay && (
+        <Panel size={panel} onSize={setPanel} label="Plan">
+          <PlanSheet
+            places={places}
+            byId={byId}
+            date={planDate}
+            onDate={setPlanDate}
+            userPos={userPos}
+            onLocate={locate}
+            onShowPlace={(p) => select(p.id)}
+            onSuggestions={onSuggestions}
+          />
+        </Panel>
+      )}
+
+      {tab === 'journal' && !pickingStay && (
+        <Panel size={panel} onSize={setPanel} label="Journal">
+          <JournalScreen
+            mode={owner ? 'owner' : 'family'}
+            entries={entries}
+            familyName={family?.name}
+            status={journal.status}
+            onCheckIn={checkIn}
+            checkingIn={checkingIn}
+            onWrite={() => setComposer({ heading: 'New entry', draft: { kind: 'note' } })}
+            onAddStay={startStay}
+            onShowOnMap={showOnMap}
+          />
+        </Panel>
       )}
 
       {familyError && (
@@ -378,23 +458,22 @@ function App() {
           onClose={() => setSearchOpen(false)}
           onPickPlace={(p) => {
             setSearchOpen(false)
-            setTab('map')
-            setTimeout(() => select(p.id), 50)
+            select(p.id)
           }}
           onPickStation={(st) => {
             setSearchOpen(false)
-            setTab('map')
             setTrainsOn(true)
             select(null)
-            setTimeout(() => api.current?.flyToPoint(st.lon, st.lat), 50)
+            setPanel('peek')
+            api.current?.flyToPoint(st.lon, st.lat)
           }}
           onPickLine={(line, kind) => {
             setSearchOpen(false)
-            setTab('map')
             setTrainsOn(true)
             select(null)
+            setPanel('peek')
             setRailPick({ rail: line, kind })
-            setTimeout(() => api.current?.flyToBounds(lineBounds(line)), 50)
+            api.current?.flyToBounds(lineBounds(line))
           }}
         />
       )}

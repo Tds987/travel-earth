@@ -1,0 +1,1087 @@
+[
+  {
+    "id": "sensoji",
+    "region": "japan",
+    "name": "Senso-ji Temple, Asakusa",
+    "localName": "浅草寺",
+    "lat": 35.7148,
+    "lon": 139.7967,
+    "city": "Tokyo",
+    "category": "sight",
+    "subtype": "temple",
+    "why": "Tokyo's oldest temple (founded 628) through the giant red Kaminarimon lantern. Busy by day, quietly magical lit up at night when the crowds go home.",
+    "tips": [
+      "Go after 7 pm: the buildings are lit and the shopping street is shut",
+      "Nakamise snacks: ningyo-yaki and age-manju"
+    ],
+    "hours": "0:00–24:00",
+    "flags": {
+      "cultural": true
+    },
+    "era": "ancient",
+    "mapsQuery": "Senso-ji Temple, Asakusa, Tokyo, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "meijijingu",
+    "region": "japan",
+    "name": "Meiji Jingu Shrine",
+    "localName": "明治神宮",
+    "lat": 35.6764,
+    "lon": 139.6993,
+    "city": "Tokyo",
+    "category": "sight",
+    "subtype": "shrine",
+    "why": "A forest shrine in the middle of the city: 100,000 trees donated from all over Japan, a gravel path under a huge wooden torii, sake barrels stacked as offerings.",
+    "tips": [
+      "Opens around sunrise and closes at sunset",
+      "Pair with Harajuku and Omotesando in one walk"
+    ],
+    "hours": "6:00–17:00",
+    "flags": {
+      "cultural": true
+    },
+    "era": "meiji",
+    "mapsQuery": "Meiji Jingu Shrine, Tokyo, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "shibuyacrossing",
+    "region": "japan",
+    "name": "Shibuya Crossing & Shibuya Sky",
+    "localName": "渋谷スクランブル交差点",
+    "lat": 35.6595,
+    "lon": 139.7005,
+    "city": "Tokyo",
+    "category": "sight",
+    "subtype": "viewpoint",
+    "why": "The famous scramble: up to 3,000 people crossing at once. Watch from above at Shibuya Sky's open rooftop, 230 m up, best at sunset.",
+    "tips": [
+      "Shibuya Sky sunset slots sell out: book a few days ahead online (about ¥2,500)",
+      "The crossing itself is free and best at 6–8 pm"
+    ],
+    "price": {
+      "min": 2200,
+      "max": 2700,
+      "estimate": true
+    },
+    "hours": "0:00–24:00",
+    "flags": {
+      "trap": true
+    },
+    "bookAhead": 3,
+    "mapsQuery": "Shibuya Crossing & Shibuya Sky, Tokyo, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "goldengai",
+    "region": "japan",
+    "name": "Golden Gai, Shinjuku",
+    "localName": "新宿ゴールデン街",
+    "lat": 35.6938,
+    "lon": 139.7046,
+    "city": "Tokyo",
+    "category": "sight",
+    "subtype": "historic district",
+    "why": "Six narrow alleys, 200-odd bars, some with five seats. Postwar Tokyo frozen in place. Bourdain's kind of neighborhood.",
+    "tips": [
+      "Many bars charge a seating fee (¥500–1,500)",
+      "Look for 'Welcome' or English signs; some are regulars-only"
+    ],
+    "hours": "19:00–28:00",
+    "flags": {
+      "local": true,
+      "bourdain": true
+    },
+    "mapsQuery": "Golden Gai, Shinjuku, Tokyo, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "omoideyokocho",
+    "region": "japan",
+    "name": "Omoide Yokocho, Shinjuku",
+    "localName": "思い出横丁",
+    "lat": 35.693,
+    "lon": 139.6995,
+    "city": "Tokyo",
+    "category": "sight",
+    "subtype": "historic district",
+    "why": "'Memory Lane': a smoky alley of yakitori counters beside the Shinjuku tracks. Elbow room is optional.",
+    "tips": ["Cash", "Order a beer and a few skewers, then move to the next stall"],
+    "hours": "17:00–24:00",
+    "flags": {
+      "local": true
+    },
+    "mapsQuery": "Omoide Yokocho, Shinjuku, Tokyo, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "teamlab",
+    "region": "japan",
+    "name": "teamLab Planets, Toyosu",
+    "localName": "チームラボプラネッツ",
+    "lat": 35.6491,
+    "lon": 139.7898,
+    "city": "Tokyo",
+    "category": "sight",
+    "subtype": "museum",
+    "why": "Barefoot through rooms of light, water and mirrors. Gimmicky on paper, genuinely beautiful in person.",
+    "tips": [
+      "Timed tickets sell out on weekends: book about a week ahead",
+      "You'll wade knee-deep: wear shorts or roll-up pants"
+    ],
+    "price": {
+      "min": 3800,
+      "max": 4200,
+      "estimate": true
+    },
+    "hours": "9:00–22:00",
+    "bookAhead": 7,
+    "mapsQuery": "teamLab Planets, Toyosu, Tokyo, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "tokyonationalmuseum",
+    "region": "japan",
+    "name": "Tokyo National Museum, Ueno",
+    "localName": "東京国立博物館",
+    "lat": 35.7188,
+    "lon": 139.7765,
+    "city": "Tokyo",
+    "category": "sight",
+    "subtype": "museum",
+    "why": "Japan's biggest collection of samurai armor, swords, screens and Buddhist sculpture. If you only do one museum, make it this.",
+    "tips": ["Closed Mondays", "The Honkan (main building) has the greatest hits in two floors"],
+    "price": {
+      "min": 1000,
+      "max": 1000,
+      "estimate": true
+    },
+    "hours": "9:30–17:00",
+    "closed": ["Mon"],
+    "flags": {
+      "cultural": true
+    },
+    "era": "edo",
+    "mapsQuery": "Tokyo National Museum, Ueno, Tokyo, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "uenopark",
+    "region": "japan",
+    "name": "Ueno Park & Ameyoko",
+    "localName": "上野公園・アメ横",
+    "lat": 35.7146,
+    "lon": 139.7732,
+    "city": "Tokyo",
+    "category": "sight",
+    "subtype": "park",
+    "why": "Temples, a five-story pagoda and museums in one park, with Ameyoko next door: a rowdy postwar market street of fish, snacks and standing bars.",
+    "tips": ["Ameyoko is best late afternoon", "Cheap seafood rice bowls along the tracks"],
+    "hours": "5:00–23:00",
+    "mapsQuery": "Ueno Park & Ameyoko, Tokyo, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "imperialgardens",
+    "region": "japan",
+    "name": "Imperial Palace East Gardens",
+    "localName": "皇居東御苑",
+    "lat": 35.6852,
+    "lon": 139.7528,
+    "city": "Tokyo",
+    "category": "sight",
+    "subtype": "garden",
+    "why": "The old Edo Castle grounds: massive stone walls, moats and a free garden where the shogun's keep once stood.",
+    "tips": ["Free", "Closed Mondays and Fridays"],
+    "hours": "9:00–16:30",
+    "closed": ["Mon", "Fri"],
+    "flags": {
+      "cultural": true
+    },
+    "era": "edo",
+    "mapsQuery": "Imperial Palace East Gardens, Tokyo, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "yanaka",
+    "region": "japan",
+    "name": "Yanaka Old Town",
+    "localName": "谷中",
+    "lat": 35.7266,
+    "lon": 139.766,
+    "city": "Tokyo",
+    "category": "sight",
+    "subtype": "historic district",
+    "why": "One of the few neighborhoods that survived the war and the 1923 quake: temples, cats, a shotengai of old shops and a huge, peaceful cemetery.",
+    "tips": [
+      "Start at Nippori station, walk to Yanaka Ginza at sunset",
+      "Menchi-katsu (fried meat cutlet) from the street"
+    ],
+    "hours": "0:00–24:00",
+    "flags": {
+      "local": true
+    },
+    "mapsQuery": "Yanaka Old Town, Tokyo, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "ryogokukokugikan",
+    "region": "japan",
+    "name": "Ryogoku Kokugikan & sumo",
+    "localName": "両国国技館",
+    "lat": 35.6969,
+    "lon": 139.7934,
+    "city": "Tokyo",
+    "category": "sight",
+    "subtype": "sumo",
+    "why": "The sumo hall. No tournament in late October (the November tournament is in Fukuoka, around Nov 8–22), but the free sumo museum and chanko restaurants make Ryogoku worth an hour.",
+    "tips": ["Morning sumo practice at some stables can be watched with a tour"],
+    "hours": "10:00–16:30",
+    "flags": {
+      "cultural": true
+    },
+    "mapsQuery": "Ryogoku Kokugikan & sumo, Tokyo, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "akihabara",
+    "region": "japan",
+    "name": "Akihabara",
+    "localName": "秋葉原",
+    "lat": 35.7023,
+    "lon": 139.7745,
+    "city": "Tokyo",
+    "category": "sight",
+    "subtype": "neighborhood",
+    "why": "Electronics, anime, retro games and maid cafes. Even if it's not your thing, Super Potato's retro-game floors are a trip.",
+    "tips": [
+      "Sunday afternoons the main street goes car-free",
+      "Retro game shops: Super Potato, Beep"
+    ],
+    "hours": "10:00–21:00",
+    "flags": {
+      "trap": true
+    },
+    "mapsQuery": "Akihabara, Tokyo, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "ghibli",
+    "region": "japan",
+    "name": "Ghibli Museum, Mitaka",
+    "localName": "三鷹の森ジブリ美術館",
+    "lat": 35.6962,
+    "lon": 139.5704,
+    "city": "Tokyo",
+    "category": "sight",
+    "subtype": "museum",
+    "why": "Miyazaki's own whimsical museum, with a short film you can only see here. Tickets go on sale the 10th of the month before.",
+    "tips": [
+      "November tickets went on sale Oct 10: check Lawson Ticket for leftovers",
+      "Closed Tuesdays"
+    ],
+    "price": {
+      "min": 1000,
+      "max": 1000,
+      "estimate": true
+    },
+    "hours": "10:00–18:00",
+    "closed": ["Tue"],
+    "bookAhead": 30,
+    "mapsQuery": "Ghibli Museum, Mitaka, Tokyo, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "tokyotower",
+    "region": "japan",
+    "name": "Tokyo Tower & Zojo-ji",
+    "localName": "東京タワー・増上寺",
+    "lat": 35.6586,
+    "lon": 139.7454,
+    "city": "Tokyo",
+    "category": "sight",
+    "subtype": "viewpoint",
+    "why": "The orange 1958 tower rising behind a 600-year-old temple of the Tokugawa shoguns. The best photo in Tokyo is from Zojo-ji's gate at dusk.",
+    "tips": ["Zojo-ji is free; the tower deck is about ¥1,200"],
+    "price": {
+      "min": 1200,
+      "max": 3000,
+      "estimate": true
+    },
+    "hours": "9:00–22:30",
+    "era": "edo",
+    "mapsQuery": "Tokyo Tower & Zojo-ji, Tokyo, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "kappabashi",
+    "region": "japan",
+    "name": "Kappabashi Kitchen Street",
+    "localName": "かっぱ橋道具街",
+    "lat": 35.7135,
+    "lon": 139.788,
+    "city": "Tokyo",
+    "category": "sight",
+    "subtype": "shopping street",
+    "why": "Where Tokyo's chefs shop: knives, lacquerware, and the plastic food models you see in restaurant windows. A knife here beats any souvenir.",
+    "tips": [
+      "Kamata and Kama-Asa for knives; they'll engrave your name",
+      "Most shops close Sundays"
+    ],
+    "hours": "9:30–17:30",
+    "closed": ["Sun"],
+    "flags": {
+      "local": true
+    },
+    "mapsQuery": "Kappabashi Kitchen Street, Tokyo, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "nezu",
+    "region": "japan",
+    "name": "Nezu Shrine",
+    "localName": "根津神社",
+    "lat": 35.7202,
+    "lon": 139.7607,
+    "city": "Tokyo",
+    "category": "sight",
+    "subtype": "shrine",
+    "why": "A tunnel of small red torii gates and a 1706 lacquered shrine, without Kyoto's crowds.",
+    "tips": ["Free", "10 minutes' walk from Yanaka"],
+    "hours": "6:00–17:00",
+    "flags": {
+      "local": true,
+      "cultural": true
+    },
+    "era": "edo",
+    "mapsQuery": "Nezu Shrine, Tokyo, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "shimokitazawa",
+    "region": "japan",
+    "name": "Shimokitazawa",
+    "localName": "下北沢",
+    "lat": 35.6613,
+    "lon": 139.6681,
+    "city": "Tokyo",
+    "category": "sight",
+    "subtype": "neighborhood",
+    "why": "Tokyo's thrift-shop, live-music, tiny-bar neighborhood. Good for an aimless afternoon and a cheap gig at night.",
+    "tips": ["Live houses: Shelter, Club Que, 251", "Vintage shops open around noon"],
+    "hours": "12:00–23:00",
+    "flags": {
+      "local": true
+    },
+    "mapsQuery": "Shimokitazawa, Tokyo, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "hamarikyu",
+    "region": "japan",
+    "name": "Hama-rikyu Gardens",
+    "localName": "浜離宮恩賜庭園",
+    "lat": 35.66,
+    "lon": 139.7633,
+    "city": "Tokyo",
+    "category": "sight",
+    "subtype": "garden",
+    "why": "A shogun's duck-hunting garden with a teahouse on a tidal pond, skyscrapers behind it. Matcha and a sweet at Nakajima-no-ochaya.",
+    "tips": ["Water bus to Asakusa leaves from inside the garden"],
+    "price": {
+      "min": 300,
+      "max": 1100,
+      "estimate": true
+    },
+    "hours": "9:00–17:00",
+    "era": "edo",
+    "mapsQuery": "Hama-rikyu Gardens, Tokyo, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "fuunji",
+    "region": "japan",
+    "name": "Fuunji (tsukemen), Shinjuku",
+    "localName": "風雲児",
+    "lat": 35.6877,
+    "lon": 139.6965,
+    "city": "Tokyo",
+    "category": "food",
+    "subtype": "ramen",
+    "why": "Thick dipping noodles in a rich chicken-and-fish broth. There's always a line of office workers, and it moves fast.",
+    "tips": [
+      "Buy a ticket at the machine first",
+      "Ask for the soup-wari (broth top-up) at the end"
+    ],
+    "price": {
+      "min": 1000,
+      "max": 1300,
+      "estimate": true
+    },
+    "hours": "11:00–15:00, 17:00–21:00",
+    "closed": ["Sun"],
+    "flags": {
+      "local": true
+    },
+    "mapsQuery": "Fuunji (tsukemen), Shinjuku, Tokyo, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "afuri",
+    "region": "japan",
+    "name": "Afuri, Ebisu",
+    "localName": "AFURI 恵比寿",
+    "lat": 35.6475,
+    "lon": 139.7101,
+    "city": "Tokyo",
+    "category": "food",
+    "subtype": "ramen",
+    "why": "Light yuzu-shio ramen: citrusy, clean, perfect when you've had enough rich food. Open late.",
+    "tips": ["Vegan option available"],
+    "price": {
+      "min": 1100,
+      "max": 1500,
+      "estimate": true
+    },
+    "hours": "11:00–23:00",
+    "mapsQuery": "Afuri, Ebisu, Tokyo, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "tonki",
+    "region": "japan",
+    "name": "Tonki, Meguro",
+    "localName": "とんき",
+    "lat": 35.6334,
+    "lon": 139.7146,
+    "city": "Tokyo",
+    "category": "food",
+    "subtype": "tonkatsu",
+    "why": "A 1939 tonkatsu counter where a team of white-capped cooks works in silence. Crisp pork cutlet, refills of rice and cabbage.",
+    "tips": ["Closed Tuesdays", "They take your order while you wait in line"],
+    "price": {
+      "min": 2000,
+      "max": 2600,
+      "estimate": true
+    },
+    "hours": "16:00–22:30",
+    "closed": ["Tue"],
+    "flags": {
+      "local": true,
+      "cultural": true
+    },
+    "mapsQuery": "Tonki, Meguro, Tokyo, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "sushidai",
+    "region": "japan",
+    "name": "Sushi at Toyosu Market",
+    "localName": "豊洲市場 寿司",
+    "lat": 35.6455,
+    "lon": 139.7848,
+    "city": "Tokyo",
+    "category": "food",
+    "subtype": "sushi",
+    "why": "Breakfast sushi a few hundred meters from the tuna auction. Sushi Dai has the famous line; Daiwa Sushi and others next door are just as fresh.",
+    "tips": ["Go before 7 am or after 11 am", "Closed Sundays and market holidays"],
+    "price": {
+      "min": 3500,
+      "max": 6000,
+      "estimate": true
+    },
+    "hours": "6:00–14:00",
+    "closed": ["Sun"],
+    "flags": {
+      "trap": true
+    },
+    "mapsQuery": "Sushi at Toyosu Market, Tokyo, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "tsunahachi",
+    "region": "japan",
+    "name": "Tsunahachi Tempura, Shinjuku",
+    "localName": "つな八",
+    "lat": 35.6907,
+    "lon": 139.7027,
+    "city": "Tokyo",
+    "category": "food",
+    "subtype": "tempura",
+    "why": "Since 1924: tempura fried in front of you at the counter, one piece at a time. Lunch sets are a bargain.",
+    "tips": ["Sit at the counter", "Lunch set around ¥1,800"],
+    "price": {
+      "min": 1800,
+      "max": 4000,
+      "estimate": true
+    },
+    "hours": "11:00–22:00",
+    "mapsQuery": "Tsunahachi Tempura, Shinjuku, Tokyo, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "uogashinihonichi",
+    "region": "japan",
+    "name": "Uogashi Nihon-ichi standing sushi",
+    "localName": "魚がし日本一",
+    "lat": 35.6595,
+    "lon": 139.7015,
+    "city": "Tokyo",
+    "category": "food",
+    "subtype": "sushi",
+    "why": "Standing sushi bar: order piece by piece from the chef, eat, leave. Fresh, cheap and very Tokyo.",
+    "tips": ["Many branches; Shibuya and Shinjuku are handy", "Point at the menu boards"],
+    "price": {
+      "min": 1200,
+      "max": 2500,
+      "estimate": true
+    },
+    "hours": "11:00–23:00",
+    "flags": {
+      "local": true
+    },
+    "mapsQuery": "Uogashi Nihon-ichi standing sushi, Tokyo, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "yakitori-tonton",
+    "region": "japan",
+    "name": "Yakitori Ton Ton, Yurakucho",
+    "localName": "とんとん",
+    "lat": 35.6739,
+    "lon": 139.7618,
+    "city": "Tokyo",
+    "category": "food",
+    "subtype": "yakitori",
+    "why": "Smoky yakitori and beer under the train tracks at Yurakucho, with salarymen at plastic tables. Pure Tokyo after dark.",
+    "tips": ["Cash; many stalls under the tracks"],
+    "price": {
+      "min": 2500,
+      "max": 4000,
+      "estimate": true
+    },
+    "hours": "16:00–23:00",
+    "flags": {
+      "local": true
+    },
+    "mapsQuery": "Yakitori Ton Ton, Yurakucho, Tokyo",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "ichiran",
+    "region": "japan",
+    "name": "Ichiran Ramen",
+    "localName": "一蘭",
+    "lat": 35.6604,
+    "lon": 139.7013,
+    "city": "Tokyo",
+    "category": "food",
+    "subtype": "ramen",
+    "why": "Tonkotsu ramen in private booths, ordered on a form. Open 24 hours. Fun once, but locals call it the tourist ramen.",
+    "tips": ["Always open", "Fill in the form: firmness, richness, spice"],
+    "price": {
+      "min": 1000,
+      "max": 1500,
+      "estimate": true
+    },
+    "hours": "0:00–24:00",
+    "flags": {
+      "trap": true
+    },
+    "mapsQuery": "Ichiran Ramen, Tokyo, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "naniwaya",
+    "region": "japan",
+    "name": "Naniwaya Sohonten taiyaki, Azabu-Juban",
+    "localName": "浪花家総本店",
+    "lat": 35.6559,
+    "lon": 139.7364,
+    "city": "Tokyo",
+    "category": "sweet",
+    "subtype": "taiyaki",
+    "why": "Fish-shaped cakes with sweet red bean, made one at a time in iron molds since 1909. The original taiyaki shop.",
+    "tips": ["Closed Tuesdays", "Near Sarashina Horii soba"],
+    "price": {
+      "min": 200,
+      "max": 400,
+      "estimate": true
+    },
+    "hours": "11:00–19:00",
+    "closed": ["Tue"],
+    "flags": {
+      "local": true,
+      "cultural": true
+    },
+    "mapsQuery": "Naniwaya Sohonten taiyaki, Azabu-Juban, Tokyo, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "mihashi",
+    "region": "japan",
+    "name": "Mihashi anmitsu, Ueno",
+    "localName": "みはし",
+    "lat": 35.7102,
+    "lon": 139.7741,
+    "city": "Tokyo",
+    "category": "sweet",
+    "subtype": "wagashi",
+    "why": "Classic anmitsu: agar jelly, sweet beans, fruit and black sugar syrup. Old-Tokyo dessert in a no-frills shop.",
+    "tips": ["Opposite Ueno Park's south entrance"],
+    "price": {
+      "min": 700,
+      "max": 1100,
+      "estimate": true
+    },
+    "hours": "10:30–21:00",
+    "flags": {
+      "local": true
+    },
+    "mapsQuery": "Mihashi anmitsu Ueno, Tokyo",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "suzukien",
+    "region": "japan",
+    "name": "Suzukien matcha gelato, Asakusa",
+    "localName": "壽々喜園",
+    "lat": 35.7134,
+    "lon": 139.793,
+    "city": "Tokyo",
+    "category": "sweet",
+    "subtype": "matcha",
+    "why": "Matcha gelato in seven strengths. No. 7 is said to be the world's most intense matcha ice cream.",
+    "tips": ["Try No. 7 and a lighter one side by side"],
+    "price": {
+      "min": 500,
+      "max": 800,
+      "estimate": true
+    },
+    "hours": "11:00–17:00",
+    "flags": {
+      "local": true
+    },
+    "mapsQuery": "Suzukien matcha gelato, Asakusa, Tokyo, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "depachikasweets",
+    "region": "japan",
+    "name": "Isetan Shinjuku depachika sweets",
+    "localName": "伊勢丹新宿 デパ地下",
+    "lat": 35.6918,
+    "lon": 139.7045,
+    "city": "Tokyo",
+    "category": "sweet",
+    "subtype": "depachika",
+    "why": "The basement food hall of Isetan: pastry counters, wagashi, perfect fruit. A dessert crawl with no reservations needed.",
+    "tips": ["Weekday evenings are calmer"],
+    "price": {
+      "min": 400,
+      "max": 2000,
+      "estimate": true
+    },
+    "hours": "10:00–20:00",
+    "mapsQuery": "Isetan Shinjuku depachika sweets, Tokyo, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "ginzawest",
+    "region": "japan",
+    "name": "Ginza West",
+    "localName": "銀座ウエスト",
+    "lat": 35.669,
+    "lon": 139.7608,
+    "city": "Tokyo",
+    "category": "sweet",
+    "subtype": "cafe",
+    "why": "A 1947 coffee-and-cake salon: white tablecloths, leaf pies and dry cake. Postwar Ginza elegance.",
+    "price": {
+      "min": 1000,
+      "max": 1800,
+      "estimate": true
+    },
+    "hours": "9:00–22:00",
+    "flags": {
+      "cultural": true
+    },
+    "mapsQuery": "Ginza West, Tokyo, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "chatei",
+    "region": "japan",
+    "name": "Chatei Hatou, Shibuya",
+    "localName": "茶亭 羽當",
+    "lat": 35.6597,
+    "lon": 139.7039,
+    "city": "Tokyo",
+    "category": "coffee",
+    "subtype": "kissaten",
+    "why": "Dim, wood-paneled kissaten where each cup is hand-poured and served in a cup chosen to suit you. A Tokyo classic.",
+    "tips": ["No laptops; quiet room"],
+    "price": {
+      "min": 900,
+      "max": 1400,
+      "estimate": true
+    },
+    "hours": "11:00–23:00",
+    "flags": {
+      "local": true,
+      "cultural": true
+    },
+    "mapsQuery": "Chatei Hatou, Shibuya, Tokyo, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "glitch",
+    "region": "japan",
+    "name": "Glitch Coffee, Jimbocho",
+    "localName": "GLITCH COFFEE",
+    "lat": 35.6957,
+    "lon": 139.7594,
+    "city": "Tokyo",
+    "category": "coffee",
+    "subtype": "specialty",
+    "why": "Some of the best light-roast pour-over in Tokyo, in the city's old bookstore district.",
+    "tips": ["Pair with a browse of Jimbocho's used bookshops"],
+    "price": {
+      "min": 800,
+      "max": 1600,
+      "estimate": true
+    },
+    "hours": "8:00–19:00",
+    "mapsQuery": "Glitch Coffee, Jimbocho, Tokyo, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "cafedelambre",
+    "region": "japan",
+    "name": "Cafe de l’Ambre, Ginza",
+    "localName": "カフェ・ド・ランブル",
+    "lat": 35.6676,
+    "lon": 139.7647,
+    "city": "Tokyo",
+    "category": "coffee",
+    "subtype": "kissaten",
+    "why": "Coffee only, since 1948. The founder aged beans for decades. Order the Blanc et Noir, an iced coffee with milk in a champagne coupe.",
+    "tips": ["Coffee only, no food", "Cash"],
+    "price": {
+      "min": 800,
+      "max": 1500,
+      "estimate": true
+    },
+    "hours": "12:00–21:00",
+    "flags": {
+      "cultural": true
+    },
+    "mapsQuery": "Cafe de l’Ambre, Ginza, Tokyo, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "fuglen",
+    "region": "japan",
+    "name": "Fuglen Tokyo, Tomigaya",
+    "localName": "Fuglen Tokyo",
+    "lat": 35.6676,
+    "lon": 139.6914,
+    "city": "Tokyo",
+    "category": "coffee",
+    "subtype": "specialty",
+    "why": "Norwegian cafe by day, cocktail bar by night, in a quiet corner near Yoyogi Park.",
+    "price": {
+      "min": 600,
+      "max": 1200,
+      "estimate": true
+    },
+    "hours": "7:00–24:00",
+    "flags": {
+      "local": true
+    },
+    "mapsQuery": "Fuglen Tokyo, Tomigaya, Tokyo, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "kayaba",
+    "region": "japan",
+    "name": "Kayaba Coffee, Yanaka",
+    "localName": "カヤバ珈琲",
+    "lat": 35.7232,
+    "lon": 139.7708,
+    "city": "Tokyo",
+    "category": "coffee",
+    "subtype": "kissaten",
+    "why": "A 1938 wooden coffee house on a Yanaka corner, revived. Egg sandwich and a coffee on the tatami upstairs.",
+    "price": {
+      "min": 700,
+      "max": 1500,
+      "estimate": true
+    },
+    "hours": "8:00–18:00",
+    "flags": {
+      "local": true,
+      "cultural": true
+    },
+    "mapsQuery": "Kayaba Coffee, Yanaka, Tokyo, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "ebisuyokocho",
+    "region": "japan",
+    "name": "Ebisu Yokocho",
+    "localName": "恵比寿横丁",
+    "lat": 35.6464,
+    "lon": 139.7106,
+    "city": "Tokyo",
+    "category": "drink",
+    "subtype": "yokocho",
+    "why": "A covered alley of tiny bars and food stalls, loud and friendly. Easy to talk to strangers.",
+    "tips": ["Gets packed after 8 pm"],
+    "price": {
+      "min": 2000,
+      "max": 4000,
+      "estimate": true
+    },
+    "hours": "17:00–25:00",
+    "flags": {
+      "local": true
+    },
+    "mapsQuery": "Ebisu Yokocho, Tokyo, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "benfiddich",
+    "region": "japan",
+    "name": "Bar BenFiddich, Shinjuku",
+    "localName": "BenFiddich",
+    "lat": 35.6914,
+    "lon": 139.699,
+    "city": "Tokyo",
+    "category": "drink",
+    "subtype": "cocktail bar",
+    "why": "A candle-lit bar where the bartender grows and grinds his own herbs and builds cocktails from scratch. One of Asia's best.",
+    "tips": ["Small: go early or expect to wait", "No menu; tell him what you like"],
+    "price": {
+      "min": 2500,
+      "max": 5000,
+      "estimate": true
+    },
+    "hours": "18:00–27:00",
+    "closed": ["Sun"],
+    "mapsQuery": "Bar Benfiddich, Shinjuku, Tokyo, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "popeye",
+    "region": "japan",
+    "name": "Popeye craft beer, Ryogoku",
+    "localName": "麦酒倶楽部ポパイ",
+    "lat": 35.6964,
+    "lon": 139.7968,
+    "city": "Tokyo",
+    "category": "drink",
+    "subtype": "craft beer",
+    "why": "Seventy Japanese craft beers on tap. A beer pilgrimage spot for 30 years.",
+    "tips": ["Happy hour early evening"],
+    "price": {
+      "min": 1000,
+      "max": 3000,
+      "estimate": true
+    },
+    "hours": "17:00–23:00",
+    "flags": {
+      "local": true
+    },
+    "mapsQuery": "Popeye craft beer, Ryogoku, Tokyo, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "nonbei",
+    "region": "japan",
+    "name": "Nonbei Yokocho, Shibuya",
+    "localName": "のんべい横丁",
+    "lat": 35.6601,
+    "lon": 139.7023,
+    "city": "Tokyo",
+    "category": "drink",
+    "subtype": "yokocho",
+    "why": "'Drunkard's alley' beside the Shibuya tracks: lantern-lit bars with six seats each.",
+    "tips": ["Seating charges common"],
+    "price": {
+      "min": 1500,
+      "max": 3500,
+      "estimate": true
+    },
+    "hours": "18:00–26:00",
+    "flags": {
+      "local": true
+    },
+    "mapsQuery": "Nonbei Yokocho, Shibuya, Tokyo",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "shinbashi-bars",
+    "region": "japan",
+    "name": "Shinbashi salaryman bars (baseball on TV)",
+    "localName": "新橋",
+    "lat": 35.6663,
+    "lon": 139.7583,
+    "city": "Tokyo",
+    "category": "baseball",
+    "subtype": "sports bar",
+    "why": "Shinbashi's salaryman bars put NPB on every screen. Watch the away Series games here with the locals.",
+    "tips": ["Shinbashi station west exit, under the tracks"],
+    "price": {
+      "min": 1500,
+      "max": 3000,
+      "estimate": true
+    },
+    "hours": "17:00–24:00",
+    "flags": {
+      "local": true
+    },
+    "mapsQuery": "Shinbashi izakaya baseball, Tokyo",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "toyosu",
+    "region": "japan",
+    "name": "Toyosu Market tuna auction",
+    "localName": "豊洲市場",
+    "lat": 35.6455,
+    "lon": 139.7848,
+    "city": "Tokyo",
+    "category": "market",
+    "subtype": "fish market",
+    "why": "Where Tsukiji's wholesale market moved in 2018. Watch the tuna auction from the observation deck at dawn.",
+    "tips": [
+      "The lower viewing deck needs an online lottery (apply about a month ahead); the upper gallery is free",
+      "Closed Sundays and market holidays"
+    ],
+    "hours": "5:00–15:00",
+    "closed": ["Sun"],
+    "bookAhead": 30,
+    "mapsQuery": "Toyosu Market tuna auction, Tokyo, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "ameyoko",
+    "region": "japan",
+    "name": "Ameyoko Market",
+    "localName": "アメ横",
+    "lat": 35.7105,
+    "lon": 139.7745,
+    "city": "Tokyo",
+    "category": "market",
+    "subtype": "street market",
+    "why": "A clattering market street under the tracks: dried fish, fruit on sticks, discount sneakers, standing bars.",
+    "hours": "10:00–20:00",
+    "flags": {
+      "local": true
+    },
+    "mapsQuery": "Ameyoko Market, Tokyo, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "nakameguro",
+    "region": "japan",
+    "name": "Nakameguro & Daikanyama",
+    "localName": "中目黒",
+    "lat": 35.644,
+    "lon": 139.6986,
+    "city": "Tokyo",
+    "category": "market",
+    "subtype": "neighborhood",
+    "why": "Canal-side boutiques, Tsutaya bookstore's beautiful Daikanyama shop, and good coffee everywhere.",
+    "hours": "11:00–20:00",
+    "mapsQuery": "Nakameguro & Daikanyama, Tokyo, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "jakotsuyu",
+    "region": "japan",
+    "name": "Jakotsu-yu sento, Asakusa",
+    "localName": "蛇骨湯",
+    "lat": 35.7118,
+    "lon": 139.7952,
+    "city": "Tokyo",
+    "category": "onsen",
+    "subtype": "sento",
+    "why": "A neighborhood bathhouse fed by real hot-spring water, with a little outdoor bath. Tokyo's everyday bath culture, about ¥550.",
+    "tips": ["Bring a small towel or buy one there", "Closed Tuesdays"],
+    "price": {
+      "min": 550,
+      "max": 600,
+      "estimate": true
+    },
+    "hours": "13:00–24:00",
+    "closed": ["Tue"],
+    "flags": {
+      "local": true
+    },
+    "mapsQuery": "Jakotsu-yu sento, Asakusa, Tokyo, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "spalaqua",
+    "region": "japan",
+    "name": "Spa LaQua, Tokyo Dome City",
+    "localName": "スパ ラクーア",
+    "lat": 35.7067,
+    "lon": 139.752,
+    "city": "Tokyo",
+    "category": "onsen",
+    "subtype": "onsen",
+    "why": "A big modern onsen complex with outdoor baths and saunas. A good reset after the flight.",
+    "price": {
+      "min": 3200,
+      "max": 4000,
+      "estimate": true
+    },
+    "hours": "11:00–09:00",
+    "mapsQuery": "Spa LaQua, Tokyo Dome City, Tokyo, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "yoyogi",
+    "region": "japan",
+    "name": "Yoyogi Park",
+    "localName": "代々木公園",
+    "lat": 35.6717,
+    "lon": 139.6949,
+    "city": "Tokyo",
+    "category": "nature",
+    "subtype": "park",
+    "why": "Big, open and local on weekends: rockabilly dancers, drummers, picnics. Next to Meiji Jingu.",
+    "hours": "0:00–24:00",
+    "flags": {
+      "local": true
+    },
+    "mapsQuery": "Yoyogi Park, Tokyo, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "rikugien",
+    "region": "japan",
+    "name": "Rikugien Garden",
+    "localName": "六義園",
+    "lat": 35.7329,
+    "lon": 139.7468,
+    "city": "Tokyo",
+    "category": "season",
+    "subtype": "garden",
+    "why": "An Edo-era stroll garden and one of Tokyo's best for autumn color. Maples light up at night in late November.",
+    "tips": ["Best color late Nov–early Dec"],
+    "price": {
+      "min": 300,
+      "max": 300,
+      "estimate": true
+    },
+    "hours": "9:00–17:00",
+    "era": "edo",
+    "mapsQuery": "Rikugien Garden, Tokyo, Japan",
+    "updated": "2026-10-19"
+  }
+]

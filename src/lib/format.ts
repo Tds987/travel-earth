@@ -2,6 +2,11 @@ import type { Category, Place, Region } from '../types'
 
 export const CATEGORY_LABEL: Record<Category, string> = {
   food: 'Food',
+  sweet: 'Sweets',
+  coffee: 'Coffee',
+  drink: 'Drinks',
+  market: 'Market',
+  onsen: 'Onsen',
   sight: 'Sight',
   nature: 'Nature',
   stay: 'Stay',

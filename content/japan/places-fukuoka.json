@@ -1,0 +1,863 @@
+[
+  {
+    "id": "kushida",
+    "region": "japan",
+    "name": "Kushida Shrine",
+    "localName": "櫛田神社",
+    "lat": 33.593,
+    "lon": 130.4106,
+    "city": "Fukuoka",
+    "category": "sight",
+    "subtype": "shrine",
+    "why": "Hakata's guardian shrine since 757. A towering festival float from the Yamakasa race stands on display all year.",
+    "tips": ["Free", "Next to Kawabata shopping arcade"],
+    "hours": "4:00–22:00",
+    "flags": {
+      "cultural": true
+    },
+    "era": "ancient",
+    "mapsQuery": "Kushida Shrine, Fukuoka, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "tochoji",
+    "region": "japan",
+    "name": "Tocho-ji Temple",
+    "localName": "東長寺",
+    "lat": 33.5966,
+    "lon": 130.4135,
+    "city": "Fukuoka",
+    "category": "sight",
+    "subtype": "temple",
+    "why": "Home of Japan's largest wooden seated Buddha (10.8 m), founded by Kukai in 806. A five-story vermilion pagoda out front.",
+    "tips": ["The big Buddha hall has a small fee; the 'hell tunnel' beneath it is pitch dark"],
+    "price": {
+      "min": 0,
+      "max": 50,
+      "estimate": true
+    },
+    "hours": "9:00–17:00",
+    "flags": {
+      "cultural": true
+    },
+    "era": "heian",
+    "mapsQuery": "Tocho-ji Temple, Fukuoka, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "shofukuji",
+    "region": "japan",
+    "name": "Shofuku-ji, Japan’s first Zen temple",
+    "localName": "聖福寺",
+    "lat": 33.5978,
+    "lon": 130.4148,
+    "city": "Fukuoka",
+    "category": "sight",
+    "subtype": "temple",
+    "why": "Founded in 1195 by Eisai, who also brought tea to Japan. Mossy, quiet grounds a few minutes from Hakata station.",
+    "tips": ["Grounds free; buildings mostly closed to visitors"],
+    "hours": "0:00–24:00",
+    "flags": {
+      "local": true,
+      "cultural": true
+    },
+    "era": "kamakura",
+    "mapsQuery": "Shofuku-ji, Japan’s first Zen temple, Fukuoka, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "ohori",
+    "region": "japan",
+    "name": "Ohori Park & Fukuoka Castle ruins",
+    "localName": "大濠公園・福岡城跡",
+    "lat": 33.5859,
+    "lon": 130.3765,
+    "city": "Fukuoka",
+    "category": "sight",
+    "subtype": "park",
+    "why": "A big lake park with a Japanese garden, next to the stone walls of Fukuoka Castle on a hill with city views.",
+    "tips": ["Japanese garden ¥250; castle ruins free"],
+    "hours": "0:00–24:00",
+    "mapsQuery": "Ohori Park & Fukuoka Castle ruins, Fukuoka, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "dazaifu",
+    "region": "japan",
+    "name": "Dazaifu Tenmangu",
+    "localName": "太宰府天満宮",
+    "lat": 33.5215,
+    "lon": 130.5349,
+    "city": "Fukuoka",
+    "category": "sight",
+    "subtype": "shrine",
+    "why": "Shrine to the god of learning, 30 minutes from Tenjin. Plum trees, a red bridge over a pond, and a temporary modern main hall while the old one is restored.",
+    "tips": [
+      "Nishitetsu train from Tenjin, change at Futsukaichi",
+      "Umegae-mochi (grilled bean cakes) on the approach"
+    ],
+    "hours": "6:30–19:00",
+    "flags": {
+      "cultural": true
+    },
+    "era": "heian",
+    "mapsQuery": "Dazaifu Tenmangu, Fukuoka, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "kyuhaku",
+    "region": "japan",
+    "name": "Kyushu National Museum",
+    "localName": "九州国立博物館",
+    "lat": 33.5182,
+    "lon": 130.5381,
+    "city": "Fukuoka",
+    "category": "sight",
+    "subtype": "museum",
+    "why": "A glass wave of a building behind Dazaifu, telling Japan's story as a meeting point with Korea and China.",
+    "tips": ["Closed Mondays"],
+    "price": {
+      "min": 700,
+      "max": 700,
+      "estimate": true
+    },
+    "hours": "9:30–17:00",
+    "closed": ["Mon"],
+    "mapsQuery": "Kyushu National Museum, Fukuoka, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "nanzoin",
+    "region": "japan",
+    "name": "Nanzoin reclining Buddha",
+    "localName": "南蔵院",
+    "lat": 33.6261,
+    "lon": 130.5813,
+    "city": "Fukuoka",
+    "category": "sight",
+    "subtype": "temple",
+    "why": "A bronze reclining Buddha 41 m long, said to be the biggest bronze statue in the world, in a forested temple 25 minutes by train.",
+    "tips": ["JR Sasaguri line to Kidonanzoin-mae"],
+    "hours": "9:00–16:30",
+    "mapsQuery": "Nanzoin reclining Buddha, Fukuoka, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "machiya",
+    "region": "japan",
+    "name": "Hakata Machiya Folk Museum",
+    "localName": "博多町家ふるさと館",
+    "lat": 33.5937,
+    "lon": 130.4116,
+    "city": "Fukuoka",
+    "category": "sight",
+    "subtype": "museum",
+    "why": "Old Hakata life in a restored merchant house: weavers at work, Hakata dialect recordings, and the festival culture explained.",
+    "price": {
+      "min": 200,
+      "max": 200,
+      "estimate": true
+    },
+    "hours": "10:00–18:00",
+    "era": "meiji",
+    "mapsQuery": "Hakata Machiya Folk Museum, Fukuoka, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "canalcity",
+    "region": "japan",
+    "name": "Canal City Hakata",
+    "localName": "キャナルシティ博多",
+    "lat": 33.5898,
+    "lon": 130.4109,
+    "city": "Fukuoka",
+    "category": "sight",
+    "subtype": "shopping",
+    "why": "A mall built around a canal with fountain shows, and Ramen Stadium upstairs with eight shops from across Japan.",
+    "hours": "10:00–21:00",
+    "flags": {
+      "trap": true
+    },
+    "mapsQuery": "Canal City Hakata, Fukuoka, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "momochi",
+    "region": "japan",
+    "name": "Momochi Seaside & Fukuoka Tower",
+    "localName": "シーサイドももち",
+    "lat": 33.5933,
+    "lon": 130.3515,
+    "city": "Fukuoka",
+    "category": "sight",
+    "subtype": "viewpoint",
+    "why": "Beach promenade with the 234 m Fukuoka Tower. The tower deck at sunset looks out over the bay to the islands.",
+    "tips": ["Next to PayPay Dome: easy pre-game"],
+    "price": {
+      "min": 800,
+      "max": 800,
+      "estimate": true
+    },
+    "hours": "9:30–22:00",
+    "mapsQuery": "Momochi Seaside & Fukuoka Tower, Fukuoka, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "rakusuien",
+    "region": "japan",
+    "name": "Rakusuien Garden",
+    "localName": "楽水園",
+    "lat": 33.5882,
+    "lon": 130.4142,
+    "city": "Fukuoka",
+    "category": "sight",
+    "subtype": "garden",
+    "why": "A tiny Meiji-era merchant's garden with a waterfall and a tea room. Matcha and a sweet for about ¥500, ten minutes from Hakata station.",
+    "tips": ["Closed Tuesdays"],
+    "price": {
+      "min": 100,
+      "max": 600,
+      "estimate": true
+    },
+    "hours": "9:00–17:00",
+    "closed": ["Tue"],
+    "flags": {
+      "local": true
+    },
+    "era": "meiji",
+    "mapsQuery": "Rakusuien Garden, Fukuoka, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "kawabata",
+    "region": "japan",
+    "name": "Kawabata Shotengai",
+    "localName": "川端商店街",
+    "lat": 33.5936,
+    "lon": 130.4085,
+    "city": "Fukuoka",
+    "category": "sight",
+    "subtype": "shopping street",
+    "why": "Fukuoka's oldest covered arcade: zenzai sweet-bean soup, Hakata dolls, festival goods.",
+    "hours": "10:00–19:00",
+    "flags": {
+      "local": true
+    },
+    "mapsQuery": "Kawabata Shotengai, Fukuoka, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "shinshin",
+    "region": "japan",
+    "name": "ShinShin ramen, Tenjin",
+    "localName": "ShinShin",
+    "lat": 33.5899,
+    "lon": 130.3943,
+    "city": "Fukuoka",
+    "category": "food",
+    "subtype": "ramen",
+    "why": "Silky Hakata tonkotsu with thin noodles, the local favorite over the chains. Order 'barikata' (very firm) and ask for kaedama (extra noodles).",
+    "tips": ["Expect a short line at lunch"],
+    "price": {
+      "min": 800,
+      "max": 1200,
+      "estimate": true
+    },
+    "hours": "11:00–25:00",
+    "flags": {
+      "local": true
+    },
+    "mapsQuery": "ShinShin ramen, Tenjin, Fukuoka, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "nagahamaya",
+    "region": "japan",
+    "name": "Ganso Nagahamaya",
+    "localName": "元祖長浜屋",
+    "lat": 33.5951,
+    "lon": 130.3852,
+    "city": "Fukuoka",
+    "category": "food",
+    "subtype": "ramen",
+    "why": "One-item menu since 1952: a cheap, light tonkotsu bowl for fishermen at the Nagahama fish market. Refill noodles for ¥150.",
+    "tips": ["Cash; ticket machine"],
+    "price": {
+      "min": 550,
+      "max": 800,
+      "estimate": true
+    },
+    "hours": "6:00–25:45",
+    "flags": {
+      "local": true,
+      "cultural": true
+    },
+    "mapsQuery": "Ganso Nagahamaya, Fukuoka, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "ichiranhonten",
+    "region": "japan",
+    "name": "Ichiran Main Shop, Nakasu",
+    "localName": "一蘭 本社総本店",
+    "lat": 33.5928,
+    "lon": 130.4061,
+    "city": "Fukuoka",
+    "category": "food",
+    "subtype": "ramen",
+    "why": "Where the booth-style ramen chain began, open 24 hours. Fine, but the locals' picks above are better.",
+    "price": {
+      "min": 1000,
+      "max": 1500,
+      "estimate": true
+    },
+    "hours": "0:00–24:00",
+    "flags": {
+      "trap": true
+    },
+    "mapsQuery": "Ichiran Main Shop, Nakasu, Fukuoka, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "motsunabe",
+    "region": "japan",
+    "name": "Motsunabe at Rakutenchi",
+    "localName": "楽天地",
+    "lat": 33.5917,
+    "lon": 130.4117,
+    "city": "Fukuoka",
+    "category": "food",
+    "subtype": "motsunabe",
+    "why": "Fukuoka's hot pot: beef offal, cabbage and chives piled high in garlicky broth, finished with noodles. Perfect after a game.",
+    "tips": ["Order champon noodles to finish"],
+    "price": {
+      "min": 1500,
+      "max": 3000,
+      "estimate": true
+    },
+    "hours": "17:00–24:00",
+    "flags": {
+      "local": true
+    },
+    "mapsQuery": "Motsunabe at Rakutenchi, Fukuoka, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "mizutaki",
+    "region": "japan",
+    "name": "Mizutaki at Hakata Hanamidori",
+    "localName": "博多華味鳥",
+    "lat": 33.5905,
+    "lon": 130.4205,
+    "city": "Fukuoka",
+    "category": "food",
+    "subtype": "mizutaki",
+    "why": "Chicken hot pot in a milky collagen broth, a Hakata classic. Drink the broth first with a pinch of salt.",
+    "price": {
+      "min": 3000,
+      "max": 6000,
+      "estimate": true
+    },
+    "hours": "17:00–23:00",
+    "flags": {
+      "cultural": true
+    },
+    "mapsQuery": "Mizutaki at Hakata Hanamidori, Fukuoka, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "makinoudon",
+    "region": "japan",
+    "name": "Makino Udon",
+    "localName": "牧のうどん",
+    "lat": 33.555,
+    "lon": 130.342,
+    "city": "Fukuoka",
+    "category": "food",
+    "subtype": "udon",
+    "why": "Soft Hakata-style udon that keeps soaking up broth, so they give you a pot to refill. Fukuoka claims to be the birthplace of udon.",
+    "tips": ["Several branches; cheap and fast"],
+    "price": {
+      "min": 500,
+      "max": 900,
+      "estimate": true
+    },
+    "hours": "9:00–24:00",
+    "flags": {
+      "local": true
+    },
+    "mapsQuery": "Makino Udon, Fukuoka, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "tetsunabe",
+    "region": "japan",
+    "name": "Tetsunabe gyoza, Nakasu",
+    "localName": "鉄なべ",
+    "lat": 33.5935,
+    "lon": 130.407,
+    "city": "Fukuoka",
+    "category": "food",
+    "subtype": "gyoza",
+    "why": "Bite-size Hakata gyoza sizzled in an iron pan, with beer. Cash, cramped, perfect.",
+    "price": {
+      "min": 1000,
+      "max": 2500,
+      "estimate": true
+    },
+    "hours": "17:00–24:00",
+    "flags": {
+      "local": true
+    },
+    "mapsQuery": "Tetsunabe gyoza, Nakasu, Fukuoka, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "mentaiju",
+    "region": "japan",
+    "name": "Ganso Hakata Mentaiju",
+    "localName": "元祖博多めんたい重",
+    "lat": 33.5947,
+    "lon": 130.4049,
+    "city": "Fukuoka",
+    "category": "food",
+    "subtype": "mentaiko",
+    "why": "Rice bowls topped with a whole slab of spicy cod roe (mentaiko), Fukuoka's signature ingredient. Breakfast or lunch line.",
+    "price": {
+      "min": 1800,
+      "max": 2500,
+      "estimate": true
+    },
+    "hours": "7:00–22:30",
+    "mapsQuery": "Ganso Hakata Mentaiju, Fukuoka, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "umegae",
+    "region": "japan",
+    "name": "Umegae-mochi at Dazaifu",
+    "localName": "梅ヶ枝餅",
+    "lat": 33.5205,
+    "lon": 130.5333,
+    "city": "Fukuoka",
+    "category": "sweet",
+    "subtype": "wagashi",
+    "why": "Grilled rice cakes filled with red bean, sold fresh off the irons all along the Dazaifu shrine approach.",
+    "tips": ["Kasanoya is the classic stall"],
+    "price": {
+      "min": 150,
+      "max": 300,
+      "estimate": true
+    },
+    "hours": "9:00–18:00",
+    "flags": {
+      "local": true,
+      "cultural": true
+    },
+    "mapsQuery": "Kasanoya umegae mochi, Dazaifu",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "amaou",
+    "region": "japan",
+    "name": "Amaou strawberry desserts",
+    "localName": "あまおう",
+    "lat": 33.59,
+    "lon": 130.4206,
+    "city": "Fukuoka",
+    "category": "sweet",
+    "subtype": "fruit",
+    "why": "Fukuoka's giant Amaou strawberries. Look for parfaits and strawberry daifuku at Hakata station's sweets halls.",
+    "price": {
+      "min": 500,
+      "max": 1800,
+      "estimate": true
+    },
+    "hours": "10:00–20:00",
+    "mapsQuery": "Amaou strawberry parfait, Hakata station",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "zenzai",
+    "region": "japan",
+    "name": "Kawabata Zenzai Hiroba",
+    "localName": "川端ぜんざい広場",
+    "lat": 33.594,
+    "lon": 130.4086,
+    "city": "Fukuoka",
+    "category": "sweet",
+    "subtype": "wagashi",
+    "why": "Warm sweet-red-bean soup with mochi in the old arcade, served under festival floats. Usually weekends only.",
+    "tips": ["Typically Fri–Sun"],
+    "price": {
+      "min": 500,
+      "max": 600,
+      "estimate": true
+    },
+    "hours": "11:00–18:00",
+    "mapsQuery": "Kawabata Zenzai Hiroba, Fukuoka, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "manucoffee",
+    "region": "japan",
+    "name": "Manu Coffee, Daimyo",
+    "localName": "manu coffee",
+    "lat": 33.5872,
+    "lon": 130.3925,
+    "city": "Fukuoka",
+    "category": "coffee",
+    "subtype": "specialty",
+    "why": "Fukuoka's best-known local roaster, in the hip Daimyo district.",
+    "price": {
+      "min": 500,
+      "max": 900,
+      "estimate": true
+    },
+    "hours": "8:00–24:00",
+    "flags": {
+      "local": true
+    },
+    "mapsQuery": "Manu Coffee, Daimyo, Fukuoka, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "coffeebimi",
+    "region": "japan",
+    "name": "Coffee Bimi, Akasaka",
+    "localName": "珈琲美美",
+    "lat": 33.5881,
+    "lon": 130.3846,
+    "city": "Fukuoka",
+    "category": "coffee",
+    "subtype": "kissaten",
+    "why": "A revered, serious kissaten: dark-roasted, hand-dripped, served in fine cups. Coffee as ceremony.",
+    "tips": ["Closed Mondays"],
+    "price": {
+      "min": 800,
+      "max": 1300,
+      "estimate": true
+    },
+    "hours": "11:00–19:00",
+    "closed": ["Mon"],
+    "flags": {
+      "local": true,
+      "cultural": true
+    },
+    "mapsQuery": "Coffee Bimi, Akasaka, Fukuoka, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "reccoffee",
+    "region": "japan",
+    "name": "Rec Coffee, Yakuin",
+    "localName": "REC COFFEE",
+    "lat": 33.5815,
+    "lon": 130.3955,
+    "city": "Fukuoka",
+    "category": "coffee",
+    "subtype": "specialty",
+    "why": "Run by a Japan Barista Champion. Bright espresso drinks, open late.",
+    "price": {
+      "min": 500,
+      "max": 900,
+      "estimate": true
+    },
+    "hours": "8:00–24:00",
+    "mapsQuery": "Rec Coffee, Yakuin, Fukuoka, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "yatai-nakasu",
+    "region": "japan",
+    "name": "Yatai food stalls, Nakasu riverside",
+    "localName": "中洲屋台",
+    "lat": 33.5911,
+    "lon": 130.4053,
+    "city": "Fukuoka",
+    "category": "drink",
+    "subtype": "yatai",
+    "why": "Fukuoka's open-air food stalls light up along the river at dusk: eight seats, a cook, a beer, ramen or yakitori and strangers who become friends.",
+    "tips": [
+      "Stalls open ~6 pm; closed in rain",
+      "Order a drink and one dish per person, then move on"
+    ],
+    "price": {
+      "min": 1500,
+      "max": 3500,
+      "estimate": true
+    },
+    "hours": "18:00–25:00",
+    "flags": {
+      "local": true,
+      "cultural": true,
+      "bourdain": true
+    },
+    "mapsQuery": "Yatai food stalls, Nakasu riverside, Fukuoka, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "yatai-tenjin",
+    "region": "japan",
+    "name": "Yatai food stalls, Tenjin",
+    "localName": "天神屋台",
+    "lat": 33.5907,
+    "lon": 130.4005,
+    "city": "Fukuoka",
+    "category": "drink",
+    "subtype": "yatai",
+    "why": "The Tenjin yatai are more local than the Nakasu row. Look for stalls with mentaiko tamagoyaki or grilled ramen.",
+    "price": {
+      "min": 1500,
+      "max": 3500,
+      "estimate": true
+    },
+    "hours": "18:00–25:00",
+    "flags": {
+      "local": true
+    },
+    "mapsQuery": "Yatai food stalls, Tenjin, Fukuoka, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "kakuuchi",
+    "region": "japan",
+    "name": "Kakuuchi standing sake bars",
+    "localName": "角打ち",
+    "lat": 33.5935,
+    "lon": 130.417,
+    "city": "Fukuoka",
+    "category": "drink",
+    "subtype": "sake",
+    "why": "Liquor shops with a counter where you drink what you buy: Kyushu's after-work ritual, cheap and chatty.",
+    "price": {
+      "min": 500,
+      "max": 1500,
+      "estimate": true
+    },
+    "hours": "16:00–21:00",
+    "flags": {
+      "local": true
+    },
+    "mapsQuery": "kakuuchi, Hakata, Fukuoka",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "hawkstown",
+    "region": "japan",
+    "name": "Hawks Town & PayPay Dome bars",
+    "localName": "HKT",
+    "lat": 33.596,
+    "lon": 130.3627,
+    "city": "Fukuoka",
+    "category": "baseball",
+    "subtype": "sports bar",
+    "why": "Bars and restaurants around the dome fill with Hawks fans on game nights. Watch the start of the 7th inning: everyone releases yellow balloons.",
+    "hours": "11:00–23:00",
+    "flags": {
+      "series": true
+    },
+    "mapsQuery": "BOSS E・ZO FUKUOKA",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "yanagibashi",
+    "region": "japan",
+    "name": "Yanagibashi Rengo Market",
+    "localName": "柳橋連合市場",
+    "lat": 33.5856,
+    "lon": 130.404,
+    "city": "Fukuoka",
+    "category": "market",
+    "subtype": "fish market",
+    "why": "'Hakata's kitchen': a short covered street of fishmongers and eateries. Breakfast seafood bowls and fish cakes.",
+    "tips": ["Closed Sundays", "Go before noon"],
+    "hours": "8:00–17:00",
+    "closed": ["Sun"],
+    "flags": {
+      "local": true
+    },
+    "mapsQuery": "Yanagibashi Rengo Market, Fukuoka, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "nagahamamarket",
+    "region": "japan",
+    "name": "Nagahama Fish Market restaurants",
+    "localName": "長浜鮮魚市場",
+    "lat": 33.5962,
+    "lon": 130.3858,
+    "city": "Fukuoka",
+    "category": "market",
+    "subtype": "fish market",
+    "why": "The wholesale fish market's public restaurant building, plus one public tuna-cutting day a month.",
+    "hours": "6:00–14:00",
+    "closed": ["Sun"],
+    "mapsQuery": "Nagahama Fish Market restaurants, Fukuoka, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "hakatahankyu",
+    "region": "japan",
+    "name": "Hakata Hankyu depachika",
+    "localName": "博多阪急",
+    "lat": 33.5899,
+    "lon": 130.4206,
+    "city": "Fukuoka",
+    "category": "market",
+    "subtype": "depachika",
+    "why": "Department store food hall in Hakata station: mentaiko, bento for the Shinkansen, sweets.",
+    "tips": ["Buy an ekiben (station bento) for the train"],
+    "hours": "10:00–20:00",
+    "mapsQuery": "Hakata Hankyu depachika, Fukuoka, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "futsukaichi",
+    "region": "japan",
+    "name": "Futsukaichi Onsen (Hakata-yu)",
+    "localName": "二日市温泉 博多湯",
+    "lat": 33.499,
+    "lon": 130.5146,
+    "city": "Fukuoka",
+    "category": "onsen",
+    "subtype": "onsen",
+    "why": "An onsen town mentioned in 8th-century poetry, 20 minutes south. Hakata-yu is the cheap local bathhouse.",
+    "tips": ["Combine with Dazaifu"],
+    "price": {
+      "min": 300,
+      "max": 500,
+      "estimate": true
+    },
+    "hours": "9:00–21:00",
+    "flags": {
+      "local": true
+    },
+    "mapsQuery": "Futsukaichi Onsen (Hakata-yu), Fukuoka, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "nokonoshima",
+    "region": "japan",
+    "name": "Nokonoshima Island Park",
+    "localName": "能古島",
+    "lat": 33.6326,
+    "lon": 130.3022,
+    "city": "Fukuoka",
+    "category": "nature",
+    "subtype": "island",
+    "why": "A 10-minute ferry to an island of flower fields: cosmos in October, sea views back to the city.",
+    "tips": ["Ferry from Meinohama port"],
+    "price": {
+      "min": 1200,
+      "max": 1600,
+      "estimate": true
+    },
+    "hours": "9:00–17:30",
+    "mapsQuery": "Nokonoshima Island Park, Fukuoka, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "itoshima",
+    "region": "japan",
+    "name": "Itoshima coast",
+    "localName": "糸島",
+    "lat": 33.6565,
+    "lon": 130.1997,
+    "city": "Fukuoka",
+    "category": "nature",
+    "subtype": "coast",
+    "why": "Beach cafes, a torii gate in the sea at Sakurai Futamigaura, oyster huts from November. Best with a rental car or bike.",
+    "tips": ["JR to Chikuzen-Maebaru, then bus"],
+    "hours": "0:00–24:00",
+    "mapsQuery": "Itoshima coast, Fukuoka, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "karatsucastle",
+    "region": "japan",
+    "name": "Karatsu Castle",
+    "localName": "唐津城",
+    "lat": 33.4586,
+    "lon": 129.9783,
+    "city": "Karatsu",
+    "category": "sight",
+    "subtype": "castle",
+    "why": "A rebuilt castle on a headland over the sea and a pine-forest beach. Great view of the Kunchi town below.",
+    "price": {
+      "min": 500,
+      "max": 500,
+      "estimate": true
+    },
+    "hours": "9:00–17:00",
+    "era": "edo",
+    "mapsQuery": "Karatsu Castle, Karatsu, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "hikiyama",
+    "region": "japan",
+    "name": "Hikiyama Exhibition Hall",
+    "localName": "曳山展示場",
+    "lat": 33.4512,
+    "lon": 129.9709,
+    "city": "Karatsu",
+    "category": "sight",
+    "subtype": "museum",
+    "why": "Where the 14 giant lacquered Kunchi floats (a sea bream, samurai helmets, a dragon) are kept. Moving to a new hall near Karatsu Shrine.",
+    "tips": ["Check which hall is open in 2026"],
+    "price": {
+      "min": 300,
+      "max": 300,
+      "estimate": true
+    },
+    "hours": "9:00–17:00",
+    "flags": {
+      "cultural": true
+    },
+    "mapsQuery": "Hikiyama Exhibition Hall, Karatsu, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "karatsuyakiyaki",
+    "region": "japan",
+    "name": "Karatsu ware pottery",
+    "localName": "唐津焼",
+    "lat": 33.4502,
+    "lon": 129.9686,
+    "city": "Karatsu",
+    "category": "sight",
+    "subtype": "craft",
+    "why": "Karatsu-yaki: earthy 400-year-old tea ceramics. Galleries and kilns around town; buy a cup to use for the rest of the trip.",
+    "hours": "10:00–18:00",
+    "flags": {
+      "cultural": true
+    },
+    "mapsQuery": "Karatsu ware gallery, Karatsu",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "yobuko",
+    "region": "japan",
+    "name": "Yobuko morning market & squid",
+    "localName": "呼子朝市",
+    "lat": 33.5427,
+    "lon": 129.8932,
+    "city": "Karatsu",
+    "category": "market",
+    "subtype": "morning market",
+    "why": "One of Japan's three great morning markets, and live, see-through squid sashimi at Kawataro. 40 min by bus from Karatsu.",
+    "tips": ["Market 7:30–noon"],
+    "price": {
+      "min": 2000,
+      "max": 4000,
+      "estimate": true
+    },
+    "hours": "7:30–12:00",
+    "flags": {
+      "local": true
+    },
+    "mapsQuery": "Yobuko morning market & squid, Karatsu, Japan",
+    "updated": "2026-10-19"
+  }
+]

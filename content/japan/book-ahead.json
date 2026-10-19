@@ -1,0 +1,49 @@
+[
+  {
+    "id": "series-tickets",
+    "title": "Japan Series tickets",
+    "leadDays": 7,
+    "when": "event",
+    "match": { "flag": "series" },
+    "note": "Face value goes fast on team sites and Ticket Pia; resale runs higher. Your ceiling is about $200 (¥31,700) a game."
+  },
+  {
+    "id": "series-hotels",
+    "title": "Hotel in a Japan Series city",
+    "leadDays": 7,
+    "when": "base",
+    "match": { "cities": ["fukuoka", "yokohama"] },
+    "note": "Game nights fill hotels near the stadiums. Lock a cancellable room as soon as the dates are set."
+  },
+  {
+    "id": "shinkansen-seat",
+    "title": "Shinkansen reserved seat",
+    "leadDays": 2,
+    "when": "travel",
+    "note": "Weekends and game days sell out the window seats. Reserve on SmartEX or JR East, or at a station machine."
+  },
+  {
+    "id": "temple-stay",
+    "title": "Koyasan temple stay (shukubo)",
+    "leadDays": 10,
+    "when": "base",
+    "match": { "cities": ["koyasan"] },
+    "note": "Autumn weekends book up. Book through the Koyasan tourist association or Japanese Guest Houses."
+  },
+  {
+    "id": "ryokan",
+    "title": "Ryokan / onsen inn night",
+    "leadDays": 7,
+    "when": "base",
+    "match": { "cities": ["hakone", "nikko", "kanazawa"] },
+    "note": "Autumn color season is peak for onsen towns; the good mid-price rooms go first."
+  },
+  {
+    "id": "counter-sushi",
+    "title": "Famous sushi or kaiseki counter",
+    "leadDays": 21,
+    "when": "place",
+    "match": { "places": ["jiro", "sushiko", "karaku", "yamanoo"] },
+    "note": "Most top counters only book through hotel concierges or services like Omakase or Tableall."
+  }
+]

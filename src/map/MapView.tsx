@@ -16,6 +16,7 @@ import {
   Matrix4,
   Math as CesiumMath,
   NearFarScalar,
+  PolylineDashMaterialProperty,
   Rectangle,
   ScreenSpaceEventHandler,
   ScreenSpaceEventType,
@@ -25,7 +26,7 @@ import {
 } from 'cesium'
 import type { Entry } from '../journal/types'
 import type { Place, Region } from '../types'
-import { pinImage, stayImage } from './pins'
+import { pinImage, stayImage, stopImage } from './pins'
 import {
   isRailPick,
   loadRail,
@@ -74,6 +75,8 @@ type Props = {
   onSelect: (id: string | null) => void
   onSelectRail: (pick: RailPick | null) => void
   onTrainsError: () => void
+  /** The selected plan day's stops, drawn numbered with a route line. */
+  dayStops: { lat: number; lon: number; name: string }[]
   /** Line to emphasise (the one whose card is open). */
   highlight: RailPick | null
   /** Map heading in degrees (0 = north up), for the compass. */
@@ -98,6 +101,7 @@ export default function MapView({
   onTrainsError,
   highlight,
   onHeading,
+  dayStops,
   onReady,
   onSource,
 }: Props) {
@@ -107,6 +111,7 @@ export default function MapView({
   const sourceRef = useRef<MapSource>('offline')
   const entitiesRef = useRef(new Map<string, Entity>())
   const journalRef = useRef<CustomDataSource | null>(null)
+  const planRef = useRef<CustomDataSource | null>(null)
   const railRef = useRef<{
     prims: Map<RailKind, GroundPolylinePrimitive>
     stations: CustomDataSource
@@ -135,6 +140,9 @@ export default function MapView({
     const journalLayer = new CustomDataSource('journal')
     void viewer.dataSources.add(journalLayer)
     journalRef.current = journalLayer
+    const planLayer = new CustomDataSource('plan')
+    void viewer.dataSources.add(planLayer)
+    planRef.current = planLayer
     const railStations = new CustomDataSource('rail-stations')
     railStations.show = false
     void viewer.dataSources.add(railStations)
@@ -287,6 +295,7 @@ export default function MapView({
       viewer.destroy()
       viewerRef.current = null
       journalRef.current = null
+      planRef.current = null
       railRef.current = null
       entities.clear()
     }
@@ -324,8 +333,8 @@ export default function MapView({
           pixelOffset: new Cartesian2(0, PIN_SIZE / 2 + 4),
           heightReference: HeightReference.CLAMP_TO_GROUND,
           disableDepthTestDistance: Number.POSITIVE_INFINITY,
-          // Decluttering: names appear only once you're zoomed in to a city.
-          distanceDisplayCondition: new DistanceDisplayCondition(0, 120_000),
+          // Decluttering: names appear only at street level (cities are dense now).
+          distanceDisplayCondition: new DistanceDisplayCondition(0, 5_000),
         },
       })
       map.set(place.id, entity)
@@ -348,7 +357,7 @@ export default function MapView({
       e.billboard.height = size as never
       e.label.distanceDisplayCondition = new DistanceDisplayCondition(
         0,
-        sel ? Infinity : 120_000,
+        sel ? Infinity : 5_000,
       ) as never
       e.label.pixelOffset = new Cartesian2(0, size / 2 + 4) as never
     }
@@ -409,6 +418,39 @@ export default function MapView({
       cancelled = true
     }
   }, [trainsOn])
+
+  // Day plan overlay: numbered stops joined by a dashed ink line.
+  useEffect(() => {
+    const layer = planRef.current
+    if (!layer) return
+    layer.entities.removeAll()
+    dayStops.forEach((s, i) =>
+      layer.entities.add({
+        position: Cartesian3.fromDegrees(s.lon, s.lat),
+        billboard: {
+          image: stopImage(i + 1, 30),
+          width: 30,
+          height: 30,
+          pixelOffset: new Cartesian2(0, -22),
+          heightReference: HeightReference.CLAMP_TO_GROUND,
+          disableDepthTestDistance: Number.POSITIVE_INFINITY,
+        },
+      }),
+    )
+    if (dayStops.length > 1)
+      layer.entities.add({
+        polyline: {
+          positions: dayStops.map((s) => Cartesian3.fromDegrees(s.lon, s.lat)),
+          width: 3,
+          material: new PolylineDashMaterialProperty({
+            color: Color.fromCssColorString('#2B2B28').withAlpha(0.85),
+            dashLength: 14,
+          }),
+          clampToGround: true,
+        },
+      })
+    viewerRef.current?.scene.requestRender()
+  }, [dayStops])
 
   // Emphasise the tapped line: a light halo with the line color on top.
   useEffect(() => {

@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { region } from '../content'
 import { CATEGORY_LABEL, firstSentence, formatPrice } from '../lib/format'
+import { hoursFor } from '../lib/hours'
+import { TIER_LABEL, tierOf } from '../lib/moods'
 import { CATEGORY_COLOR } from '../map/pins'
 import type { Place } from '../types'
 
@@ -11,10 +13,22 @@ type Props = {
   visitedAt?: string
   /** Owner only: stamp this place and open the journal composer. */
   onStamp?: () => void
+  /** Owner only: add to the selected plan day (label like "Thu 24"). */
+  onAddToPlan?: () => void
+  planLabel?: string
+  inPlan?: boolean
 }
 
 /** Place card: peek (name, one line, price) → full (story, tips, directions). */
-export function PeekCard({ place, onClose, visitedAt, onStamp }: Props) {
+export function PeekCard({
+  place,
+  onClose,
+  visitedAt,
+  onStamp,
+  onAddToPlan,
+  planLabel,
+  inPlan,
+}: Props) {
   const [open, setOpen] = useState(false)
   const destination = place.mapsQuery
     ? encodeURIComponent(place.mapsQuery)
@@ -77,6 +91,26 @@ export function PeekCard({ place, onClose, visitedAt, onStamp }: Props) {
         </p>
       )}
 
+      <p className="card__facts">
+        {tierOf(place) && <span>{TIER_LABEL[tierOf(place)!]}</span>}
+        {hoursFor(place) && (
+          <span>
+            {hoursFor(place) === '0:00–24:00' ? 'Open all day' : `Usually ${hoursFor(place)}`}
+            {place.closed?.length ? ` · closed ${place.closed.join(', ')}` : ''}
+          </span>
+        )}
+        {place.bookAhead && <span className="card__book">Book ~{place.bookAhead} days ahead</span>}
+      </p>
+      {(place.flags?.local || place.flags?.cultural || place.flags?.trap) && (
+        <p className="result__badges">
+          {place.flags?.local && <span className="badge">Local favorite</span>}
+          {place.flags?.cultural && <span className="badge">Culturally significant</span>}
+          {place.flags?.trap && (
+            <span className="badge badge--warn">Tourist trap: go anyway, eyes open</span>
+          )}
+        </p>
+      )}
+
       <p className="card__why">{open ? place.why : firstSentence(place.why)}</p>
 
       {open && (
@@ -119,6 +153,11 @@ export function PeekCard({ place, onClose, visitedAt, onStamp }: Props) {
         <a className="btn btn--primary" href={directions} target="_blank" rel="noopener noreferrer">
           Directions
         </a>
+        {onAddToPlan && (
+          <button type="button" className="btn" onClick={onAddToPlan} disabled={inPlan}>
+            {inPlan ? `In plan · ${planLabel}` : `Add to ${planLabel}`}
+          </button>
+        )}
         {onStamp && (
           <button type="button" className="btn" onClick={onStamp}>
             {visitedAt ? 'Add to journal' : 'I’ve been here'}

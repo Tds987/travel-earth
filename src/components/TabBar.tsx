@@ -1,8 +1,8 @@
-export type Tab = 'map' | 'journal'
+export type Tab = 'plan' | 'journal'
 
 const TABS: { id: Tab; label: string; icon: string }[] = [
   // Simple inline strokes; words carry the meaning, icons only support them.
-  { id: 'map', label: 'Map', icon: 'M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2Zm0 0v14m6-12v14' },
+  { id: 'plan', label: 'Plan', icon: 'M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2Zm0 0v14m6-12v14' },
   {
     id: 'journal',
     label: 'Journal',

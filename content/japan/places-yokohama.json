@@ -1,0 +1,550 @@
+[
+  {
+    "id": "chinatown-yokohama",
+    "region": "japan",
+    "name": "Yokohama Chinatown",
+    "localName": "横浜中華街",
+    "lat": 35.4425,
+    "lon": 139.6458,
+    "city": "Yokohama",
+    "category": "sight",
+    "subtype": "neighborhood",
+    "why": "Japan's biggest Chinatown, ten minutes' walk from the ballpark: ornate gates, the Kanteibyo temple, steamed buns on every corner. Pre-game dinner sorted.",
+    "tips": [
+      "Kanteibyo temple is lit at night",
+      "Street food beats the sit-down 'all you can eat' places"
+    ],
+    "hours": "10:00–22:00",
+    "mapsQuery": "Yokohama Chinatown, Yokohama, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "sankeien",
+    "region": "japan",
+    "name": "Sankeien Garden",
+    "localName": "三溪園",
+    "lat": 35.4157,
+    "lon": 139.662,
+    "city": "Yokohama",
+    "category": "sight",
+    "subtype": "garden",
+    "why": "A silk merchant's garden of 17 historic buildings moved here from Kyoto and Kamakura, including a 500-year-old pagoda on a hill over a pond. Early autumn color in November.",
+    "tips": ["Bus from Yokohama station or Motomachi", "Allow two hours"],
+    "price": {
+      "min": 900,
+      "max": 900,
+      "estimate": true
+    },
+    "hours": "9:00–17:00",
+    "flags": {
+      "cultural": true
+    },
+    "era": "edo",
+    "mapsQuery": "Sankeien Garden, Yokohama, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "ramenmuseum",
+    "region": "japan",
+    "name": "Shin-Yokohama Raumen Museum",
+    "localName": "新横浜ラーメン博物館",
+    "lat": 35.51,
+    "lon": 139.6176,
+    "city": "Yokohama",
+    "category": "sight",
+    "subtype": "museum",
+    "why": "A recreated 1958 Tokyo street in a basement with ramen shops from all over Japan. Order mini bowls and try three styles.",
+    "tips": ["Near Shin-Yokohama Shinkansen station", "Mini bowls let you sample several shops"],
+    "price": {
+      "min": 450,
+      "max": 1500,
+      "estimate": true
+    },
+    "hours": "11:00–21:00",
+    "flags": {
+      "local": true
+    },
+    "mapsQuery": "Shin-Yokohama Raumen Museum, Yokohama, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "cupnoodles",
+    "region": "japan",
+    "name": "Cup Noodles Museum",
+    "localName": "カップヌードルミュージアム",
+    "lat": 35.4555,
+    "lon": 139.6386,
+    "city": "Yokohama",
+    "category": "sight",
+    "subtype": "museum",
+    "why": "Design your own cup noodle and watch it sealed. Silly and genuinely fun.",
+    "tips": ["Make-your-own slots fill: arrive early"],
+    "price": {
+      "min": 500,
+      "max": 1000,
+      "estimate": true
+    },
+    "hours": "10:00–18:00",
+    "closed": ["Tue"],
+    "mapsQuery": "Cup Noodles Museum, Yokohama, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "redbrick",
+    "region": "japan",
+    "name": "Red Brick Warehouse & Osanbashi Pier",
+    "localName": "赤レンガ倉庫",
+    "lat": 35.4527,
+    "lon": 139.6425,
+    "city": "Yokohama",
+    "category": "sight",
+    "subtype": "waterfront",
+    "why": "1910s customs warehouses turned shops and bars, with the wooden Osanbashi pier next door for a sunset view of the bay.",
+    "tips": ["Osanbashi pier roof deck is free and open late"],
+    "hours": "11:00–20:00",
+    "mapsQuery": "Red Brick Warehouse & Osanbashi Pier, Yokohama, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "yamate",
+    "region": "japan",
+    "name": "Yamate Bluff & Motomachi",
+    "localName": "山手",
+    "lat": 35.4385,
+    "lon": 139.6517,
+    "city": "Yokohama",
+    "category": "sight",
+    "subtype": "historic district",
+    "why": "Hilltop Western-style houses from Yokohama's treaty-port days, a foreigners' cemetery, and the Harbor View Park lookout.",
+    "tips": ["Free houses open 9:30–17:00"],
+    "hours": "9:30–17:00",
+    "era": "meiji",
+    "mapsQuery": "Yamate Bluff & Motomachi, Yokohama, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "yokohamastadiumtour",
+    "region": "japan",
+    "name": "Yokohama Park & Stadium area",
+    "localName": "横浜公園",
+    "lat": 35.4434,
+    "lon": 139.64,
+    "city": "Yokohama",
+    "category": "baseball",
+    "subtype": "stadium area",
+    "why": "Before Game 1, walk around the stadium: BayStars blue everywhere, food stalls, and the fan shops on Yokohama Park's edge.",
+    "tips": ["BayStars official store at the stadium gates"],
+    "hours": "10:00–21:00",
+    "flags": {
+      "series": true
+    },
+    "mapsQuery": "Yokohama Park & Stadium area, Yokohama, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "yoshimuraya",
+    "region": "japan",
+    "name": "Yoshimuraya, Yokohama",
+    "localName": "吉村家",
+    "lat": 35.4625,
+    "lon": 139.62,
+    "city": "Yokohama",
+    "category": "food",
+    "subtype": "ramen",
+    "why": "The 1974 birthplace of iekei ramen. Long line, fast turnover, worth it once.",
+    "tips": ["Buy a ticket at the machine; tell them noodle firmness"],
+    "price": {
+      "min": 900,
+      "max": 1200,
+      "estimate": true
+    },
+    "hours": "11:00–20:00",
+    "closed": ["Mon"],
+    "flags": {
+      "local": true,
+      "cultural": true
+    },
+    "mapsQuery": "Yoshimuraya, Yokohama, Yokohama, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "manchinro",
+    "region": "japan",
+    "name": "Manchinro, Chinatown",
+    "localName": "萬珍樓",
+    "lat": 35.443,
+    "lon": 139.6467,
+    "city": "Yokohama",
+    "category": "food",
+    "subtype": "chinese",
+    "why": "Since 1892, Chinatown's grand old Cantonese house. Dim sum lunch is the affordable way in.",
+    "price": {
+      "min": 3000,
+      "max": 8000,
+      "estimate": true
+    },
+    "hours": "11:00–21:30",
+    "mapsQuery": "Manchinro, Chinatown, Yokohama, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "edosei",
+    "region": "japan",
+    "name": "Edosei pork buns, Chinatown",
+    "localName": "江戸清",
+    "lat": 35.4428,
+    "lon": 139.6455,
+    "city": "Yokohama",
+    "category": "food",
+    "subtype": "street food",
+    "why": "Huge steamed pork buns to eat walking. Cheap, filling, game-day fuel.",
+    "price": {
+      "min": 500,
+      "max": 800,
+      "estimate": true
+    },
+    "hours": "9:30–21:00",
+    "mapsQuery": "Edosei pork buns, Chinatown, Yokohama, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "noge",
+    "region": "japan",
+    "name": "Noge izakaya alleys",
+    "localName": "野毛",
+    "lat": 35.4497,
+    "lon": 139.6301,
+    "city": "Yokohama",
+    "category": "drink",
+    "subtype": "yokocho",
+    "why": "Hundreds of cheap izakaya and standing bars in a gritty postwar neighborhood near Sakuragicho. Where Yokohama actually drinks.",
+    "tips": ["Great after a game: 15 minutes' walk from the stadium"],
+    "price": {
+      "min": 1500,
+      "max": 3500,
+      "estimate": true
+    },
+    "hours": "16:00–24:00",
+    "flags": {
+      "local": true
+    },
+    "mapsQuery": "Noge izakaya alleys, Yokohama, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "gyuyamaburi",
+    "region": "japan",
+    "name": "Gyunabe Araiya, Kannai",
+    "localName": "荒井屋",
+    "lat": 35.4475,
+    "lon": 139.6371,
+    "city": "Yokohama",
+    "category": "food",
+    "subtype": "sukiyaki",
+    "why": "Yokohama was where Japan first ate beef in the 1860s. Gyunabe (beef hot pot) here since 1895.",
+    "price": {
+      "min": 2500,
+      "max": 8000,
+      "estimate": true
+    },
+    "hours": "11:30–21:30",
+    "flags": {
+      "cultural": true
+    },
+    "mapsQuery": "Gyunabe Araiya, Kannai, Yokohama, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "motomachi-sweets",
+    "region": "japan",
+    "name": "Motomachi bakeries & patisseries",
+    "localName": "元町",
+    "lat": 35.4407,
+    "lon": 139.6503,
+    "city": "Yokohama",
+    "category": "sweet",
+    "subtype": "pastry",
+    "why": "Motomachi's European-style shopping street of old bakeries and patisseries, a reminder of Yokohama's treaty-port days.",
+    "price": {
+      "min": 300,
+      "max": 1200,
+      "estimate": true
+    },
+    "hours": "10:00–19:00",
+    "mapsQuery": "Motomachi Shopping Street, Yokohama",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "chinatown-sweets",
+    "region": "japan",
+    "name": "Chinatown mango and sesame balls",
+    "localName": "中華街スイーツ",
+    "lat": 35.4427,
+    "lon": 139.646,
+    "city": "Yokohama",
+    "category": "sweet",
+    "subtype": "street food",
+    "why": "Fried sesame balls, egg tarts, mango shaved ice: the Chinatown dessert crawl.",
+    "price": {
+      "min": 300,
+      "max": 800,
+      "estimate": true
+    },
+    "hours": "10:00–21:00",
+    "mapsQuery": "Yokohama Chinatown egg tart",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "kannai-kissaten",
+    "region": "japan",
+    "name": "Kissaten around Kannai",
+    "localName": "珈琲",
+    "lat": 35.4471,
+    "lon": 139.6352,
+    "city": "Yokohama",
+    "category": "coffee",
+    "subtype": "kissaten",
+    "why": "Old-school coffee houses (kissaten) dot the arcades around Kannai station: hand-drip coffee, thick toast, quiet. Pick whichever has a wooden counter and an older owner.",
+    "price": {
+      "min": 600,
+      "max": 1100,
+      "estimate": true
+    },
+    "hours": "8:00–18:00",
+    "flags": {
+      "local": true
+    },
+    "mapsQuery": "kissaten Kannai, Yokohama",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "redbrick-coffee",
+    "region": "japan",
+    "name": "Coffee at the Red Brick Warehouse",
+    "localName": "赤レンガ",
+    "lat": 35.4527,
+    "lon": 139.6425,
+    "city": "Yokohama",
+    "category": "coffee",
+    "subtype": "specialty",
+    "why": "Harbor-side coffee with the bay view.",
+    "price": {
+      "min": 500,
+      "max": 900,
+      "estimate": true
+    },
+    "hours": "10:00–19:00",
+    "mapsQuery": "Coffee at the Red Brick Warehouse, Yokohama, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "yokohamabrewery",
+    "region": "japan",
+    "name": "Yokohama Brewery",
+    "localName": "横浜ビール",
+    "lat": 35.451,
+    "lon": 139.6356,
+    "city": "Yokohama",
+    "category": "drink",
+    "subtype": "craft beer",
+    "why": "Yokohama was home to Japan's first commercial brewery (1869). This craft brewpub keeps the tradition: their pilsner and a restaurant upstairs.",
+    "price": {
+      "min": 900,
+      "max": 3000,
+      "estimate": true
+    },
+    "hours": "12:00–23:00",
+    "flags": {
+      "local": true
+    },
+    "mapsQuery": "Yokohama Brewery, Yokohama, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "baystars-beer",
+    "region": "japan",
+    "name": "BayStars beer at the ballpark",
+    "localName": "ベイスターズ・ビール",
+    "lat": 35.4434,
+    "lon": 139.64,
+    "city": "Yokohama",
+    "category": "drink",
+    "subtype": "craft beer",
+    "why": "The BayStars sell their own original craft beers inside Yokohama Stadium. Drink blue.",
+    "price": {
+      "min": 700,
+      "max": 1200,
+      "estimate": true
+    },
+    "hours": "11:00–22:00",
+    "flags": {
+      "series": true
+    },
+    "mapsQuery": "Yokohama Stadium",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "sirius",
+    "region": "japan",
+    "name": "Sirius Sky Lounge, Landmark Tower",
+    "localName": "シリウス",
+    "lat": 35.4547,
+    "lon": 139.6315,
+    "city": "Yokohama",
+    "category": "drink",
+    "subtype": "hotel bar",
+    "why": "70th-floor bar with the bay, the Ferris wheel and Mt. Fuji on clear days. One drink at sunset.",
+    "tips": ["Cover charge in the evening"],
+    "price": {
+      "min": 2500,
+      "max": 5000,
+      "estimate": true
+    },
+    "hours": "11:00–24:00",
+    "mapsQuery": "Sirius Sky Lounge, Yokohama Royal Park Hotel",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "yokohamamarket",
+    "region": "japan",
+    "name": "Yokohama Central Wholesale Market",
+    "localName": "横浜中央卸売市場",
+    "lat": 35.4567,
+    "lon": 139.622,
+    "city": "Yokohama",
+    "category": "market",
+    "subtype": "fish market",
+    "why": "A working wholesale fish market with a few public restaurants in the related-goods building. Breakfast sushi without Tokyo's lines.",
+    "tips": ["Closed Sundays and Wednesdays"],
+    "hours": "7:00–13:00",
+    "closed": ["Sun", "Wed"],
+    "mapsQuery": "Yokohama Central Wholesale Market, Yokohama, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "skyspa",
+    "region": "japan",
+    "name": "Sky Spa Yokohama",
+    "localName": "スカイスパ横浜",
+    "lat": 35.4646,
+    "lon": 139.6233,
+    "city": "Yokohama",
+    "category": "onsen",
+    "subtype": "onsen",
+    "why": "Baths and saunas on the 14th floor above Yokohama station, with city views. Good for a post-flight or post-game soak.",
+    "price": {
+      "min": 1800,
+      "max": 2500,
+      "estimate": true
+    },
+    "hours": "10:00–09:00",
+    "mapsQuery": "Sky Spa Yokohama",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "daibutsu",
+    "region": "japan",
+    "name": "Great Buddha of Kamakura (Kotoku-in)",
+    "localName": "鎌倉大仏",
+    "lat": 35.3167,
+    "lon": 139.5357,
+    "city": "Kamakura",
+    "category": "sight",
+    "subtype": "temple",
+    "why": "A 13 m bronze Buddha sitting in the open air since 1252. You can go inside it for ¥50.",
+    "tips": ["25 min by Enoden from Kamakura station, or walk from Hase"],
+    "price": {
+      "min": 300,
+      "max": 350,
+      "estimate": true
+    },
+    "hours": "8:00–17:30",
+    "flags": {
+      "cultural": true
+    },
+    "era": "kamakura",
+    "mapsQuery": "Great Buddha of Kamakura (Kotoku-in), Kamakura, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "hasedera",
+    "region": "japan",
+    "name": "Hase-dera Temple, Kamakura",
+    "localName": "長谷寺",
+    "lat": 35.3127,
+    "lon": 139.5332,
+    "city": "Kamakura",
+    "category": "sight",
+    "subtype": "temple",
+    "why": "A hillside temple with a sea view, caves of carved deities and a gold Kannon. Five minutes from the Great Buddha.",
+    "price": {
+      "min": 400,
+      "max": 400,
+      "estimate": true
+    },
+    "hours": "8:00–17:00",
+    "era": "kamakura",
+    "mapsQuery": "Hase-dera Temple, Kamakura, Kamakura, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "tsurugaoka",
+    "region": "japan",
+    "name": "Tsurugaoka Hachimangu, Kamakura",
+    "localName": "鶴岡八幡宮",
+    "lat": 35.3259,
+    "lon": 139.5565,
+    "city": "Kamakura",
+    "category": "sight",
+    "subtype": "shrine",
+    "why": "The shoguns' shrine at the top of Kamakura's main avenue. Komachi-dori street food on the way up.",
+    "tips": ["Free", "Komachi-dori for snacks"],
+    "hours": "5:00–21:00",
+    "flags": {
+      "cultural": true
+    },
+    "era": "kamakura",
+    "mapsQuery": "Tsurugaoka Hachimangu, Kamakura, Kamakura, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "hokokuji",
+    "region": "japan",
+    "name": "Hokoku-ji bamboo grove, Kamakura",
+    "localName": "報国寺",
+    "lat": 35.3194,
+    "lon": 139.5672,
+    "city": "Kamakura",
+    "category": "sight",
+    "subtype": "temple",
+    "why": "A quiet Zen temple with a bamboo grove and a tea house where you sip matcha looking into it. Fewer people than Kyoto's.",
+    "price": {
+      "min": 400,
+      "max": 1000,
+      "estimate": true
+    },
+    "hours": "9:00–16:00",
+    "flags": {
+      "local": true
+    },
+    "era": "kamakura",
+    "mapsQuery": "Hokoku-ji bamboo grove, Kamakura, Kamakura, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "enoshima",
+    "region": "japan",
+    "name": "Enoshima Island",
+    "localName": "江の島",
+    "lat": 35.2997,
+    "lon": 139.4807,
+    "city": "Kamakura",
+    "category": "nature",
+    "subtype": "island",
+    "why": "A small island shrine, caves and sea views, reached by causeway. Fresh shirasu (whitebait) bowls are the local dish.",
+    "tips": ["Take the Enoden train from Kamakura: 25 min of coastal views"],
+    "hours": "0:00–24:00",
+    "mapsQuery": "Enoshima Island, Kamakura, Japan",
+    "updated": "2026-10-19"
+  }
+]

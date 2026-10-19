@@ -25,7 +25,8 @@
     "sources": [
       "https://www.continentscondiments.com/anthony-bourdain-tokyo-all-of-the-restaurants-picked-on-no-reservations/"
     ],
-    "updated": "2026-10-17"
+    "updated": "2026-10-17",
+    "subtype": "sushi"
   },
   {
     "id": "karaku",
@@ -51,7 +52,8 @@
     },
     "mapsQuery": "Sushi Karaku, Ginza, Tokyo",
     "sources": ["https://www.timeout.com/tokyo/restaurants/sushi-karaku"],
-    "updated": "2026-10-17"
+    "updated": "2026-10-17",
+    "subtype": "sushi"
   },
   {
     "id": "edosawa",
@@ -77,7 +79,8 @@
     },
     "mapsQuery": "Chanko Edosawa, Ryogoku, Tokyo",
     "sources": ["https://eatlikebourdain.com/anthony-bourdain-in-japan/"],
-    "updated": "2026-10-17"
+    "updated": "2026-10-17",
+    "subtype": "chanko nabe"
   },
   {
     "id": "ishinohana",
@@ -87,7 +90,7 @@
     "lat": 35.6567,
     "lon": 139.7058,
     "city": "Tokyo",
-    "category": "food",
+    "category": "drink",
     "why": "No Reservations Tokyo: Bourdain sipped a 'Claudia' cocktail from champion bartender Shinobu Ishigaki. Japanese bartending at its most precise: hand-cut ice, exact pours, quiet room.",
     "tips": ["Cover charge plus ¥1,800–2,500 per cocktail", "Dress a notch up from hostel-casual"],
     "price": {
@@ -100,7 +103,8 @@
     },
     "mapsQuery": "Bar Ishinohana, Shibuya, Tokyo, Japan",
     "sources": ["https://eatlikebourdain.com/anthony-bourdain-in-japan/"],
-    "updated": "2026-10-17"
+    "updated": "2026-10-17",
+    "subtype": "cocktail bar"
   },
   {
     "id": "pianobar",
@@ -110,7 +114,7 @@
     "lat": 35.6602,
     "lon": 139.7022,
     "city": "Tokyo",
-    "category": "food",
+    "category": "drink",
     "why": "A late-night stop on No Reservations Tokyo: a doll's-house bar in Shibuya's 'Drunkard's Alley', a lantern-lit lane of tiny bars right by the station.",
     "tips": ["Seats about eight; peek in and smile", "Cash; small cover charge"],
     "price": {
@@ -123,7 +127,8 @@
     },
     "mapsQuery": "Piano Bar, Nonbei Yokocho, Shibuya, Tokyo",
     "sources": ["https://eatlikebourdain.com/anthony-bourdain-in-japan/"],
-    "updated": "2026-10-17"
+    "updated": "2026-10-17",
+    "subtype": "bar"
   },
   {
     "id": "nygrill",
@@ -133,7 +138,7 @@
     "lat": 35.6855,
     "lon": 139.6907,
     "city": "Tokyo",
-    "category": "food",
+    "category": "drink",
     "why": "Parts Unknown Tokyo, 2013. The 52nd-floor bar from Lost in Translation, with the whole city lit up below. Bourdain came for the view and the whisky.",
     "tips": [
       "The hotel reopened after a long renovation; check hours before going",
@@ -149,7 +154,8 @@
     },
     "mapsQuery": "New York Grill, Park Hyatt Tokyo, Shinjuku",
     "sources": ["https://explorepartsunknown.com/destination/tokyo/"],
-    "updated": "2026-10-17"
+    "updated": "2026-10-17",
+    "subtype": "hotel bar"
   },
   {
     "id": "morimotoxex",
@@ -172,7 +178,8 @@
     },
     "mapsQuery": "Atelier Morimoto XEX, Roppongi, Tokyo, Japan",
     "sources": ["https://eatlikebourdain.com/anthony-bourdain-in-japan/"],
-    "updated": "2026-10-17"
+    "updated": "2026-10-17",
+    "subtype": "teppanyaki"
   },
   {
     "id": "sushiko",
@@ -195,33 +202,8 @@
     },
     "mapsQuery": "Ginza Sushiko Honten, Ginza, Tokyo",
     "sources": ["https://explorepartsunknown.com/destination/masas-japan/"],
-    "updated": "2026-10-17"
-  },
-  {
-    "id": "tsukiji",
-    "region": "japan",
-    "name": "Tsukiji Outer Market",
-    "localName": "築地場外市場",
-    "lat": 35.6654,
-    "lon": 139.7707,
-    "city": "Tokyo",
-    "category": "food",
-    "why": "Bourdain filmed the old Tsukiji tuna auction in 2002 and again with Naomichi Yasuda in 2013. The wholesale market moved to Toyosu in 2018, but the outer market's 400-odd stalls still do breakfast: tamagoyaki, uni, grilled scallops.",
-    "tips": [
-      "Go early, by 8 am; many stalls close by early afternoon",
-      "The tuna auction itself is now at Toyosu (book the viewing deck online)"
-    ],
-    "price": {
-      "min": 1000,
-      "max": 4000,
-      "estimate": true
-    },
-    "flags": {
-      "bourdain": true
-    },
-    "mapsQuery": "Tsukiji Outer Market, Tokyo",
-    "sources": ["https://eatlikebourdain.com/anthony-bourdain-in-japan/"],
-    "updated": "2026-10-17"
+    "updated": "2026-10-17",
+    "subtype": "sushi"
   },
   {
     "id": "mahakala",
@@ -247,7 +229,8 @@
     },
     "mapsQuery": "Mahakala, Nakameguro, Tokyo, Japan",
     "sources": ["https://eatlikebourdain.com/anthony-bourdain-in-japan/"],
-    "updated": "2026-10-17"
+    "updated": "2026-10-17",
+    "subtype": "kushiage"
   },
   {
     "id": "jiyuken",
@@ -273,7 +256,8 @@
     },
     "mapsQuery": "Jiyuken Namba, Osaka",
     "sources": ["https://eatlikebourdain.com/anthony-bourdain-in-japan/"],
-    "updated": "2026-10-17"
+    "updated": "2026-10-17",
+    "subtype": "curry"
   },
   {
     "id": "kanidoraku",
@@ -296,7 +280,8 @@
     },
     "mapsQuery": "Kani Doraku Dotonbori, Osaka, Japan",
     "sources": ["https://eatlikebourdain.com/anthony-bourdain-in-japan/"],
-    "updated": "2026-10-17"
+    "updated": "2026-10-17",
+    "subtype": "crab"
   },
   {
     "id": "kuidaore",
@@ -314,7 +299,8 @@
     },
     "mapsQuery": "Kuidaore Taro, Dotonbori, Osaka, Japan",
     "sources": ["https://eatlikebourdain.com/anthony-bourdain-in-japan/"],
-    "updated": "2026-10-17"
+    "updated": "2026-10-17",
+    "subtype": "landmark"
   },
   {
     "id": "fukutaro",
@@ -340,7 +326,8 @@
     },
     "mapsQuery": "Fukutaro okonomiyaki, Sennichimae, Osaka",
     "sources": ["https://eatlikebourdain.com/anthony-bourdain-in-japan/"],
-    "updated": "2026-10-17"
+    "updated": "2026-10-17",
+    "subtype": "okonomiyaki"
   },
   {
     "id": "takonotetsu",
@@ -363,7 +350,8 @@
     },
     "mapsQuery": "Takonotetsu, Osaka",
     "sources": ["https://eatlikebourdain.com/anthony-bourdain-in-japan/"],
-    "updated": "2026-10-17"
+    "updated": "2026-10-17",
+    "subtype": "takoyaki"
   },
   {
     "id": "gosakudon",
@@ -372,7 +360,7 @@
     "lat": 34.647,
     "lon": 135.513,
     "city": "Osaka",
-    "category": "baseball",
+    "category": "drink",
     "why": "No Reservations Osaka opened in a sushi sports bar packed with Hanshin Tigers fans screaming at the TV. Fitting for a Japan Series trip; check it still exists, or find the nearest Tigers bar on game night.",
     "tips": [
       "Pin is approximate; Directions searches the name.",
@@ -384,7 +372,8 @@
     },
     "mapsQuery": "Gosakudon, Tennoji, Osaka, Japan",
     "sources": ["https://eatlikebourdain.com/anthony-bourdain-in-japan/"],
-    "updated": "2026-10-17"
+    "updated": "2026-10-17",
+    "subtype": "sports bar"
   },
   {
     "id": "rokkakudo",
@@ -402,7 +391,8 @@
     },
     "mapsQuery": "Rokkakudo Temple, Kyoto, Japan",
     "sources": ["https://eatlikebourdain.com/anthony-bourdain-in-japan/"],
-    "updated": "2026-10-17"
+    "updated": "2026-10-17",
+    "subtype": "temple"
   },
   {
     "id": "yamanoo",
@@ -425,7 +415,8 @@
     },
     "mapsQuery": "Yamanoo, Kanazawa",
     "sources": ["https://explorepartsunknown.com/destination/masas-japan/"],
-    "updated": "2026-10-17"
+    "updated": "2026-10-17",
+    "subtype": "kaiseki"
   },
   {
     "id": "higashichaya",
@@ -446,7 +437,8 @@
     },
     "mapsQuery": "Higashi Chaya District, Kanazawa, Japan",
     "sources": ["https://eatlikebourdain.com/anthony-bourdain-in-japan/"],
-    "updated": "2026-10-17"
+    "updated": "2026-10-17",
+    "subtype": "historic district"
   },
   {
     "id": "nanao",
@@ -456,7 +448,7 @@
     "lat": 37.045,
     "lon": 136.962,
     "city": "Nanao",
-    "category": "food",
+    "category": "market",
     "why": "No Reservations 'Cook It Raw' (2011): after a morning at sea, Bourdain ate a fisherman's breakfast in the market restaurant. Noto was hit hard by the 2024 earthquake, so check what has reopened.",
     "tips": [
       "Verify opening status (Noto quake recovery)",
@@ -473,7 +465,8 @@
     },
     "mapsQuery": "Noto Shokusai Market, Nanao, Ishikawa",
     "sources": ["https://eatlikebourdain.com/anthony-bourdain-in-japan/"],
-    "updated": "2026-10-17"
+    "updated": "2026-10-17",
+    "subtype": "fish market"
   },
   {
     "id": "tsukimura",
@@ -499,7 +492,8 @@
     },
     "mapsQuery": "Tsukimura sushi, Nasushiobara, Tochigi",
     "sources": ["https://eatlikebourdain.com/anthony-bourdain-in-japan/"],
-    "updated": "2026-10-17"
+    "updated": "2026-10-17",
+    "subtype": "sushi"
   },
   {
     "id": "sapporobeer",
@@ -525,7 +519,8 @@
     },
     "mapsQuery": "Sapporo Beer Garden (jingisukan), Sapporo, Japan",
     "sources": ["https://eatlikebourdain.com/anthony-bourdain-in-japan/"],
-    "updated": "2026-10-17"
+    "updated": "2026-10-17",
+    "subtype": "jingisukan"
   },
   {
     "id": "torimatsu",
@@ -551,7 +546,8 @@
     },
     "mapsQuery": "Torimatsu yakitori, Kutchan, Hokkaido",
     "sources": ["https://eatlikebourdain.com/anthony-bourdain-in-japan/"],
-    "updated": "2026-10-17"
+    "updated": "2026-10-17",
+    "subtype": "yakitori"
   },
   {
     "id": "makishi",
@@ -561,7 +557,7 @@
     "lat": 26.2147,
     "lon": 127.688,
     "city": "Naha",
-    "category": "food",
+    "category": "market",
     "why": "Parts Unknown Okinawa: buy fish downstairs (parrotfish, sea grapes, gurukun) and the restaurants upstairs cook it for a small fee. Bourdain ate sashimi and fried porcupine fish here.",
     "tips": [
       "The market was rebuilt in 2023, same idea",
@@ -577,7 +573,8 @@
     },
     "mapsQuery": "Makishi Public Market, Naha, Naha, Japan",
     "sources": ["https://explorepartsunknown.com/destination/okinawa/"],
-    "updated": "2026-10-17"
+    "updated": "2026-10-17",
+    "subtype": "fish market"
   },
   {
     "id": "urizun",
@@ -600,7 +597,8 @@
     },
     "mapsQuery": "Urizun, Naha, Naha, Japan",
     "sources": ["https://eatlikebourdain.com/anthony-bourdain-in-japan/"],
-    "updated": "2026-10-17"
+    "updated": "2026-10-17",
+    "subtype": "izakaya"
   },
   {
     "id": "kingtacos",
@@ -626,7 +624,8 @@
     },
     "mapsQuery": "King Tacos, Kin, Kin, Japan",
     "sources": ["https://eatlikebourdain.com/anthony-bourdain-in-japan/"],
-    "updated": "2026-10-17"
+    "updated": "2026-10-17",
+    "subtype": "taco rice"
   },
   {
     "id": "dojobar",
@@ -635,7 +634,7 @@
     "lat": 26.214,
     "lon": 127.683,
     "city": "Naha",
-    "category": "food",
+    "category": "drink",
     "why": "Karate-themed bar where Bourdain drank habushu, awamori with a pit viper coiled in the bottle. Run by a martial artist who appears in the episode.",
     "tips": [
       "Pin is approximate; Directions searches the name.",
@@ -651,7 +650,8 @@
     },
     "mapsQuery": "Dojo Bar, Naha, Okinawa",
     "sources": ["https://eatlikebourdain.com/anthony-bourdain-in-japan/"],
-    "updated": "2026-10-17"
+    "updated": "2026-10-17",
+    "subtype": "bar"
   },
   {
     "id": "sekiyou",

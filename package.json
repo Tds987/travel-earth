@@ -5,11 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "node scripts/check-content.mjs && tsc -b && vite build",
     "lint": "oxlint",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "check": "node scripts/check-content.mjs"
   },
   "dependencies": {
     "cesium": "^1.146.0",
