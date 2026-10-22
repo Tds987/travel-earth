@@ -8,6 +8,14 @@
     "station": "Tokyo"
   },
   {
+    "id": "kamata",
+    "name": "Kamata (Tokyo)",
+    "lat": 35.5622,
+    "lon": 139.716,
+    "radiusKm": 6,
+    "station": "Kamata"
+  },
+  {
     "id": "yokohama",
     "name": "Yokohama",
     "lat": 35.4437,

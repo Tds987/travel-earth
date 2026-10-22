@@ -22,6 +22,7 @@ A Google Earth–style travel guide for **an ordinary traveler**: open it, see a
 - **One obvious starting point.** Opening the app answers "what's next for me today?"
 - **Words over icons.** Every control has a text label or an unmistakable icon + accessible name. Plain language ("Train times", not a pictogram).
 - **Filters live in search.** Tapping search opens one sheet: text search + simple chips (Food, Sights, Nature, Open now, Near me, Bourdain).
+- **Guide with options, never dictate.** Tyler's rule: offer choices with hours, typical time needed, cost and travel time. Never build hour-by-hour schedules for his days; he decides the order and pace.
 - **Progressive disclosure.** Place card has a peek state (name, one line, price, distance) → full state (story, tips, hours, directions).
 - **Thumb-first.** Primary actions in the bottom half, 44px+ targets, works one-handed.
 - **Bottom tabs:** Tyler decides the final set. Working proposal: **Map · Plan · Journal** (Plan shows the trip anchor, e.g. the Japan Series schedule, then day-by-day).

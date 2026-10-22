@@ -1083,5 +1083,72 @@
     "era": "edo",
     "mapsQuery": "Rikugien Garden, Tokyo, Japan",
     "updated": "2026-10-19"
+  },
+  {
+    "id": "kamata-onsen",
+    "region": "japan",
+    "name": "Kamata Onsen (black-water sento)",
+    "localName": "蒲田温泉",
+    "lat": 35.5555,
+    "lon": 139.7275,
+    "city": "Tokyo",
+    "category": "onsen",
+    "subtype": "sento",
+    "why": "A 1937 neighborhood bathhouse with some of Ota ward's darkest 'black water' hot spring, plus an electric bath and sauna. About ¥550, very local.",
+    "tips": [
+      "About 10 min walk from Keikyu Kamata",
+      "Hours vary (roughly 10:00 to midnight or 1 am): check before going"
+    ],
+    "price": {
+      "min": 550,
+      "max": 600,
+      "estimate": true
+    },
+    "hours": "10:00–24:00",
+    "flags": {
+      "local": true
+    },
+    "mapsQuery": "Kamata Onsen (black-water sento), Tokyo, Japan",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "kamata-gyoza",
+    "region": "japan",
+    "name": "Kamata hanetsuki gyoza",
+    "localName": "羽根つき餃子 蒲田",
+    "lat": 35.5627,
+    "lon": 139.7155,
+    "city": "Tokyo",
+    "category": "food",
+    "subtype": "gyoza",
+    "why": "Kamata is the home of hanetsuki ('winged') gyoza: pan-fried dumplings joined by a lacy crisp skirt. Several old Chinese restaurants near the station compete; a plate and a beer is under ¥1,500.",
+    "tips": ["Look around the station's east exit"],
+    "price": {
+      "min": 500,
+      "max": 1500,
+      "estimate": true
+    },
+    "hours": "11:00–22:00",
+    "flags": {
+      "local": true
+    },
+    "mapsQuery": "hanetsuki gyoza Kamata station",
+    "updated": "2026-10-19"
+  },
+  {
+    "id": "haneda-t3-deck",
+    "region": "japan",
+    "name": "Haneda Terminal 3 observation deck",
+    "localName": "羽田空港 第3ターミナル 展望デッキ",
+    "lat": 35.5446,
+    "lon": 139.7681,
+    "city": "Tokyo",
+    "category": "sight",
+    "subtype": "viewpoint",
+    "why": "Open 24 hours: planes taking off over Tokyo Bay, sunrise over the water, Tokyo Tower and Skytree on clear days. Free, 10 min from Kamata.",
+    "tips": ["5th floor", "May close in bad weather"],
+    "hours": "0:00–24:00",
+    "mapsQuery": "Haneda Terminal 3 observation deck, Tokyo, Japan",
+    "updated": "2026-10-19"
   }
 ]
